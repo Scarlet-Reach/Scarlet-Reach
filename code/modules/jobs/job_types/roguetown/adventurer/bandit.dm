@@ -16,7 +16,7 @@
 
 	display_order = JDO_BANDIT
 	announce_latejoin = FALSE
-	min_pq = 15
+	min_pq = 10
 	max_pq = null
 	round_contrib_points = 5
 
