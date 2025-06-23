@@ -21,7 +21,7 @@
 	round_contrib_points = 5
 
 	advclass_cat_rolls = list(CTAG_BANDIT = 20)
-	PQ_boost_divider = 10
+	PQ_boost_divider = 13
 
 	wanderer_examine = TRUE
 	advjob_examine = TRUE
