@@ -47,7 +47,7 @@
 	earliest_start = 0 SECONDS
 
 	weight = 16
-	max_occurrences = 1
+	max_occurrences = 0 // Disabled because there's 5 slots open round start, mid-round migrants should still be there.
 
 	typepath = /datum/round_event/antagonist/solo/bandits
 	antag_datum = /datum/antagonist/bandit
