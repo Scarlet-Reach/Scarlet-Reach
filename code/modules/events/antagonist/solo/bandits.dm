@@ -47,6 +47,7 @@
 	earliest_start = 0 SECONDS
 
 	weight = 16
+	max_occurrences = 0
 
 	typepath = /datum/round_event/antagonist/solo/bandits
 	antag_datum = /datum/antagonist/bandit
