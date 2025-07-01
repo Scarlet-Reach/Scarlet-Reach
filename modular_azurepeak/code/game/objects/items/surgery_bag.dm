@@ -40,3 +40,7 @@
 	/obj/item/needle,
 	/obj/item/natural/bundle/cloth
 	)
+
+/obj/item/storage/belt/rogue/surgery_bag/empty
+	populate_contents = list(
+	)
