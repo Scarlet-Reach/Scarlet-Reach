@@ -3,8 +3,8 @@
 	flag = ORTHODOXIST
 	department_flag = INQUISITION
 	faction = "Station"
-	total_positions = 3 // THREE GOONS!!
-	spawn_positions = 3
+	total_positions = 1 // ONE GOON!!
+	spawn_positions = 1
 	allowed_races = RACES_ALL_KINDS
 	allowed_patrons = ALL_DIVINE_PATRONS
 	tutorial = "Whether hand-picked by the Sovereignty of the Church or taken along through mere circumstance, you now serve as a loyal adherent to the Inquisitor's retinue. Descend into the darkness and - be it with a clenched fist or an opened palm - bring the inhumen towards the light: gift them salvation or damnation."
