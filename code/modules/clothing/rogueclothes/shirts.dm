@@ -218,7 +218,9 @@
 	item_state = "silkydress"
 	sleevetype = null
 	sleeved = null
-	flags_inv = HIDECROTCH|HIDEBOOB
+	flags_inv = HIDECROTCH
+	mob_overlay_icon = 'icons/roguetown/clothing/onmob/shirts.dmi'
+	boobed = TRUE
 
 /obj/item/clothing/suit/roguetown/shirt/dress/silkydress/random/Initialize()
 	color = pick("#e6e5e5", "#249589", "#a32121", "#428138", "#8747b1", "#007fff")
@@ -424,6 +426,9 @@
 	icon_state = "silkdress"
 	item_state = "silkdress"
 	color = "#e6e5e5"
+	mob_overlay_icon = 'icons/roguetown/clothing/onmob/shirts.dmi'
+	boobed = TRUE
+	flags_inv = HIDECROTCH
 
 /obj/item/clothing/suit/roguetown/shirt/dress/silkdress/princess
 	color = CLOTHING_WHITE
