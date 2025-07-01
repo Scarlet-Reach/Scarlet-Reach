@@ -1,6 +1,10 @@
 /mob/living/carbon/human/species/demihuman
 	race = /datum/species/demihuman
 
+/datum/species/demihuman/on_species_gain(mob/living/carbon/C, datum/species/old_species)
+	..()
+	RegisterSignal(C, COMSIG_MOB_SAY, PROC_REF(handle_speech))
+
 /datum/species/demihuman
 	name = "Half-Kin"
 	id = "demihuman"
