@@ -2703,10 +2703,10 @@
 /turf/open/water/swamp,
 /area/rogue/outdoors/bog)
 "aVg" = (
-/obj/structure/chair/stool/rogue,
+/obj/structure/bed/rogue/shit,
 /obj/effect/landmark/start/prisonerr,
 /turf/open/floor/rogue/cobble,
-/area/rogue/indoors/town)
+/area/rogue/indoors/town/cell)
 "aVq" = (
 /obj/structure/mineral_door/wood{
 	locked = 1;
@@ -246906,7 +246906,7 @@ dra
 mPl
 jdu
 jdu
-aVg
+siD
 phl
 phl
 gyu
@@ -247357,7 +247357,7 @@ dra
 ogj
 vGV
 jdu
-aVg
+siD
 cZH
 phl
 phl
@@ -278103,11 +278103,11 @@ dwl
 eFC
 rPF
 dot
-dwl
+aVg
 aaB
 rPF
 dot
-dwl
+aVg
 dKM
 wFN
 uqB
