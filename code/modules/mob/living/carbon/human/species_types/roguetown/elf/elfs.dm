@@ -104,6 +104,7 @@
 
 /datum/species/elf/wood/get_skin_list()
 	return list(
+		"Ghost" = SKIN_COLOR_GHOST,
 		"Grenzel Woods" = SKIN_COLOR_GRENZEL_WOODS,
 		"Dandelion Creek" = SKIN_COLOR_DANDELION_CREEK,
 		"Roseveil" = SKIN_COLOR_ROSEVEIL,
@@ -113,7 +114,6 @@
 		"Walnut Woods" = SKIN_COLOR_WALNUT_WOODS,
 		"Timberborn" = SKIN_COLOR_TIMBERBORN,
 		"Lotus Coast" = SKIN_COLOR_LOTUS_COAST,
-		"Grenzel Woods" = SKIN_COLOR_GRENZEL_WOODS,
 		"Etruscan Swamps" = SKIN_COLOR_ETRUSCAN_SWAMPS,
 		"Shalvine Forests" = SKIN_COLOR_SHALVINE_FORESTS,
 		"Lalvestine Thickets" = SKIN_COLOR_LALVE_STEPPES,
