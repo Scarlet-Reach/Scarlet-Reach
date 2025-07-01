@@ -1946,7 +1946,7 @@ Slots: [job.spawn_positions] [job.round_contrib_points ? "RCP: +[job.round_contr
 							continue
 						crap += bla
 
-					var/result = input(user, "Select a race", "Blackmoor") as null|anything in crap
+					var/result = input(user, "Select a race", "Scarlet Reach") as null|anything in crap
 
 					if(result)
 						set_new_race(result, user)
@@ -1967,7 +1967,7 @@ Slots: [job.spawn_positions] [job.round_contrib_points ? "RCP: +[job.round_contr
 						if (istype(V, /datum/virtue/utility/noble) && (pref_species == /datum/species/construct/metal))		//Stops bypass of nobility for constructs.
 							continue
 						virtue_choices[V.name] = V
-					var/result = input(user, "Select a virtue", "Blackmoor") as null|anything in virtue_choices
+					var/result = input(user, "Select a virtue", "Scarlet Reach") as null|anything in virtue_choices
 
 					if (result)
 						var/datum/virtue/virtue_chosen = virtue_choices[result]
@@ -1987,7 +1987,7 @@ Slots: [job.spawn_positions] [job.round_contrib_points ? "RCP: +[job.round_contr
 						if (istype(V, /datum/virtue/utility/noble) && (pref_species == /datum/species/construct/metal))		//Stops bypass of nobility for constructs.
 							continue
 						virtue_choices[V.name] = V
-					var/result = input(user, "Select a virtue", "Blackmoor") as null|anything in virtue_choices
+					var/result = input(user, "Select a virtue", "Scarlet Reach") as null|anything in virtue_choices
 
 					if (result)
 						var/datum/virtue/virtue_chosen = virtue_choices[result]
@@ -1999,7 +1999,7 @@ Slots: [job.spawn_positions] [job.round_contrib_points ? "RCP: +[job.round_contr
 
 				if("charflaw")
 					var/list/coom = GLOB.character_flaws.Copy()
-					var/result = input(user, "Select a flaw", "Blackmoor") as null|anything in coom
+					var/result = input(user, "Select a flaw", "Scarlet Reach") as null|anything in coom
 					if(result)
 						result = coom[result]
 						var/datum/charflaw/C = new result()
@@ -2432,7 +2432,7 @@ Slots: [job.spawn_positions] [job.round_contrib_points ? "RCP: +[job.round_contr
 								if(!name)
 									name = "Slot[i]"
 								choices[name] = i
-					var/choice = input(user, "CHOOSE A HERO","BLACKMOOR") as null|anything in choices
+					var/choice = input(user, "CHOOSE A HERO","SCARLET REACH") as null|anything in choices
 					if(choice)
 						choice = choices[choice]
 						if(!load_character(choice))

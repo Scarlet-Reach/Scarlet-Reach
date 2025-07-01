@@ -70,7 +70,7 @@
 		modifier += 3
 
 	record_featured_stat(FEATURED_STATS_FARMERS, user)
-	GLOB.blackmoor_round_stats[STATS_PLANTS_HARVESTED]++
+	GLOB.scarlet_round_stats[STATS_PLANTS_HARVESTED]++
 	to_chat(user, span_notice(feedback))
 	yield_produce(modifier)
 

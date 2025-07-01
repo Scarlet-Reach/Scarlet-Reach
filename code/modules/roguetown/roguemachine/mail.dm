@@ -41,13 +41,13 @@
 	if(!coin_loaded)
 		to_chat(user, span_warning("The machine doesn't respond. It needs a coin."))
 		return
-	var/send2place = input(user, "Where to? (Person or #number)", "BLACKMOOR", null)
+	var/send2place = input(user, "Where to? (Person or #number)", "SCARLET REACH", null)
 	if(!send2place)
 		return
-	var/sentfrom = input(user, "Who is this letter from?", "BLACKMOOR", null)
+	var/sentfrom = input(user, "Who is this letter from?", "SCARLET REACH", null)
 	if(!sentfrom)
 		sentfrom = "Anonymous"
-	var/t = stripped_multiline_input("Write Your Letter", "BLACKMOOR", no_trim=TRUE)
+	var/t = stripped_multiline_input("Write Your Letter", "SCARLET REACH", no_trim=TRUE)
 	if(t)
 		if(length(t) > 2000)
 			to_chat(user, span_warning("Too long. Try again."))
@@ -134,8 +134,8 @@
 		return
 	if(istype(P, /obj/item/paper))
 		if(alert(user, "Send Mail?",,"YES","NO") == "YES")
-			var/send2place = input(user, "Where to? (Person or #number)", "BLACKMOOR", null)
-			var/sentfrom = input(user, "Who is this from?", "BLACKMOOR", null)
+			var/send2place = input(user, "Where to? (Person or #number)", "SCARLET REACH", null)
+			var/sentfrom = input(user, "Who is this from?", "SCARLET REACH", null)
 			if(!sentfrom)
 				sentfrom = "Anonymous"
 			if(findtext(send2place, "#"))

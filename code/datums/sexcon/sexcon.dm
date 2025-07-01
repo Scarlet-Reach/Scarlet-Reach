@@ -119,7 +119,7 @@
 	user.emote("sexmoanhvy", forced = TRUE)
 	user.playsound_local(user, 'sound/misc/mat/end.ogg', 100)
 	last_ejaculation_time = world.time
-	GLOB.blackmoor_round_stats[STATS_PLEASURES]++
+	GLOB.scarlet_round_stats[STATS_PLEASURES]++
 
 /datum/sex_controller/proc/cuckold_check()
 	if(!target || !ishuman(target) || !ishuman(user))

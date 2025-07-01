@@ -3588,7 +3588,7 @@
 /area/rogue/under/cave/goblinfort)
 "Uz" = (
 /obj/structure/fluff/walldeco/goblet{
-	name = "Blackmoorian Pints Inn and Bath"
+	name = "Scarlet Pints Inn and Bath"
 	},
 /turf/open/floor/rogue/dirt/road,
 /area/rogue/outdoors/mountains/decap/stepbelow)

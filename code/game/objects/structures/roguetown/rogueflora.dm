@@ -39,7 +39,7 @@
 	if(.)
 		if(!was_destroyed && obj_destroyed)
 			record_featured_stat(FEATURED_STATS_TREE_FELLERS, user)
-			GLOB.blackmoor_round_stats[STATS_TREES_CUT]++
+			GLOB.scarlet_round_stats[STATS_TREES_CUT]++
 
 /obj/structure/flora/roguetree/spark_act()
 	fire_act()

@@ -133,7 +133,7 @@
 		"Grenzelhoft" = SKIN_COLOR_GRENZELHOFT,
 		"Hammerhold" = SKIN_COLOR_HAMMERHOLD,
 		"Avar" = SKIN_COLOR_AVAR,
-		"Blackmoorian" = SKIN_COLOR_ROCKHILL,
+		"Scarlet Reach" = SKIN_COLOR_ROCKHILL,
 		"Otava" = SKIN_COLOR_OTAVA,
 		"Etrusca" = SKIN_COLOR_ETRUSCA,
 		"Gronn" = SKIN_COLOR_GRONN,

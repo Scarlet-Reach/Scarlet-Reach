@@ -744,7 +744,7 @@ Traitors and the like can also be revived with the previous role mostly intact.
 			if(ishuman(target))
 				var/mob/living/carbon/human/H = target
 				H.electrocution_animation(40)
-			GLOB.blackmoor_round_stats[STATS_PEOPLE_SMITTEN]++
+			GLOB.scarlet_round_stats[STATS_PEOPLE_SMITTEN]++
 			to_chat(target, span_danger("The gods have punished you for your sins!"))
 		if(ADMIN_PUNISHMENT_BRAINDAMAGE)
 			target.adjustOrganLoss(ORGAN_SLOT_BRAIN, 199, 199)
@@ -847,7 +847,7 @@ Traitors and the like can also be revived with the previous role mostly intact.
 			humie.add_stress(/datum/stressevent/maniac_woke_up)
 			to_chat(humie, span_deadsay("<span class='reallybig'>... WHERE AM I? ...</span>"))
 			var/static/list/slop_lore = list(
-				span_deadsay("... Blackmoor? No ... It doesn't exist ..."),
+				span_deadsay("... Scarlet Reach? No ... It doesn't exist ..."),
 				span_deadsay("... My name is Trey. Trey Liam, Liamtific Troverseer ..."),
 				span_deadsay("... I'm on NT Liam, a self Treystaining ship, used to Treyserve what Liamains of roguemanity ..."),
 				span_deadsay("... Launched into the Grim Darkness, War and Grim Darkness preserves their grimness ... Their edge ..."),

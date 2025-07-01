@@ -2,7 +2,7 @@
 /mob/living/simple_animal/hostile/retaliate/rogue/wolf/bobcat
 	icon = 'icons/roguetown/mob/monster/bobcat.dmi'
 	name = "lynx"
-	desc = "An adorable albiet hated creacher of Blackmoor's northern coast, hunting livestock and vulnrable people alike.."
+	desc = "An adorable albiet hated creacher of Scarlet's northern coast, hunting livestock and vulnrable people alike.."
 	icon_state = "bobcat"
 	icon_living = "bobcat"
 	icon_dead = "bobcat_dead"

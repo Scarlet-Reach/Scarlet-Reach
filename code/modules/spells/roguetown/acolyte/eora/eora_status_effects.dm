@@ -183,7 +183,7 @@
 
 		M.emote("breathgasp")
 		M.Jitter(100)
-		GLOB.blackmoor_round_stats[STATS_LUX_REVIVALS]++
+		GLOB.scarlet_round_stats[STATS_LUX_REVIVALS]++
 		M.update_body()
 		M.visible_message(span_notice("[M] is dragged back from Necra's hold!"), span_green("I awake from the void."))
 

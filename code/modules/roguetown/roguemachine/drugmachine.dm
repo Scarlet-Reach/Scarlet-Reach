@@ -85,7 +85,7 @@
 				if(!(drugrade_flags & DRUGRADE_NOTAX))
 					SStreasury.give_money_treasury(tax_amt, "purity import tax")
 					record_featured_stat(FEATURED_STATS_TAX_PAYERS, human_mob, tax_amt)
-					GLOB.blackmoor_round_stats[STATS_TAXES_COLLECTED] += tax_amt
+					GLOB.scarlet_round_stats[STATS_TAXES_COLLECTED] += tax_amt
 			else
 				say("Not enough!")
 				return

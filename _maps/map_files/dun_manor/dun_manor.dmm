@@ -6382,7 +6382,7 @@
 /area/rogue/indoors)
 "enF" = (
 /obj/structure/fluff/signage{
-	name = "BLACKMOOR - NORTH"
+	name = "SCARLET REACH - NORTH"
 	},
 /turf/open/floor/rogue/dirt/road,
 /area/rogue/outdoors/rtfield)
@@ -30035,7 +30035,7 @@
 /area/rogue/indoors/town/manor)
 "uXm" = (
 /obj/structure/fluff/walldeco/goblet{
-	name = "Blackmoorian Pints Inn and Bath"
+	name = "Scarlet Pints Inn and Bath"
 	},
 /turf/open/floor/rogue/ruinedwood/spiral,
 /area/rogue/indoors/town/tavern)

@@ -1,6 +1,6 @@
 /obj/structure/roguemachine/atm
 	name = "MEISTER"
-	desc = "Stores and withdraws currency for accounts managed by the Grand Duchy of Blackmoor."
+	desc = "Stores and withdraws currency for accounts managed by the Grand Duchy of Scarlet Reach."
 	icon = 'icons/roguetown/misc/machines.dmi'
 	icon_state = "atm"
 	density = FALSE
@@ -105,7 +105,7 @@
 						SStreasury.total_deposit_tax += T
 						say("Your deposit was taxed [T] mammon.")
 						record_featured_stat(FEATURED_STATS_TAX_PAYERS, H, T)
-						GLOB.blackmoor_round_stats[STATS_TAXES_COLLECTED] += T
+						GLOB.scarlet_round_stats[STATS_TAXES_COLLECTED] += T
 				qdel(P)
 				playsound(src, 'sound/misc/coininsert.ogg', 100, FALSE, -1)
 				return

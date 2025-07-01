@@ -121,7 +121,7 @@
 //Fake reskin of a scroll for the dwarf mercs -- just a fluffy toy
 /obj/item/paper/scroll/grudge
 	name = "Book of Grudges"
-	desc = "A copy you've taken with you. Unfortunately the dampness of Blackmoor made it unreadable. You can still add new entries, however. It looks bulky enough to act as a mild blunt weapon."
+	desc = "A copy you've taken with you. Unfortunately the dampness of Scarlet Reach made it unreadable. You can still add new entries, however. It looks bulky enough to act as a mild blunt weapon."
 	icon_state ="grudge_closed"
 	drop_sound = 'sound/foley/dropsound/book_drop.ogg'
 	grid_width = 32
@@ -220,7 +220,7 @@
 
 	if(signedname)
 		info += "SIGNED,<br/>"
-		info += "<font face=\"[FOUNTAIN_PEN_FONT]\" color=#27293f>[signedname] the [signedjob] of Blackmoor</font>"
+		info += "<font face=\"[FOUNTAIN_PEN_FONT]\" color=#27293f>[signedname] the [signedjob] of Scarlet Reach</font>"
 
 /obj/item/paper/confession
 	name = "confession"

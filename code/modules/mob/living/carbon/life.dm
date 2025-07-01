@@ -128,7 +128,7 @@
 		if(HAS_TRAIT(src, TRAIT_NOBREATH) || HAS_TRAIT(src, TRAIT_WATERBREATHING))
 			return TRUE
 		if(stat == DEAD && client)
-			GLOB.blackmoor_round_stats[STATS_PEOPLE_DROWNED]++
+			GLOB.scarlet_round_stats[STATS_PEOPLE_DROWNED]++
 		var/drown_damage = has_world_trait(/datum/world_trait/abyssor_rage) ? 10 : 5
 		adjustOxyLoss(drown_damage)
 		emote("drown")

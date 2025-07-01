@@ -61,12 +61,12 @@ SUBSYSTEM_DEF(elastic)
 	for(var/patron_name in GLOB.patron_follower_counts)
 		round_data["[patron_name]_followers"] = GLOB.patron_follower_counts[patron_name]
 
-	round_data[STATS_BLOOD_SPILT] = round(GLOB.blackmoor_round_stats[STATS_BLOOD_SPILT] / 100, 1)
+	round_data[STATS_BLOOD_SPILT] = round(GLOB.scarlet_round_stats[STATS_BLOOD_SPILT] / 100, 1)
 
-	for(var/stat in GLOB.blackmoor_round_stats)
+	for(var/stat in GLOB.scarlet_round_stats)
 		if(stat in special_stats)
 			continue
-		round_data[stat] = GLOB.blackmoor_round_stats[stat]
+		round_data[stat] = GLOB.scarlet_round_stats[stat]
 
 	return round_data
 

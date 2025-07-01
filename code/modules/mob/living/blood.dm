@@ -170,7 +170,7 @@
 		return FALSE
 	
 	blood_volume = max(blood_volume - amt, 0)
-	GLOB.blackmoor_round_stats[STATS_BLOOD_SPILT] += amt
+	GLOB.scarlet_round_stats[STATS_BLOOD_SPILT] += amt
 	if(isturf(src.loc)) //Blood loss still happens in locker, floor stays clean
 		add_drip_floor(src.loc, amt)
 	var/vol2use

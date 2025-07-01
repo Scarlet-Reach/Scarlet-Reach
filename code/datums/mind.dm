@@ -351,12 +351,12 @@ GLOBAL_LIST_EMPTY(personal_objective_minds)
 		if(known_skills[S] > old_level)
 			to_chat(current, span_nicegreen("My [S.name] grows to [SSskills.level_names[known_skills[S]]]!"))
 			SEND_SIGNAL(current, COMSIG_SKILL_RANK_INCREASED, S, known_skills[S], old_level)
-			GLOB.blackmoor_round_stats[STATS_SKILLS_LEARNED]++
+			GLOB.scarlet_round_stats[STATS_SKILLS_LEARNED]++
 			S.skill_level_effect(known_skills[S], src)
 			if(istype(known_skills, /datum/skill/combat))
-				GLOB.blackmoor_round_stats[STATS_COMBAT_SKILLS]++
+				GLOB.scarlet_round_stats[STATS_COMBAT_SKILLS]++
 			if(istype(known_skills, /datum/skill/craft))
-				GLOB.blackmoor_round_stats[STATS_CRAFT_SKILLS]++
+				GLOB.scarlet_round_stats[STATS_CRAFT_SKILLS]++
 	else
 		to_chat(current, span_warning("My [S.name] has weakened to [SSskills.level_names[known_skills[S]]]!"))
 
@@ -414,7 +414,7 @@ GLOBAL_LIST_EMPTY(personal_objective_minds)
 		return
 	if(known_skills[S] >= old_level)
 		to_chat(current, span_nicegreen("I feel like I've become more proficient at [lowertext(S.name)]!"))
-		GLOB.blackmoor_round_stats[STATS_SKILLS_LEARNED]++
+		GLOB.scarlet_round_stats[STATS_SKILLS_LEARNED]++
 		SEND_SIGNAL(current, COMSIG_SKILL_RANK_INCREASED, S, known_skills[S], old_level)
 	else
 		to_chat(current, span_warning("I feel like I've become worse at [lowertext(S.name)]!"))

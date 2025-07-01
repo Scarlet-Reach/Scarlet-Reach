@@ -299,7 +299,7 @@ GLOBAL_LIST_INIT(roleplay_readme, world.file2list("strings/rt/rp_prompt.txt"))
 	var/list/dat = list()
 	dat += GLOB.roleplay_readme
 	if(dat)
-		var/datum/browser/popup = new(src, "Primer", "BLACKMOOR", 460, 550)
+		var/datum/browser/popup = new(src, "Primer", "SCARLET REACH", 460, 550)
 		popup.set_content(dat.Join())
 		popup.open()
 

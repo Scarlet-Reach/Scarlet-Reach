@@ -243,7 +243,7 @@ GLOBAL_LIST_EMPTY(anonymize)
 //		to_chat(src, span_warning("Whitelisted players only."))
 //		return
 	if(client.prefs.anonymize == TRUE)
-		if(alert(src, "Disable Anonymize? (Not Recommended)", "BLACKMOOR", "YES", "NO") == "YES")
+		if(alert(src, "Disable Anonymize? (Not Recommended)", "SCARLET REACH", "YES", "NO") == "YES")
 			if(GLOB.respawncounts[client.ckey])
 				to_chat(src, span_warning("You have already spawned."))
 				return
@@ -254,7 +254,7 @@ GLOBAL_LIST_EMPTY(anonymize)
 	else
 		if(alert(src, "Enable Anonymize? This will hide your BYOND name from anyone except \
 		Dungeon Masters while playing here, useful for dealing with negative OOC bias or \
-		maintaining privacy from other BYOND users.", "BLACKMOOR", "YES", "NO") == "YES")
+		maintaining privacy from other BYOND users.", "SCARLET REACH", "YES", "NO") == "YES")
 			if(GLOB.respawncounts[client.ckey])
 				to_chat(src, span_warning("You have already spawned."))
 				return
@@ -292,10 +292,10 @@ GLOBAL_LIST_EMPTY(temporary_donators)
 	if(client)
 		if(client.patreonlevel())
 			return
-	var/name = input("Enter your patreon DISPLAY NAME exactly as it appears on Patreon.","BLACKMOOR") as text|null
+	var/name = input("Enter your patreon DISPLAY NAME exactly as it appears on Patreon.","SCARLET REACH") as text|null
 	if(!name)
 		return
-	var/email = input("Enter your patreon EMAIL ADDRESS exactly as it appears on Patreon.","BLACKMOOR") as text|null
+	var/email = input("Enter your patreon EMAIL ADDRESS exactly as it appears on Patreon.","SCARLET REACH") as text|null
 	if(!email)
 		return
 	if(!patreon_lookup(name) || !patreon_lookup(email) || !findtext(email, "@"))

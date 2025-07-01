@@ -155,7 +155,7 @@
 		if ("coast", "coastforest")
 			locale = "somewhere betwixt Abyssor's realm and Dendor's bounty"
 		if ("indoors", "shop", "physician", "outdoors", "roofs", "manor", "wizard's tower", "garrison", "dungeon cell", "baths", "tavern")
-			locale = "the city of Blackmoor and all its bustling souls"
+			locale = "the city of Scarlet Reach and all its bustling souls"
 		if ("church")
 			locale = "a hallowed place, sworn to the Ten" // special bit for the church since it's sacred ground
 	

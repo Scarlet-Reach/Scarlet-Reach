@@ -336,7 +336,7 @@ SUBSYSTEM_DEF(triumphs)
 // Display leaderboard browser popup
 /datum/controller/subsystem/triumphs/proc/show_triumph_leaderboard(client/C)
 
-	var/webpagu = "<B>CHAMPIONS OF BLACKMOOR</B><br>"
+	var/webpagu = "<B>CHAMPIONS OF SCARLET REACH</B><br>"
 	webpagu += "Current Season: [GLOB.triumph_wipe_season]"
 	webpagu += "<hr><br>"
 

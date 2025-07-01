@@ -1447,7 +1447,7 @@
 
 /obj/item/clothing/head/roguetown/helmet/heavy/frogmouth
 	name = "froggemund helmet"
-	desc = "A tall and imposing frogmouth-style helm popular in the highest plateaus of the Blackmoor. It covers not only the entire head and face, but the neck as well. Add a cloth to show the colors of your family or allegiance."
+	desc = "A tall and imposing frogmouth-style helm popular in the highest plateaus of the Scarlet Reach. It covers not only the entire head and face, but the neck as well. Add a cloth to show the colors of your family or allegiance."
 	icon_state = "frogmouth"
 	item_state = "frogmouth"
 	emote_environment = 3

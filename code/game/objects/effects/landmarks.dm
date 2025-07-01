@@ -345,7 +345,7 @@ INITIALIZE_IMMEDIATE(/obj/effect/landmark)
 	icon_state = "arrow"
 
 /obj/effect/landmark/start/prisonerr
-	name = "Prisoner (Blackmoor Hold)"
+	name = "Prisoner (Scarlet Reach)"
 	icon_state = "arrow"
 
 /obj/effect/landmark/start/prisonerb

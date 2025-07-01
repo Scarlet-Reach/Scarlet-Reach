@@ -357,7 +357,7 @@
 				if(lockprogress >= locktreshold)
 					to_chat(user, "<span class='deadsay'>The locking mechanism gives.</span>")
 					record_featured_stat(FEATURED_STATS_CRIMINALS, user)
-					GLOB.blackmoor_round_stats[STATS_LOCKS_PICKED]++
+					GLOB.scarlet_round_stats[STATS_LOCKS_PICKED]++
 					togglelock(user)
 					break
 				else

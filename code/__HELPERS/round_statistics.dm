@@ -145,7 +145,7 @@
 #define STATS_LOCKS_PICKED "locks_picked"
 #define STATS_BANDITS "bandits"
 
-GLOBAL_LIST_INIT(blackmoor_round_stats, list(
+GLOBAL_LIST_INIT(scarlet_round_stats, list(
 	STATS_DEATHS = 0,
 	STATS_NOBLE_DEATHS = 0,
 	STATS_MOAT_FALLERS = 0,

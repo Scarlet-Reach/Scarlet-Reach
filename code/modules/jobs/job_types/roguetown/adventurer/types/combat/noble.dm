@@ -7,7 +7,7 @@
 	traits_applied = list(TRAIT_OUTLANDER)
 	category_tags = list(CTAG_ADVENTURER, CTAG_COURTAGENT)
 	classes = list("Aristocrat" = "You are a traveling noble visiting foreign lands. With wealth, come the poor, ready to pilfer you of your hard earned (inherited) coin, so tread lightly unless you want to meet a grizzly end.",
-				"Knight Errant" = "You are a knight from a distant land, a scion of a noble house visiting Blackmoor for one reason or another.",
+				"Knight Errant" = "You are a knight from a distant land, a scion of a noble house visiting Scarlet Reach for one reason or another.",
 				"Squire Errant" = "You are a squire who has traveled far in search of a master to train you and a lord to knight you.")
 
 	cmode_music = 'sound/music/combat_knight.ogg'
@@ -58,7 +58,7 @@
 			H.set_blindness(0)
 
 		if("Knight Errant")
-			to_chat(H, span_warning("You are a knight from a distant land, a scion of a noble house visiting Blackmoor for one reason or another."))
+			to_chat(H, span_warning("You are a knight from a distant land, a scion of a noble house visiting Scarlet Reach for one reason or another."))
 			var/helmets = list(
 				"Pigface Bascinet" 	= /obj/item/clothing/head/roguetown/helmet/bascinet/pigface,
 				"Guard Helmet"		= /obj/item/clothing/head/roguetown/helmet/heavy/guard,

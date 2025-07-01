@@ -178,7 +178,7 @@
 			open()
 			for(var/obj/structure/gravemarker/G in loc)
 				record_featured_stat(FEATURED_STATS_CRIMINALS, user)
-				GLOB.blackmoor_round_stats[STATS_GRAVES_ROBBED]++
+				GLOB.scarlet_round_stats[STATS_GRAVES_ROBBED]++
 				qdel(G)
 				if(isliving(user))
 					var/mob/living/L = user

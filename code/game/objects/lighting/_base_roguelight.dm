@@ -150,9 +150,9 @@
 					return
 	if(W.firefuel && !no_refuel)
 		if(W.smeltresult) // For things with actual smelt results - functionally no differences
-			if(alert(usr, "Fuel [src] with [W]?", "BLACKMOOR", "Fuel", "Smelt") != "Fuel")
+			if(alert(usr, "Fuel [src] with [W]?", "SCARLET REACH", "Fuel", "Smelt") != "Fuel")
 				return TRUE
-		if(alert(usr, "Fuel [src] with [W]?", "BLACKMOOR", "Yes", "No") != "Yes")
+		if(alert(usr, "Fuel [src] with [W]?", "SCARLET REACH", "Yes", "No") != "Yes")
 			return TRUE
 		if(!W)
 			return

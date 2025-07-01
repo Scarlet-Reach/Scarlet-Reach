@@ -1,7 +1,7 @@
 GLOBAL_VAR(king_throne)
 
 /obj/structure/roguethrone
-	name = "throne of Blackmoor"
+	name = "throne of Scarlet Reach"
 	desc = "A big throne, to hold the Lord's giant personality. Say 'secrets of the throat' with the crown on your head if you are confused."
 	icon = 'icons/roguetown/misc/96x96.dmi'
 	icon_state = "throne"

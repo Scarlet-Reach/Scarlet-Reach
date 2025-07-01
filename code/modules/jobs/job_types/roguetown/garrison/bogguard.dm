@@ -11,7 +11,7 @@
 	allowed_races = RACES_ALL_KINDS
 	allowed_ages = list(AGE_ADULT, AGE_MIDDLEAGED, AGE_OLD)
 	tutorial = "The downtrodden, the disgraced and the disorderly. Either by choice or against your will, you have taken the oath and now vigilantly protect the cursed lands from bandits, \
-				necromancers, and all manner of vile creatures. While the men-at-arms and knights are afforded authority in Blackmoor, you are the closest thing the wilds has to any \
+				necromancers, and all manner of vile creatures. While the men-at-arms and knights are afforded authority in Scarlet Reach, you are the closest thing the wilds has to any \
 				semblance of law. \
 				\
 				While you are afforded a relative degree of freedom in the pursuit of justice, you ultimately answer to the Marshal and the Crown."

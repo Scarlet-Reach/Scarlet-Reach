@@ -2442,7 +2442,7 @@
 /area/rogue/indoors/town)
 "aQb" = (
 /obj/structure/fluff/signage{
-	name = "BLACKMOOR - NORTH"
+	name = "SCARLET REACH - NORTH"
 	},
 /turf/open/floor/rogue/dirt,
 /area/rogue/outdoors/woods)
@@ -5076,7 +5076,7 @@
 /area/rogue/under/town/basement/keep)
 "bJP" = (
 /obj/structure/fluff/signage{
-	name = "BLACKMOOR - EAST"
+	name = "SCARLET REACH - EAST"
 	},
 /turf/open/floor/rogue/dirt/road,
 /area/rogue/outdoors/woods)
@@ -22754,7 +22754,7 @@
 /area/rogue/indoors/town/bath)
 "hJB" = (
 /obj/structure/fluff/signage{
-	name = "BLACKMOOR - EAST"
+	name = "SCARLET REACH - EAST"
 	},
 /turf/open/floor/rogue/grass,
 /area/rogue/outdoors/mountains)
@@ -41731,7 +41731,7 @@
 /area/rogue/indoors/town)
 "okN" = (
 /obj/structure/fluff/walldeco/goblet{
-	name = "Blackmoorian Pints Inn and Bath"
+	name = "Scarlet Pints Inn and Bath"
 	},
 /turf/open/floor/rogue/ruinedwood/spiral,
 /area/rogue/indoors/town/tavern)
@@ -68822,7 +68822,7 @@
 /area/rogue/indoors/town/physician)
 "xkL" = (
 /obj/structure/fluff/signage{
-	name = "BLACKMOOR - NORTH"
+	name = "SCARLET REACH - NORTH"
 	},
 /turf/open/floor/rogue/dirt/road,
 /area/rogue/outdoors/rtfield)

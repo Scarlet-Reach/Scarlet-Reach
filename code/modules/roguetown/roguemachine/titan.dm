@@ -271,7 +271,7 @@ GLOBAL_LIST_INIT(laws_of_the_land, initialize_laws_of_the_land())
 			return
 		newtax = CLAMP(newtax, 1, 99)
 		SStreasury.tax_value = newtax / 100
-		priority_announce("The new tax in Blackmoor shall be [newtax] percent.", "The Generous Lord Decrees", pick('sound/misc/royal_decree.ogg', 'sound/misc/royal_decree2.ogg'), "Captain")
+		priority_announce("The new tax in Scarlet Reach shall be [newtax] percent.", "The Generous Lord Decrees", pick('sound/misc/royal_decree.ogg', 'sound/misc/royal_decree2.ogg'), "Captain")
 
 
 /obj/structure/roguemachine/titan/proc/make_announcement(mob/living/user, raw_message)
@@ -307,7 +307,7 @@ GLOBAL_LIST_INIT(laws_of_the_land, initialize_laws_of_the_land())
 			if(!SSmapping.retainer.head_rebel_decree)
 				user.mind.adjust_triumphs(1)
 			SSmapping.retainer.head_rebel_decree = TRUE
-	GLOB.blackmoor_round_stats[STATS_LAWS_AND_DECREES_MADE]++
+	GLOB.scarlet_round_stats[STATS_LAWS_AND_DECREES_MADE]++
 	SScommunications.make_announcement(user, TRUE, raw_message)
 
 /obj/structure/roguemachine/titan/proc/declare_outlaw(mob/living/user, raw_message)
@@ -323,7 +323,7 @@ GLOBAL_LIST_INIT(laws_of_the_land, initialize_laws_of_the_land())
 /proc/make_outlaw(raw_message)
 	if(raw_message in GLOB.outlawed_players)
 		GLOB.outlawed_players -= raw_message
-		priority_announce("[raw_message] is no longer an outlaw in the Blackmoor.", "The [SSticker.rulertype] Decrees", 'sound/misc/royal_decree.ogg', "Captain")
+		priority_announce("[raw_message] is no longer an outlaw in the Scarlet Reach.", "The [SSticker.rulertype] Decrees", 'sound/misc/royal_decree.ogg', "Captain")
 		return FALSE
 	var/found = FALSE
 	for(var/mob/living/carbon/human/H in GLOB.player_list)
@@ -338,7 +338,7 @@ GLOBAL_LIST_INIT(laws_of_the_land, initialize_laws_of_the_land())
 /proc/make_law(raw_message)
 	GLOB.laws_of_the_land += raw_message
 	priority_announce("[length(GLOB.laws_of_the_land)]. [raw_message]", "A LAW IS DECLARED", pick('sound/misc/new_law.ogg', 'sound/misc/new_law2.ogg'), "Captain")
-	GLOB.blackmoor_round_stats[STATS_LAWS_AND_DECREES_MADE]++
+	GLOB.scarlet_round_stats[STATS_LAWS_AND_DECREES_MADE]++
 
 /proc/remove_law(law_index)
 	if(!GLOB.laws_of_the_land[law_index])
@@ -346,7 +346,7 @@ GLOBAL_LIST_INIT(laws_of_the_land, initialize_laws_of_the_land())
 	var/law_text = GLOB.laws_of_the_land[law_index]
 	GLOB.laws_of_the_land -= law_text
 	priority_announce("[law_index]. [law_text]", "A LAW IS ABOLISHED", pick('sound/misc/new_law.ogg', 'sound/misc/new_law2.ogg'), "Captain")
-	GLOB.blackmoor_round_stats[STATS_LAWS_AND_DECREES_MADE]--
+	GLOB.scarlet_round_stats[STATS_LAWS_AND_DECREES_MADE]--
 
 /proc/purge_laws()
 	GLOB.laws_of_the_land = list()

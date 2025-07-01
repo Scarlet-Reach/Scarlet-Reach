@@ -49,12 +49,12 @@ GLOBAL_VAR(command_name)
 	GLOB.station_name = newname
 
 #ifdef ROGUEWORLD
-	world.name = "BLACKMOOR"
+	world.name = "SCARLET REACH"
 #else
-	world.name = "BLACKMOOR"
+	world.name = "SCARLET REACH"
 #endif
 #ifdef TESTSERVER
-	world.name = "BLACKMOOR (TESTING)"
+	world.name = "SCARLET REACH (TESTING)"
 #endif
 
 

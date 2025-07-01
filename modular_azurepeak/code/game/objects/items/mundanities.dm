@@ -31,7 +31,7 @@
 		return
 	playsound(src.loc, 'sound/items/wood_sharpen.ogg', 75, TRUE)
 	playsound(src.loc, 'sound/items/visor.ogg', 75, TRUE)
-	if (alert(user, "My fingers trace the outside of this box. It looks of average difficulty. Do I try to solve it?", "BLACKMOOR", "Yes", "No") != "Yes")
+	if (alert(user, "My fingers trace the outside of this box. It looks of average difficulty. Do I try to solve it?", "SCARLET REACH", "Yes", "No") != "Yes")
 		return
 	if(do_after(user,70, target = src))
 		if((dice_roll) <= user.STAINT)
@@ -74,7 +74,7 @@
 		return
 	playsound(src.loc, 'sound/items/wood_sharpen.ogg', 75, TRUE)
 	playsound(src.loc, 'sound/items/visor.ogg', 75, TRUE)
-	if (alert(user, "My fingers trace the outside of this box. It looks of average difficulty. Do I try to solve it?", "BLACKMOOR", "Yes", "No") != "Yes")
+	if (alert(user, "My fingers trace the outside of this box. It looks of average difficulty. Do I try to solve it?", "SCARLET REACH", "Yes", "No") != "Yes")
 		return
 	if(do_after(user,70, target = src))
 		if((dice_roll) <= user.STAINT)
@@ -118,7 +118,7 @@
 		return
 	playsound(src.loc, 'sound/items/wood_sharpen.ogg', 75, TRUE)
 	playsound(src.loc, 'sound/items/visor.ogg', 75, TRUE)
-	if (alert(user, "My fingers trace the outside of this box. It looks nearly impossible. Do I try to solve it?", "BLACKMOOR", "Yes", "No") != "Yes")
+	if (alert(user, "My fingers trace the outside of this box. It looks nearly impossible. Do I try to solve it?", "SCARLET REACH", "Yes", "No") != "Yes")
 		return
 	if(do_after(user,100, target = src))
 		if((dice_roll) + 4 <= user.STAINT)

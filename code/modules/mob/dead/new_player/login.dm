@@ -26,7 +26,7 @@
 		else
 			var/shown_patreon_level = client.patreonlevel()
 			if(!shown_patreon_level)
-				shown_patreon_level = "<font color='#41acc7'><b>Blackmoorian Chad</b></font>"
+				shown_patreon_level = "<font color='#ff2400'><b>Ascended God</b></font>"
 			switch(shown_patreon_level)
 				if(1)
 					shown_patreon_level = "Silver"

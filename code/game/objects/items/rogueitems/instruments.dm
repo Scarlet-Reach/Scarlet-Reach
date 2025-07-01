@@ -163,7 +163,7 @@
 				soundloop.cursound = null
 				soundloop.start()
 				user.apply_status_effect(/datum/status_effect/buff/playing_music, stressevent, note_color)
-				GLOB.blackmoor_round_stats[STATS_SONGS_PLAYED]++
+				GLOB.scarlet_round_stats[STATS_SONGS_PLAYED]++
 			else
 				playing = FALSE
 				groupplaying = FALSE

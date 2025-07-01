@@ -1,4 +1,4 @@
-//These are all Vanderlin ports, simply redone values and additions to fit Blackmoor. Credit for the code and idea goes to them!
+//These are all Vanderlin ports, simply redone values and additions to fit Scarlet Reach. Credit for the code and idea goes to them!
 
 //Divine Strike - Enhance your held weapon to have the next strike do extra damage and slow the target. Undead debuffed more.
 /obj/effect/proc_holder/spell/self/divine_strike

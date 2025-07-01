@@ -82,11 +82,11 @@
 			if("azure basin")
 				placetext = " in the The Black Basin!"
 			if("wilderness")
-				placetext = " in the The Blackmoor Grove!"
+				placetext = " in the The Scarlet Grove!"
 			if("bog", "dense bog")
 				placetext = " in the The Terrorbog!"
 			if("coast", "coastforest")
-				placetext = " on the Blackmoor Coast!"
+				placetext = " on the Scarlet Coast!"
 			if("indoors", "Shop", "Physician", "outdoors", "roofs")
 				placetext = " somewhere in town!"
 			if("Manor", "Wizard's Tower")

@@ -53,7 +53,7 @@
 	return ..()
 
 /datum/antagonist/lich/greet()
-	to_chat(owner.current, span_userdanger("The secret of immortality is mine, but this is not enough. The Blackmoorian lands need a new ruler. One that will reign eternal."))
+	to_chat(owner.current, span_userdanger("The secret of immortality is mine, but this is not enough. The Scarlet lands need a new ruler. One that will reign eternal."))
 	owner.announce_objectives()
 	..()
 

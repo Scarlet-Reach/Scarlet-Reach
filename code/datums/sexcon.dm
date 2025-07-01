@@ -1141,7 +1141,7 @@
 	
 	// Cuckold check removed - moved to new sexcon system
 	
-	GLOB.blackmoor_round_stats[STATS_PLEASURES]++
+	GLOB.scarlet_round_stats[STATS_PLEASURES]++
 	blueballs = FALSE
 	adjust_horny(-350)
 	switch(source)

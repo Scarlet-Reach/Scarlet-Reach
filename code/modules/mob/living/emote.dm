@@ -35,7 +35,7 @@
 			L.check_prayer(L,msg)
 			for(var/mob/living/LICKMYBALLS in hearers(2,src))
 				LICKMYBALLS.succumb_timer = world.time
-		GLOB.blackmoor_round_stats[STATS_PRAYERS_MADE]++
+		GLOB.scarlet_round_stats[STATS_PRAYERS_MADE]++
 
 /mob/living/proc/check_prayer(mob/living/L,message)
 	if(!L || !message || !ishuman(L))
@@ -530,7 +530,7 @@
 				message_param = "kisses %t on \the [parse_zone(H.zone_selected)]."
 	playsound(target.loc, pick('sound/vo/kiss (1).ogg','sound/vo/kiss (2).ogg'), 100, FALSE, -1)
 	if(user.mind)
-		GLOB.blackmoor_round_stats[STATS_KISSES_MADE]++
+		GLOB.scarlet_round_stats[STATS_KISSES_MADE]++
 
 
 /datum/emote/living/spit
@@ -589,7 +589,7 @@
 	if(ishuman(target))
 		playsound(target.loc, pick('sound/vo/hug.ogg'), 100, FALSE, -1)
 		if(user.mind)
-			GLOB.blackmoor_round_stats[STATS_HUGS_MADE]++
+			GLOB.scarlet_round_stats[STATS_HUGS_MADE]++
 			SEND_SIGNAL(user, COMSIG_MOB_HUGGED, target)
 
 /datum/emote/living/holdbreath
@@ -685,7 +685,7 @@
 /datum/emote/living/laugh/run_emote(mob/user, params, type_override, intentional, targetted)
 	. = ..()
 	if(. && user.mind)
-		GLOB.blackmoor_round_stats[STATS_LAUGHS_MADE]++
+		GLOB.scarlet_round_stats[STATS_LAUGHS_MADE]++
 
 /datum/emote/living/laugh
 	key = "laugh"
@@ -951,7 +951,7 @@
 /datum/emote/living/rage/run_emote(mob/user, params, type_override, intentional, targetted)
 	. = ..()
 	if(. && user.mind)
-		GLOB.blackmoor_round_stats[STATS_WARCRIES]++
+		GLOB.scarlet_round_stats[STATS_WARCRIES]++
 
 /datum/emote/living/attnwhistle
 	key = "attnwhistle"

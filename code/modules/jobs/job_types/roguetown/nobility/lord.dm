@@ -65,7 +65,7 @@ GLOBAL_LIST_EMPTY(lord_titles)
 			SSticker.rulertype = "Grand Duchess"
 		else
 			SSticker.rulertype = "Grand Duke"
-		to_chat(world, "<b><span class='notice'><span class='big'>[L.real_name] is [SSticker.rulertype] of Blackmoor.</span></span></b>")
+		to_chat(world, "<b><span class='notice'><span class='big'>[L.real_name] is [SSticker.rulertype] of Scarlet Reach.</span></span></b>")
 		if(STATION_TIME_PASSED() <= 10 MINUTES) //Late to the party? Stuck with default colors, sorry!
 			addtimer(CALLBACK(L, TYPE_PROC_REF(/mob, lord_color_choice)), 50)
 
