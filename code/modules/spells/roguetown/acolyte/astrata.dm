@@ -68,6 +68,12 @@
 	if(isliving(targets[1]))
 		testing("revived1")
 		var/mob/living/target = targets[1]
+		// Block if excommunicated or marked with woe
+		if(target.real_name in GLOB.excommunicated_players || HAS_TRAIT(target, "mark_of_woe"))
+			to_chat(user, span_danger("The heavens recoil from [target]! Their soul is barred by divine wrath! Flames lick the edges of your vision as the gods reject your plea."))
+			target.visible_message(span_danger("[target]'s body is wracked with searing pain as the gods reject them!"), span_userdanger("I am wracked with pain as the gods reject me!"))
+			revert_cast()
+			return FALSE
 		if(!target.mind)
 			revert_cast()
 			return FALSE

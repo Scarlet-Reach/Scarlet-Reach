@@ -258,6 +258,12 @@
 	. = ..()
 	if(isliving(targets[1]))
 		var/mob/living/target = targets[1]
+		// Block if excommunicated and caster is divine pantheon
+		if(user.patron?.type in ALL_DIVINE_PATRONS && target.real_name in GLOB.excommunicated_players)
+			to_chat(user, span_danger("The gods recoil from [target]! Divine fire scorches your hands as your plea is rejected!"))
+			target.visible_message(span_danger("[target] is seared by divine wrath! The gods hate them!"), span_userdanger("I am seared by divine wrath! The gods hate me!"))
+			revert_cast()
+			return FALSE
 		if(user.patron?.undead_hater && (target.mob_biotypes & MOB_UNDEAD)) //positive energy harms the undead
 			target.visible_message(span_danger("[target] is burned by holy light!"), span_userdanger("I'm burned by holy light!"))
 			target.adjustFireLoss(25)
