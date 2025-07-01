@@ -59,20 +59,6 @@
 		)
 	craftdiff = 0
 
-/datum/crafting_recipe/roguetown/survival/feldcollar
-	name = "feldcollar"
-	category = "Clothes"
-	result = /obj/item/clothing/neck/roguetown/collar/feldcollar
-	reqs = list(/obj/item/natural/cloth = 2)
-	craftdiff = 0
-
-/datum/crafting_recipe/roguetown/survival/surgcollar
-	name = "surgcollar"
-	category = "Clothes"
-	result = /obj/item/clothing/neck/roguetown/collar/surgcollar
-	reqs = list(/obj/item/natural/cloth = 2)
-	craftdiff = 0
-
 /datum/crafting_recipe/roguetown/survival/goodluckcharm
 	name = "cabbit's foot luck charm"
 	category = "Clothes"
