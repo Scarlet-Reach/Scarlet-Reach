@@ -1123,3 +1123,15 @@ datum/crafting_recipe/roguetown/sewing/Purdress
 	reqs = list(/obj/item/natural/cloth = 3,
 				/obj/item/natural/fibers = 4)
 	craftdiff = 2
+
+/datum/crafting_recipe/roguetown/sewing/surgcollar
+	name = "surgeon's collar (1 fibers, 1 cloth)"
+	result = list(/obj/item/clothing/neck/roguetown/collar/surgcollar)
+	reqs = list(/obj/item/natural/cloth = 1, /obj/item/natural/fibers = 1)
+	craftdiff = 1
+
+/datum/crafting_recipe/roguetown/sewing/feldcollar
+	name = "feldsher's collar (1 fibers, 1 cloth)"
+	result = list(/obj/item/clothing/neck/roguetown/collar/feldcollar)
+	reqs = list(/obj/item/natural/cloth = 1, /obj/item/natural/fibers = 1)
+	craftdiff = 1
