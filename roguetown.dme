@@ -2114,6 +2114,7 @@
 #include "code\modules\spells\spell_types\wizard\utility\message.dm"
 #include "code\modules\spells\spell_types\wizard\utility\mindlink.dm"
 #include "code\modules\spells\spell_types\wizard\utility\mirror_transform.dm"
+#include "code\modules\spells\spell_types\wizard\utility\recall.dm"
 #include "code\modules\spells\spell_types\wizard\utility\prestidigitation.dm"
 #include "code\modules\surgery\_surgery.dm"
 #include "code\modules\surgery\_surgery_step.dm"
@@ -2344,4 +2345,3 @@
 #include "modular_helmsguard\code\modules\mobs\farm\wraiths.dm"
 #include "modular_stonehedge\code\modules\clothing\rogueclothes\hats.dm"
 // END_INCLUDE
-
