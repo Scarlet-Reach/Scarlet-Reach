@@ -3,14 +3,13 @@
         "axe": "axt",
         "bad": "schlecht",
         "beautiful": "schön",
-    	"big": "groß",
+		"big": "groß",
         "great": "großartig",
-        "good bye": "auf wiedersehen",
-        "goodbye": "auf wiedersehen",
-        "bye": "tschüss",
-        "idiot": "schweinhund",
-		"you idiot": "du schweinhund",
-        "dumb": "dummkopf",
+        "good bye": ["auf wiedersehen", "tschüss"],
+        "goodbye": ["auf wiedersehen", "tschüss"],
+        "swine": "schweinhund",
+		"you swine": "du schweinhund",
+        "idiot": "dummkopf",
         "cake": "kuchen",
         "captain": "kapitän",
         "cat": "katze",
@@ -35,7 +34,6 @@
         "my": "mein",
 		"myself": "ich selbst",
         "no": "nein",
-        "nothing": "nichts",
 		"nobody": "niemand",
 		"no one": "niemand",
         "old": "alt",
@@ -50,7 +48,7 @@
 		"thank": "dank",
         "thanks": "danke",
         "thank you": "danke",
-        "the": "das",
+        "the": ["die", "der", "das"],
         "ugly": "hässlich",
         "very": "sehr",
         "water": "wasser",
@@ -88,7 +86,21 @@
         "fellow": "gefährte",
         "colleague": "kollege",
 		"goblin": "gremlin",
-		"goblins": "gremlins"
+		"goblins": "gremlins",
+		"please": "bitte",
+		"help": "hilfe",
+		"help me": "hilf mir",
+		"damn": "verdammt",
+		"damn it": "verdammt nochmal",
+		"whoreson": "hurensohn",
+		"good evening": "guten abend",
+		"good night": "gute nacht",
+		"understood": "jawohl",
+		"wonderful": "wunderbar",
+		"many thanks": "vielen dank",
+		"of course": "natürlich",
+		"i": "ich",
+		"and": "und"
     },
     "start": {
 
@@ -96,6 +108,9 @@
     "end": {
 
     },
+	"multiword": {
+
+	},
     "syllable": {
         "thi": "tii"
     }

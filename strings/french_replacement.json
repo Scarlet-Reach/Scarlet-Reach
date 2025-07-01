@@ -5,17 +5,17 @@
 		"do": "du",
 		"don't": "dun't",
 		"not": "nut",
-       	"I'm": "j'", 
-   	    "am": "ahm", 
+		"I'm": "j'", 
+		"am": "ahm", 
 		"a": "un",
         "and": "eend", 
 		"the ": "l'",
 		"I": "j'",
 		"with": "weeth",
 		"of": "de",
-      	"captain": "capitaine", 
-      	"cook": "cuisinier", 
-     	"dad": "papa", 
+		"captain": "capitaine", 
+		"cook": "cuisinier", 
+		"dad": "papa", 
         "hello": "'allo",
         "mom": "mama", 
         "my": "mon", 
@@ -35,6 +35,9 @@
     "end": {
 
     },
+	"multiword": {
+
+	},
     "syllable": {
         "shi": "shee",
         "thi": "thee"

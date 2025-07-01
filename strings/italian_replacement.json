@@ -19,6 +19,9 @@
         "m": "mma",
         "s": "ssa"
     },
+	"multiword": {
+
+	},
     "syllable": {
         "r": "rr"
     }
