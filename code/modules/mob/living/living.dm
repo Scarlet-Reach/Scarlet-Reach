@@ -1127,6 +1127,12 @@
 	log_combat(L, src, "broke grab")
 	L.changeNext_move(agg_grab ? CLICK_CD_GRABBING : CLICK_CD_GRABBING + 1 SECONDS)
 	playsound(src.loc, 'sound/combat/grabbreak.ogg', 50, TRUE, -1)
+
+	// Change the grabber's intent to grab before stopping the pull
+	if(iscarbon(L))
+		var/mob/living/carbon/C = L
+		C.a_intent_change(INTENT_GRAB)
+
 	L.stop_pulling()
 	return TRUE
 
