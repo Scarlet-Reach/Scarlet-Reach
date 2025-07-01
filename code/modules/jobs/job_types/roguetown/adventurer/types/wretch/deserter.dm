@@ -69,7 +69,7 @@
 					backr = /obj/item/rogueweapon/stoneaxe/battle
 				if("Lance + Kite Shield")
 					r_hand = /obj/item/rogueweapon/spear/lance
-					backl = /obj/item/rogueweapon/shield/tower/metal
+					backr = /obj/item/rogueweapon/shield/tower/metal
 			var/helmets = list(
 				"Pigface Bascinet" 	= /obj/item/clothing/head/roguetown/helmet/bascinet/pigface,
 				"Guard Helmet"		= /obj/item/clothing/head/roguetown/helmet/heavy/guard,
