@@ -159,6 +159,14 @@
 /*/datum/virtue/utility/deathless/apply_to_human(mob/living/carbon/human/recipient)
 	recipient.mob_biotypes |= MOB_UNDEAD*/
 
+/datum/virtue/utility/ritualist
+	name = "Ritualist"
+	desc = "I am in tune with my god, more than others. I can perform rituals to strengthen my bond with them."
+	added_traits = list(TRAIT_RITUALIST)
+	added_stashed_items = list(
+		"Ritual Chalk" = /obj/item/ritechalk
+		)
+
 /datum/virtue/utility/blacksmith
 	name = "Blacksmith's Apprentice"
 	desc = "In my youth, I worked under a skilled blacksmith, honing my skills with an anvil."
