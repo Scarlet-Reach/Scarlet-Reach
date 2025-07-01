@@ -14,6 +14,8 @@
 /obj/item/clothing/wrists/roguetown/bracers
 	name = "steel bracers"
 	desc = "Steel bracers that protect the arms."
+	body_parts_covered = 384 //For some reason the arms define was throwing a hissy fit.
+	body_parts_covered_dynamic = 384 //Ditto
 	icon_state = "bracers"
 	item_state = "bracers"
 	max_integrity = 300
