@@ -97,6 +97,7 @@
 			H.change_stat("strength", 2) // Deserter are the knight-equivalence. They get a balanced, straightforward 2 2 3 statspread to endure and overcome.
 			H.change_stat("constitution", 2)
 			H.change_stat("endurance", 3)
+			H.change_stat("speed", -1)
 			gloves = /obj/item/clothing/gloves/roguetown/plate 
 			pants = /obj/item/clothing/under/roguetown/chainlegs
 			neck = /obj/item/clothing/neck/roguetown/bevor

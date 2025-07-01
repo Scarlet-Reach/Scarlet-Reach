@@ -83,7 +83,7 @@
 		H.change_stat("intelligence", 2)
 		H.change_stat("endurance", 1)
 		H.change_stat("constitution", 1)
-		H.change_stat("speed", 1)
+		H.change_stat("speed", 0) //are required to be middle aged+ so -1 speed by default
 		H.change_stat("strength", 1)
 		if(H.age == AGE_OLD)
 			H.mind.adjust_skillrank(/datum/skill/combat/swords, 1, TRUE)
