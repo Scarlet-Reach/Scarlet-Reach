@@ -18,6 +18,8 @@
 	static_debris = list(/obj/item/rope = 1)
 	breakoutextra = 10 MINUTES
 	buckleverb = "tie"
+	var/offsetx = 0
+	var/offsety = 10
 
 //Map stactic version.
 /obj/structure/noose/gallows
@@ -26,6 +28,8 @@
 	icon_state = "gallows"
 	pixel_y = 0
 	max_integrity = 9999
+	offsetx = 6
+	offsety = 15
 
 /obj/structure/noose/Destroy()
 	STOP_PROCESSING(SSobj, src)
@@ -64,11 +68,15 @@
 /obj/structure/noose/post_buckle_mob(mob/living/M)
 	if(has_buckled_mobs())
 		START_PROCESSING(SSobj, src)
-		M.set_mob_offsets("bed_buckle", _x = 0, _y = 10)
+		M.set_mob_offsets("bed_buckle", _x = offsetx, _y = offsety)
+		M.setDir(SOUTH)
+		M.hanged = TRUE
 
 /obj/structure/noose/post_unbuckle_mob(mob/living/M)
 	STOP_PROCESSING(SSobj, src)
 	M.reset_offsets("bed_buckle")
+	if(M.hanged)
+		M.hanged = FALSE
 
 /obj/structure/noose/process()
 	if(!has_buckled_mobs())
@@ -85,6 +93,11 @@
 						buckled_mob.adjustOxyLoss(10)
 						if(prob(20))
 							buckled_mob.emote("gasp")
+					if(prob(25))
+						var/flavor_text = list("<span class='danger'>[buckled_mob]'s legs flail for anything to stand on.</span>",\
+												"<span class='danger'>[buckled_mob]'s hands are desperately clutching the noose.</span>",\
+												"<span class='danger'>[buckled_mob]'s limbs sway back and forth with diminishing strength.</span>")
+						buckled_mob.visible_message(pick(flavor_text))
 					playsound(buckled_mob.loc, 'sound/foley/noose_idle.ogg', 30, 1, -3)
 				else
 					if(prob(1))
