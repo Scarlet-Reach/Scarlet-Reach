@@ -18,7 +18,7 @@
 
 /datum/component/storage/concrete/roguetown/surgery_bag/New(datum/P, ...)
 	. = ..()
-	can_hold = typecacheof(list(/obj/item/rogueweapon/surgery, /obj/item/needle, /obj/item/natural/worms/leech, /obj/item/reagent_containers/lux, /obj/item/natural/bundle/cloth))
+	can_hold = typecacheof(list(/obj/item/rogueweapon/surgery, /obj/item/needle, /obj/item/natural/worms/leech, /obj/item/reagent_containers/lux, /obj/item/natural/bundle/cloth, /obj/item/natural/cloth))
 
 /datum/component/storage/concrete/roguetown/belt
 	screen_max_rows = 3
