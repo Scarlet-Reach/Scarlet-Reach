@@ -25,7 +25,11 @@
 		user.visible_message("<font color='yellow'>[user] points at [L]!</font>")
 		if(L.anti_magic_check(TRUE, TRUE))
 			return FALSE
-		L.adjust_fire_stacks(5)
+		var/fire_stacks = 5
+		if(L.real_name in GLOB.excommunicated_players && GLOB.tod != "night")
+			fire_stacks = 10
+			user.visible_message(span_danger("Astrata's scorn burns brighter for the excommunicated!"))
+		L.adjust_fire_stacks(fire_stacks)
 		L.IgniteMob()
 		addtimer(CALLBACK(L, TYPE_PROC_REF(/mob/living, ExtinguishMob)), 5 SECONDS)
 		return TRUE
