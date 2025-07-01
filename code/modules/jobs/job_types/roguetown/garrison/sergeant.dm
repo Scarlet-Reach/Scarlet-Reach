@@ -1,5 +1,5 @@
 /datum/job/roguetown/sergeant
-	title = "Sergeant"
+	title = "Sheriff"
 	flag = SERGEANT
 	department_flag = GARRISON
 	faction = "Station"
@@ -8,9 +8,9 @@
 	allowed_sexes = list(MALE, FEMALE)
 	allowed_races = RACES_SHUNNED_UP//Identical to MAA.
 	allowed_patrons = NON_PSYDON_PATRONS
-	allowed_ages = list(AGE_ADULT, AGE_MIDDLEAGED, AGE_OLD)
-	tutorial = "You are the most experienced of the Crown's Soldiery, leading the men-at-arms in maintaining order and attending to threats and crimes below the court's attention. \
-				See to those under your command and fill in the gaps knights leave in their wake. Obey the orders of your Marshal and the Crown."
+	allowed_ages = list(AGE_MIDDLEAGED, AGE_OLD)
+	tutorial = "You are the most experienced of the town's watch, leading them in maintaining order and attending to threats and crimes below the court's attention. \
+				You answer alone to the Marshal and the Crown."
 	display_order = JDO_SERGEANT
 	whitelist_req = TRUE
 	round_contrib_points = 3
@@ -35,19 +35,19 @@
 			H.advsetup = 1
 			H.invisibility = INVISIBILITY_MAXIMUM
 			H.become_blind("advsetup")
-			if(istype(H.cloak, /obj/item/clothing/cloak/stabard/surcoat/guard))
+			if(istype(H.cloak, /obj/item/clothing/cloak/cape))
 				var/obj/item/clothing/S = H.cloak
 				var/index = findtext(H.real_name, " ")
 				if(index)
 					index = copytext(H.real_name, 1,index)
 				if(!index)
 					index = H.real_name
-				S.name = "sergeant jupon ([index])"
+				S.name = "sheriff cape ([index])"
 
 //All skills/traits are on the loadouts. All are identical. Welcome to the stupid way we have to make sub-classes...
 /datum/outfit/job/roguetown/sergeant
 	pants = /obj/item/clothing/under/roguetown/chainlegs
-	cloak = /obj/item/clothing/cloak/stabard/surcoat/guard
+	cloak = /obj/item/clothing/cloak/
 	neck = /obj/item/clothing/neck/roguetown/gorget
 	shoes = /obj/item/clothing/shoes/roguetown/boots
 	belt = /obj/item/storage/belt/rogue/leather/black
@@ -61,8 +61,8 @@
 
 //Rare-ish anti-armor two hander sword. Kinda alternative of a bastard sword type. Could be cool.
 /datum/advclass/sergeant/sergeant
-	name = "Sergeant-at-Arms"
-	tutorial = "You are a not just anybody but the Sergeant-at-Arms of the Duchy's garrison. While you may have started as some peasant or mercenary, you have advanced through the ranks to that of someone who commands respect and wields it. Take up arms, sergeant!"
+	name = "Sheriff"
+	tutorial = "You are a not just anybody but the Sheriff of the Baron's town. While you may have started as some peasant or mercenary, you have advanced through the ranks to that of someone who commands respect and wields it."
 	outfit = /datum/outfit/job/roguetown/sergeant/sergeant
 
 	category_tags = list(CTAG_SERGEANT)

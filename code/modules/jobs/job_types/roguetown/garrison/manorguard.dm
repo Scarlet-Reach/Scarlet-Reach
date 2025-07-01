@@ -1,18 +1,18 @@
 /datum/job/roguetown/manorguard
-	title = "Man at Arms"
-	f_title = "Woman at Arms"
+	title = "Manor Guard"
+	f_title = "Manor Guard"
 	flag = MANATARMS
 	department_flag = GARRISON
 	faction = "Station"
-	total_positions = 8
-	spawn_positions = 8
+	total_positions = 2
+	spawn_positions = 2
 	allowed_sexes = list(MALE, FEMALE)
 	allowed_races = RACES_SHUNNED_UP
 	allowed_patrons = ALL_PATRONS
 	allowed_ages = list(AGE_ADULT, AGE_MIDDLEAGED)
-	tutorial = "Having proven yourself loyal and capable, you are entrusted to defend the town and enforce its laws. \
-				Trained regularly in combat and siege warfare, you deal with threats - both within and without. \
-				Obey your Sergeant-at-Arms, the Marshal, and the Crown. Show the nobles and knights your respect, so that you may earn it in turn. Not as a commoner, but as a soldier.."
+	tutorial = "Having proven yourself loyal and capable, you are entrusted to defend the royal family and their home. \
+				Trained regularly in combat and siege warfare, you deal with internal threats. \
+				Obey royal family the Marshal, and the Baron. Show the nobles and knights your respect, so that you may earn it in turn. Not as a commoner, but as a soldier."
 	display_order = JDO_CASTLEGUARD
 	whitelist_req = TRUE
 
@@ -20,7 +20,7 @@
 	advclass_cat_rolls = list(CTAG_MENATARMS = 20)
 
 	give_bank_account = 22
-	min_pq = 3
+	min_pq = 7
 	max_pq = null
 	round_contrib_points = 2
 
@@ -43,7 +43,7 @@
 				index = copytext(H.real_name, 1,index)
 			if(!index)
 				index = H.real_name
-			S.name = "man-at-arms jupon ([index])"
+			S.name = "manor guard jupon ([index])"
 
 /datum/outfit/job/roguetown/manorguard
 	cloak = /obj/item/clothing/cloak/stabard/surcoat/guard
