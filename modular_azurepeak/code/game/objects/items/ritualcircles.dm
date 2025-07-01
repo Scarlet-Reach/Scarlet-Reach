@@ -373,7 +373,12 @@ var/forgerites = list("Ritual of Blessed Reforgance")
 	var/list/possible_targets = list()
 	for(var/mob/living/carbon/human/persononrune in onrune)
 		possible_targets += persononrune
-	var/mob/living/carbon/human/target = pick(possible_targets)
+	var/mob/living/carbon/human/target
+	if(possible_targets.len)
+		target = pick(possible_targets)
+	else
+		to_chat(usr, "No valid targets are standing on the rune! You must stand directly on the rune to receive Zizo's blessing.")
+		return
 	if(!HAS_TRAIT(target, TRAIT_CABAL))
 		loc.visible_message(span_cult("THE RITE REJECTS ONE NOT OF THE CABAL"))
 		return
@@ -386,7 +391,6 @@ var/forgerites = list("Ritual of Blessed Reforgance")
 	spawn(20)
 		playsound(loc, 'sound/combat/hits/onmetal/grille (2).ogg', 50)
 		target.equipOutfit(/datum/outfit/job/roguetown/darksteelrite)
-		target.apply_status_effect(/datum/status_effect/debuff/devitalised)
 		spawn(40)
 			to_chat(target, span_purple("They are ignorant, backwards, without hope. You. You will be powerful."))
 
@@ -517,7 +521,12 @@ var/forgerites = list("Ritual of Blessed Reforgance")
 	var/list/possible_targets = list()
 	for(var/mob/living/carbon/human/persononrune in onrune)
 		possible_targets += persononrune
-	var/mob/living/carbon/human/target = pick(possible_targets)
+	var/mob/living/carbon/human/target
+	if(possible_targets.len)
+		target = pick(possible_targets)
+	else
+		to_chat(usr, "No valid targets are standing on the rune! You must stand directly on the rune to receive Graggar's blessing.")
+		return
 	if(!HAS_TRAIT(target, TRAIT_HORDE))
 		loc.visible_message(span_cult("THE RITE REJECTS ONE WITHOUT SLAUGHTER IN THEIR HEART!!"))
 		return
@@ -530,7 +539,7 @@ var/forgerites = list("Ritual of Blessed Reforgance")
 	spawn(20)
 		playsound(loc, 'sound/combat/hits/onmetal/grille (2).ogg', 50)
 		target.equipOutfit(/datum/outfit/job/roguetown/viciousrite)
-		target.apply_status_effect(/datum/status_effect/debuff/devitalised)
+		// target.apply_status_effect(/datum/status_effect/debuff/devitalised) // Removed: do not consume lux
 		spawn(40)
 			to_chat(target, span_cult("Break them."))
 
