@@ -13,6 +13,7 @@ GLOBAL_LIST_INIT(character_accents, list("No accent",
 	"Inzectoid accent",
 	"Feline accent",
 	"Slopes accent",
+	"Saut al-Atash accent",
 	"Valley accent"))
 
 /mob/living/carbon/human

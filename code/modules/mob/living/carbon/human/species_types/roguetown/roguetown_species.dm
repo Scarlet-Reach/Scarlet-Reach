@@ -33,6 +33,8 @@
 			return strings("feline_replacement.json", type, convert_HTML = TRUE)
 		if("Slopes accent")
 			return strings("welsh_replacement.json", type, convert_HTML = TRUE)
+		if("Saut al-Atash accent")
+			return
 
 /datum/species/proc/get_accent(mob/living/carbon/human/H)
 	return get_accent_list(H,"full")
