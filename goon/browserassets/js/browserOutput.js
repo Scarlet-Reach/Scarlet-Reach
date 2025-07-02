@@ -1086,7 +1086,7 @@ $(function() {
 
 		var blob = new Blob([plainText], { type: 'text/plain' });
 	
-		var fname = 'Blackmoor Chat Log';
+		var fname = 'Scarlet Chat Log';
 		var date = new Date(), month = date.getMonth() + 1, day = date.getDate(), hours = date.getHours(), mins = date.getMinutes(), secs = date.getSeconds();
 		fname += ' ' + date.getFullYear() + '-' + (month < 10 ? '0' : '') + month + '-' + (day < 10 ? '0' : '') + day;
 		fname += ' ' + (hours < 10 ? '0' : '') + hours + (mins < 10 ? '0' : '') + mins + (secs < 10 ? '0' : '') + secs;

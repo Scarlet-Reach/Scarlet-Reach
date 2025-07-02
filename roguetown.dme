@@ -1498,6 +1498,7 @@
 #include "code\modules\jobs\job_types\roguetown\peasants\knavewench.dm"
 #include "code\modules\jobs\job_types\roguetown\peasants\lunatic.dm"
 #include "code\modules\jobs\job_types\roguetown\peasants\soilson.dm"
+#include "code\modules\jobs\job_types\roguetown\peasants\prisoner.dm"
 #include "code\modules\jobs\job_types\roguetown\yeomen\archivist.dm"
 #include "code\modules\jobs\job_types\roguetown\yeomen\artificer.dm"
 #include "code\modules\jobs\job_types\roguetown\yeomen\barkeep.dm"
@@ -2113,6 +2114,7 @@
 #include "code\modules\spells\spell_types\wizard\utility\message.dm"
 #include "code\modules\spells\spell_types\wizard\utility\mindlink.dm"
 #include "code\modules\spells\spell_types\wizard\utility\mirror_transform.dm"
+#include "code\modules\spells\spell_types\wizard\utility\recall.dm"
 #include "code\modules\spells\spell_types\wizard\utility\prestidigitation.dm"
 #include "code\modules\surgery\_surgery.dm"
 #include "code\modules\surgery\_surgery_step.dm"
@@ -2343,4 +2345,3 @@
 #include "modular_helmsguard\code\modules\mobs\farm\wraiths.dm"
 #include "modular_stonehedge\code\modules\clothing\rogueclothes\hats.dm"
 // END_INCLUDE
-

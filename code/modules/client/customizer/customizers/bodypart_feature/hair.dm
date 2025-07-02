@@ -238,6 +238,7 @@
 		/datum/sprite_accessory/hair/head/pixie,
 		/datum/sprite_accessory/hair/head/pompadour,
 		/datum/sprite_accessory/hair/head/bigpompadour,
+		/datum/sprite_accessory/hair/head/playful,
 		/datum/sprite_accessory/hair/head/ponytail1,
 		/datum/sprite_accessory/hair/head/ponytail2,
 		/datum/sprite_accessory/hair/head/ponytail3,
@@ -407,6 +408,7 @@
 		/datum/sprite_accessory/hair/head/kusanagi_alt,
 		/datum/sprite_accessory/hair/head/bubblebraids,
 		/datum/sprite_accessory/hair/head/bubblebraids_v2,
+		/datum/sprite_accessory/hair/head/heiress,
 		)
 
 /datum/customizer_choice/bodypart_feature/hair/head/humanoid/get_random_accessory(datum/customizer_entry/entry, datum/preferences/prefs)

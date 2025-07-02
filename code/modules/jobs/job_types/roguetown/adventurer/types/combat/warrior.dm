@@ -11,13 +11,13 @@
 					"Duelist"= "You are an esteemed swordsman who foregoes armor in exchange for a more nimble fighting style.",
 					"Barbarian" = "You are a brutal warrior who foregoes armor in order to showcase your raw strength. You specialize in unarmed combat and wrestling.",
 					"Monster Hunter" = "You specialize in hunting down monsters and the undead, carrying two blades - one of silver, one of steel.",
-					"Flagellant" = "You are a pacifistic warrior who embraces suffering, believing pain is the path to enlightenment. You take the suffering of others upon yourself.")
-
+					"Flagellant" = "You are a pacifistic warrior who embraces suffering, believing pain is the path to enlightenment. You take the suffering of others upon yourself.",
+					"Amazon" = "Fierce warrior women from distant lands, Amazons choose their armor based on their preferred fighting style - from light and agile to heavily protected.")
 
 /datum/outfit/job/roguetown/adventurer/sfighter/pre_equip(mob/living/carbon/human/H)
 	..()
 	H.adjust_blindness(-3)
-	var/classes = list("Battlemaster","Duelist","Barbarian","Monster Hunter","Flagellant")
+	var/classes = list("Battlemaster","Duelist","Barbarian","Monster Hunter","Flagellant","Amazon")
 	var/classchoice = input("Choose your archetypes", "Available archetypes") as anything in classes
 
 	switch(classchoice)
@@ -275,3 +275,149 @@
 			belt = /obj/item/storage/belt/rogue/leather        
 			beltr = /obj/item/rogueweapon/whip
 			backpack_contents = list(/obj/item/recipe_book/survival = 1)            
+
+		if("Amazon")
+			to_chat(H, span_warning("Fierce warrior women from distant lands, Amazons choose their armor based on their preferred fighting style - from light and agile to heavily protected."))
+			var/armor_styles = list("Leather Kini","Hide Armor Kini","Studded Leather Kini","Half Plate Kini","Plate Kini")
+			var/armor_choice = input("Choose your armor style", "Available armor styles") as anything in armor_styles
+
+			switch(armor_choice)
+
+				if("Leather Kini")
+					to_chat(H, span_warning("You are a swift and agile warrior who relies on speed and evasion. Your light leather armor allows for maximum mobility."))
+					H.mind.adjust_skillrank(/datum/skill/combat/wrestling, 2, TRUE)
+					H.mind.adjust_skillrank(/datum/skill/combat/unarmed, 2, TRUE)
+					H.mind.adjust_skillrank(/datum/skill/combat/whipsflails, 3, TRUE)
+					H.mind.adjust_skillrank(/datum/skill/misc/athletics, 4, TRUE)
+					H.mind.adjust_skillrank(/datum/skill/misc/swimming, 3, TRUE)
+					H.mind.adjust_skillrank(/datum/skill/misc/climbing, 3, TRUE)
+					H.mind.adjust_skillrank(/datum/skill/misc/reading, 1, TRUE)
+					H.mind.adjust_skillrank(/datum/skill/misc/sewing, 2, TRUE)
+					H.mind.adjust_skillrank(/datum/skill/craft/tanning, 2, TRUE)
+					ADD_TRAIT(H, TRAIT_DODGEEXPERT, TRAIT_GENERIC)
+					H.set_blindness(0)
+					H.change_stat("speed", 3)
+					H.change_stat("endurance", 1)
+					H.change_stat("strength", 1)
+					armor = /obj/item/clothing/suit/roguetown/armor/leather/bikini
+					pants = /obj/item/clothing/under/roguetown/heavy_leather_pants/shorts
+					wrists = /obj/item/clothing/wrists/roguetown/bracers/leather
+					shoes = /obj/item/clothing/shoes/roguetown/boots/furlinedboots
+					gloves = /obj/item/clothing/gloves/roguetown/fingerless_leather
+					backl = /obj/item/storage/backpack/rogue/satchel
+					belt = /obj/item/storage/belt/rogue/leather
+					neck = /obj/item/storage/belt/rogue/pouch/coins/poor
+					beltr = /obj/item/rogueweapon/whip
+					backpack_contents = list(/obj/item/flashlight/flare/torch = 1, /obj/item/rogueweapon/huntingknife = 1)
+
+				if("Hide Armor Kini")
+					to_chat(H, span_warning("You are a swift and agile warrior who relies on speed and evasion. Your light leather armor allows for maximum mobility."))
+					H.mind.adjust_skillrank(/datum/skill/combat/wrestling, 2, TRUE)
+					H.mind.adjust_skillrank(/datum/skill/combat/unarmed, 2, TRUE)
+					H.mind.adjust_skillrank(/datum/skill/combat/whipsflails, 3, TRUE)
+					H.mind.adjust_skillrank(/datum/skill/misc/athletics, 4, TRUE)
+					H.mind.adjust_skillrank(/datum/skill/misc/swimming, 3, TRUE)
+					H.mind.adjust_skillrank(/datum/skill/misc/climbing, 3, TRUE)
+					H.mind.adjust_skillrank(/datum/skill/misc/reading, 1, TRUE)
+					H.mind.adjust_skillrank(/datum/skill/misc/sewing, 2, TRUE)
+					H.mind.adjust_skillrank(/datum/skill/craft/tanning, 2, TRUE)
+					ADD_TRAIT(H, TRAIT_DODGEEXPERT, TRAIT_GENERIC)
+					H.set_blindness(0)
+					H.change_stat("speed", 3)
+					H.change_stat("endurance", 1)
+					H.change_stat("strength", 1)
+					armor = /obj/item/clothing/suit/roguetown/armor/leather/hide/bikini
+					pants = /obj/item/clothing/under/roguetown/heavy_leather_pants/shorts
+					wrists = /obj/item/clothing/wrists/roguetown/bracers/leather
+					shoes = /obj/item/clothing/shoes/roguetown/boots/furlinedboots
+					gloves = /obj/item/clothing/gloves/roguetown/fingerless_leather
+					backl = /obj/item/storage/backpack/rogue/satchel
+					belt = /obj/item/storage/belt/rogue/leather
+					neck = /obj/item/storage/belt/rogue/pouch/coins/poor
+					beltr = /obj/item/rogueweapon/whip
+					backpack_contents = list(/obj/item/flashlight/flare/torch = 1, /obj/item/rogueweapon/huntingknife = 1)
+
+				if("Studded Leather Kini")
+					to_chat(H, span_warning("You are a refined warrior who combines light protection with precision strikes using a rapier."))
+					H.mind.adjust_skillrank(/datum/skill/combat/knives, 2, TRUE)
+					H.mind.adjust_skillrank(/datum/skill/combat/wrestling, 2, TRUE)
+					H.mind.adjust_skillrank(/datum/skill/combat/unarmed, 2, TRUE)
+					H.mind.adjust_skillrank(/datum/skill/misc/athletics, 3, TRUE)
+					H.mind.adjust_skillrank(/datum/skill/misc/swimming, 2, TRUE)
+					H.mind.adjust_skillrank(/datum/skill/combat/swords, 3, TRUE)
+					H.mind.adjust_skillrank(/datum/skill/misc/climbing, 2, TRUE)
+					H.mind.adjust_skillrank(/datum/skill/misc/reading, 2, TRUE)
+					ADD_TRAIT(H, TRAIT_DODGEEXPERT, TRAIT_GENERIC)
+					H.set_blindness(0)
+					H.change_stat("speed", 2)
+					H.change_stat("endurance", 1)
+					H.change_stat("strength", 2)
+					armor = /obj/item/clothing/suit/roguetown/armor/leather/studded/bikini
+					pants = /obj/item/clothing/under/roguetown/tights/black
+					wrists = /obj/item/clothing/wrists/roguetown/bracers/leather
+					shoes = /obj/item/clothing/shoes/roguetown/boots
+					gloves = /obj/item/clothing/gloves/roguetown/fingerless_leather
+					backl = /obj/item/storage/backpack/rogue/satchel
+					belt = /obj/item/storage/belt/rogue/leather
+					neck = /obj/item/storage/belt/rogue/pouch/coins/poor
+					beltr = /obj/item/rogueweapon/sword/rapier
+					backpack_contents = list(/obj/item/flashlight/flare/torch = 1, /obj/item/rogueweapon/huntingknife/idagger/steel = 1)
+
+				if("Half Plate Kini")
+					to_chat(H, span_warning("You are a balanced warrior who wears medium armor and wields a powerful axe for devastating strikes."))
+					H.mind.adjust_skillrank(/datum/skill/combat/polearms, 2, TRUE)
+					H.mind.adjust_skillrank(/datum/skill/combat/maces, 2, TRUE)
+					H.mind.adjust_skillrank(/datum/skill/combat/axes, 3, TRUE)
+					H.mind.adjust_skillrank(/datum/skill/combat/swords, 2, TRUE)
+					H.mind.adjust_skillrank(/datum/skill/combat/shields, 2, TRUE)			
+					H.mind.adjust_skillrank(/datum/skill/combat/wrestling, 2, TRUE)
+					H.mind.adjust_skillrank(/datum/skill/combat/unarmed, 2, TRUE)
+					H.mind.adjust_skillrank(/datum/skill/misc/swimming, 2, TRUE)
+					H.mind.adjust_skillrank(/datum/skill/misc/athletics, 3, TRUE)
+					H.mind.adjust_skillrank(/datum/skill/misc/climbing, 2, TRUE)
+					H.mind.adjust_skillrank(/datum/skill/misc/reading, 1, TRUE)
+					ADD_TRAIT(H, TRAIT_MEDIUMARMOR, TRAIT_GENERIC)
+					ADD_TRAIT(H, TRAIT_NOPAIN, TRAIT_GENERIC)
+					H.set_blindness(0)
+					H.change_stat("strength", 2)
+					H.change_stat("endurance", 2)
+					H.change_stat("constitution", 1)
+					armor = /obj/item/clothing/suit/roguetown/armor/plate/bikini
+					pants = /obj/item/clothing/under/roguetown/trou/leather
+					wrists = /obj/item/clothing/wrists/roguetown/bracers/leather
+					shoes = /obj/item/clothing/shoes/roguetown/boots
+					gloves = /obj/item/clothing/gloves/roguetown/angle
+					backl = /obj/item/storage/backpack/rogue/satchel
+					belt = /obj/item/storage/belt/rogue/leather
+					neck = /obj/item/storage/belt/rogue/pouch/coins/poor
+					beltr = /obj/item/rogueweapon/stoneaxe/battle
+					backpack_contents = list(/obj/item/flashlight/flare/torch = 1, /obj/item/rogueweapon/huntingknife = 1, /obj/item/recipe_book/survival = 1)
+
+				if("Plate Kini")
+					to_chat(H, span_warning("You are a heavily armored juggernaut who can withstand tremendous punishment while crushing enemies with a mace."))
+					H.mind.adjust_skillrank(/datum/skill/combat/polearms, 2, TRUE)
+					H.mind.adjust_skillrank(/datum/skill/combat/maces, 3, TRUE)
+					H.mind.adjust_skillrank(/datum/skill/combat/axes, 2, TRUE)
+					H.mind.adjust_skillrank(/datum/skill/combat/swords, 2, TRUE)
+					H.mind.adjust_skillrank(/datum/skill/combat/shields, 2, TRUE)			
+					H.mind.adjust_skillrank(/datum/skill/combat/wrestling, 2, TRUE)
+					H.mind.adjust_skillrank(/datum/skill/combat/unarmed, 2, TRUE)
+					H.mind.adjust_skillrank(/datum/skill/misc/swimming, 1, TRUE)
+					H.mind.adjust_skillrank(/datum/skill/misc/athletics, 2, TRUE)
+					H.mind.adjust_skillrank(/datum/skill/misc/climbing, 1, TRUE)
+					H.mind.adjust_skillrank(/datum/skill/misc/reading, 1, TRUE)
+					ADD_TRAIT(H, TRAIT_HEAVYARMOR, TRAIT_GENERIC)
+					H.set_blindness(0)
+					H.change_stat("strength", 3)
+					H.change_stat("constitution", 3)
+					H.change_stat("speed", -1)
+					armor = /obj/item/clothing/suit/roguetown/armor/plate/full/bikini
+					pants = /obj/item/clothing/under/roguetown/trou/leather
+					wrists = /obj/item/clothing/wrists/roguetown/bracers/leather
+					shoes = /obj/item/clothing/shoes/roguetown/boots
+					gloves = /obj/item/clothing/gloves/roguetown/angle
+					backl = /obj/item/storage/backpack/rogue/satchel
+					belt = /obj/item/storage/belt/rogue/leather
+					neck = /obj/item/storage/belt/rogue/pouch/coins/poor
+					beltr = /obj/item/rogueweapon/mace
+					backpack_contents = list(/obj/item/flashlight/flare/torch = 1, /obj/item/rogueweapon/huntingknife = 1, /obj/item/recipe_book/survival = 1)

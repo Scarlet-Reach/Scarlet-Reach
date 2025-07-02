@@ -45,6 +45,7 @@ GLOBAL_LIST_INIT(learnable_spells, (list(/obj/effect/proc_holder/spell/invoked/p
 		/obj/effect/proc_holder/spell/invoked/conjure_weapon,
 		/obj/effect/proc_holder/spell/invoked/conjure_armor,
 		/obj/effect/proc_holder/spell/self/magicians_brick,
+		/obj/effect/proc_holder/spell/self/recall,
 		/obj/effect/proc_holder/spell/invoked/projectile/guided_bolt,
 		/obj/effect/proc_holder/spell/invoked/thunderstrike,
 		/obj/effect/proc_holder/spell/invoked/enchant_weapon,
