@@ -4,33 +4,28 @@
 	allowed_sexes = list(MALE, FEMALE)
 	allowed_races = RACES_ALL_KINDS
 	outfit = /datum/outfit/job/roguetown/adventurer/butcher
-	category_tags = list(CTAG_PILGRIM, CTAG_TOWNER)
+	category_tags = list(CTAG_PILGRIM, CTAG_TOWNER, CTAG_ADVENTURER)
 
 /datum/outfit/job/roguetown/adventurer/butcher/pre_equip(mob/living/carbon/human/H)
 	..()
 	if(H.mind)
 		H.mind.adjust_skillrank(/datum/skill/combat/knives, 3, TRUE)
-		H.mind.adjust_skillrank(/datum/skill/combat/axes, 1, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/misc/reading, 1, TRUE)
-		H.mind.adjust_skillrank(/datum/skill/craft/cooking, 3, TRUE)
+		H.mind.adjust_skillrank(/datum/skill/craft/cooking, 2, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/combat/wrestling, 3, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/combat/unarmed, 2, TRUE)
-		H.mind.adjust_skillrank(/datum/skill/craft/tanning, 1, TRUE)
+		H.mind.adjust_skillrank(/datum/skill/craft/tanning, 3, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/misc/riding, 1, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/craft/crafting, 2, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/labor/butchering, 5, TRUE)
 	armor = /obj/item/clothing/suit/roguetown/armor/leather/vest
 	backl = /obj/item/storage/backpack/rogue/satchel
 	belt = /obj/item/storage/belt/rogue/leather
-	beltl = /obj/item/rogueweapon/huntingknife/cleaver // old tbutcher had no knife. as a butcher.
 	shoes = /obj/item/clothing/shoes/roguetown/boots/leather
-	neck = /obj/item/storage/belt/rogue/pouch/coins/poor
 	backpack_contents = list(
 						/obj/item/kitchen/spoon,
 						/obj/item/reagent_containers/food/snacks/rogue/truffles,
 						/obj/item/flashlight/flare/torch = 1,
-						/obj/item/recipe_book/survival = 1,
-						/obj/item/reagent_containers/food/snacks/fat = 2 // make sausages :)
 						)
 	if(H.pronouns == SHE_HER || H.pronouns == THEY_THEM_F)
 		shirt = /obj/item/clothing/suit/roguetown/shirt/dress/gen/random
@@ -39,6 +34,6 @@
 		wrists = /obj/item/clothing/wrists/roguetown/bracers/leather
 
 	if(H.mind)
-		H.change_stat("strength", 1)	//Stat spread is decent; not great but decent. 
-		H.change_stat("endurance", 2)
-		H.change_stat("constitution", 2)
+		H.change_stat("strength", 1)
+		H.change_stat("endurance", 1)
+		H.change_stat("intelligence", -1)

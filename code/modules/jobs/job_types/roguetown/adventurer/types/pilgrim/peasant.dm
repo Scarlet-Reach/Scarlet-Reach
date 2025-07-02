@@ -1,24 +1,22 @@
 /datum/advclass/peasant
 	name = "Farmer"
-	tutorial = "As a Peasant, you are a skilled farmer, able to grow a variety of crops \
+	tutorial = "As a Peasant, you are a skilled farmer, able to grow a variety of crops. \
 	Join the local Soilsmen at their farm, or make your own little orchard."
 	allowed_sexes = list(MALE, FEMALE)
 	allowed_races = RACES_ALL_KINDS
 	outfit = /datum/outfit/job/roguetown/adventurer/peasant
-	category_tags = list(CTAG_PILGRIM, CTAG_TOWNER)
-	cmode_music = 'sound/music/combat_soilson.ogg'
+	category_tags = list(CTAG_PILGRIM, CTAG_TOWNER, CTAG_ADVENTURER)
 
 /datum/outfit/job/roguetown/adventurer/peasant/pre_equip(mob/living/carbon/human/H)
 	..()
 	H.mind.adjust_skillrank(/datum/skill/combat/wrestling, 2, TRUE)
 	H.mind.adjust_skillrank(/datum/skill/combat/unarmed, 1, TRUE)
-	H.mind.adjust_skillrank(/datum/skill/combat/polearms, 2, TRUE)
+	H.mind.adjust_skillrank(/datum/skill/combat/polearms, 3, TRUE)
 	H.mind.adjust_skillrank(/datum/skill/craft/crafting, 3, TRUE)
-	H.mind.adjust_skillrank(/datum/skill/misc/sewing, 1, TRUE)
+	H.mind.adjust_skillrank(/datum/skill/misc/sewing, 2, TRUE)
 	H.mind.adjust_skillrank(/datum/skill/labor/farming, 4, TRUE)
-	H.mind.adjust_skillrank(/datum/skill/craft/cooking, 1, TRUE)
-	H.mind.adjust_skillrank(/datum/skill/misc/medicine, 1, TRUE)
-	H.mind.adjust_skillrank(/datum/skill/misc/reading, 1, TRUE)
+	H.mind.adjust_skillrank(/datum/skill/craft/cooking, 2, TRUE)
+	H.mind.adjust_skillrank(/datum/skill/misc/medicine, 2, TRUE)
 	belt = /obj/item/storage/belt/rogue/leather/rope
 	shirt = /obj/item/clothing/suit/roguetown/shirt/undershirt/random
 	pants = /obj/item/clothing/under/roguetown/trou
@@ -39,9 +37,10 @@
 						/obj/item/seeds/apple=1,
 						/obj/item/ash=1,
 						/obj/item/flashlight/flare/torch = 1,
-						/obj/item/recipe_book/survival = 1,
 						)
 	beltl = /obj/item/rogueweapon/sickle
 	backr = /obj/item/rogueweapon/hoe
 	H.change_stat("strength", 1)
+	H.change_stat("endurance", 1)
+	H.change_stat("constitution", 1)
 	H.change_stat("intelligence", -1)

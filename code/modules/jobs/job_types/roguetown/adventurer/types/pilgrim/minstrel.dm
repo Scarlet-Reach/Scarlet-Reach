@@ -1,6 +1,6 @@
 /datum/advclass/minstrel
 	name = "Minstrel"
-	tutorial = "You are a musician at heart, and not like those so-called bards who traipse around in fancy cloth and swordfight in the woods. Music is truly your calling, you're just... Yet to find a receptive audience."
+	tutorial = "You are a musician at heart, and not like those so-called bards who traipse around in fancy cloth and swordfight in the woods. Music is truly your calling, you're just... yet to find a receptive audience."
 	allowed_sexes = list(MALE, FEMALE)
 	allowed_races = RACES_ALL_KINDS
 	outfit = /datum/outfit/job/roguetown/adventurer/minstrel
@@ -8,17 +8,17 @@
 
 /datum/outfit/job/roguetown/adventurer/minstrel/pre_equip(mob/living/carbon/human/H)
 	..()
-	H.mind.adjust_skillrank(/datum/skill/misc/music, 4, TRUE)
+	H.mind.adjust_skillrank(/datum/skill/misc/music, 5, TRUE)
 	H.mind.adjust_skillrank(/datum/skill/misc/reading, 2, TRUE)
-	H.mind.adjust_skillrank(/datum/skill/combat/knives, 2, TRUE)
+	H.mind.adjust_skillrank(/datum/skill/combat/knives, 3, TRUE)
 	H.mind.adjust_skillrank(/datum/skill/misc/sneaking, 2, TRUE)
 	H.mind.adjust_skillrank(/datum/skill/misc/stealing, 2, TRUE)
-	H.mind.adjust_skillrank(/datum/skill/misc/athletics, 1, TRUE)
+	H.mind.adjust_skillrank(/datum/skill/misc/athletics, 2, TRUE)
 	H.mind.adjust_skillrank(/datum/skill/craft/crafting, 1, TRUE)
 	H.mind.adjust_skillrank(/datum/skill/combat/unarmed, 1, TRUE)
 	neck = /obj/item/storage/belt/rogue/pouch/coins/poor
 	cloak = /obj/item/clothing/cloak/half
-	shirt = /obj/item/clothing/suit/roguetown/shirt/tunic/white
+	shirt = /obj/item/clothing/suit/roguetown/shirt/undershirt/artificer
 	r_hand = /obj/item/rogue/instrument/accord
 	pants = /obj/item/clothing/under/roguetown/tights/random
 	shoes = /obj/item/clothing/shoes/roguetown/shortboots

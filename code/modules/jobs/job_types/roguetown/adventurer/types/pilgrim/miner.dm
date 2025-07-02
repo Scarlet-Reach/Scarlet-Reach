@@ -1,29 +1,25 @@
 /datum/advclass/miner
 	name = "Miner"
 	tutorial = "You are a Miner, you mine for the local blacksmith, gathering rare ores. \
-	there are tales of ambitious dwarf miners building great forts in the lavalands, to harvest all of its hardly touched ores"
+	There are tales of ambitious dwarf miners building great forts in the lavalands, to harvest all of its hardly touched ores."
 	allowed_sexes = list(MALE, FEMALE)
 	allowed_races = RACES_ALL_KINDS
 	outfit = /datum/outfit/job/roguetown/adventurer/miner
 
-	category_tags = list(CTAG_PILGRIM, CTAG_TOWNER)
+	category_tags = list(CTAG_PILGRIM, CTAG_TOWNER, CTAG_ADVENTURER)
 
 /datum/outfit/job/roguetown/adventurer/miner/pre_equip(mob/living/carbon/human/H)
 	..()
-	head = /obj/item/clothing/head/roguetown/armingcap
+	head = /obj/item/clothing/head/roguetown/helmet/leather/minershelm
 	shoes = /obj/item/clothing/shoes/roguetown/boots/leather
 	belt = /obj/item/storage/belt/rogue/leather
 	neck = /obj/item/storage/belt/rogue/pouch/coins/poor
-	beltl = /obj/item/rogueweapon/pick
+	beltl = /obj/item/rogueweapon/stoneaxe/woodcut/pick
 	beltr = /obj/item/rogueweapon/huntingknife
 	backl = /obj/item/storage/backpack/rogue/backpack
 	backpack_contents = list(
 						/obj/item/flint = 1,
 						/obj/item/flashlight/flare/torch = 1,
-						/obj/item/rogueweapon/chisel = 1, 
-						/obj/item/rogueweapon/hammer/wood = 1,
-						/obj/item/recipe_book/survival = 1,
-						/obj/item/recipe_book/builder = 1,
 						)
 	if(H.pronouns == SHE_HER || H.pronouns == THEY_THEM_F)
 		armor = /obj/item/clothing/suit/roguetown/shirt/dress/gen
@@ -38,7 +34,6 @@
 		H.mind.adjust_skillrank(/datum/skill/combat/wrestling, 2, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/combat/unarmed, 3, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/combat/knives, 1, TRUE)
-		H.mind.adjust_skillrank(/datum/skill/combat/polearms, 3, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/misc/swimming, 1, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/misc/climbing, 2, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/craft/crafting, 2, TRUE)
@@ -47,11 +42,11 @@
 		H.mind.adjust_skillrank(/datum/skill/craft/carpentry, 1, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/craft/masonry, 3, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/misc/medicine, 1, TRUE)
-		H.mind.adjust_skillrank(/datum/skill/labor/mining, 4, TRUE)
+		H.mind.adjust_skillrank(/datum/skill/labor/mining, 5, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/craft/smelting, 4, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/misc/reading, 1, TRUE)
-		H.change_stat("strength", 2)
+		H.change_stat("strength", 3)
 		H.change_stat("endurance", 1)
 		H.change_stat("constitution", 2)
-		H.change_stat("fortune", 2)
-		ADD_TRAIT(H, TRAIT_NOCSIGHT, TRAIT_GENERIC)
+		H.change_stat("speed", -2)
+		H.change_stat("fortune", 3)
