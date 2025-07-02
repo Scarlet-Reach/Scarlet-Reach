@@ -221,3 +221,8 @@
 	stressadd = -1
 	desc = span_green("I have prevailed over my rival! Graggar favours me now!")
 	timer = INFINITY
+
+/datum/stressevent/psicross_worn
+	stressadd = -2
+	desc = span_green("PSYDON protects me.")
+	timer = INFINITY

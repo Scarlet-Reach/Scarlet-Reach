@@ -263,3 +263,7 @@
 
 /atom/movable/screen/fullscreen/dreaming/waking_up
 	icon_state = "wake_up"
+
+/atom/movable/screen/fullscreen/psydon
+	icon = 'icons/mob/screen_full.dmi'
+	icon_state = "psydon"
