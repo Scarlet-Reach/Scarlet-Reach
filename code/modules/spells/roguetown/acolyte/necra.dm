@@ -71,15 +71,9 @@
 				user.throw_at(get_ranged_target_turf(user, get_dir(user,L), 7), 7, 1, L, spin = FALSE)
 				return
 		if((L.mob_biotypes & MOB_UNDEAD) || isvampire || iszombie)
-			var/vamp_prob = prob2explode
-			if(isvampire)
-				vamp_prob -= 59
-			if(prob(vamp_prob))
-				L.visible_message("<span class='warning'>[L] has been churned by Necra's grip!", "<span class='danger'>I've been churned by Necra's grip!")
-				explosion(get_turf(L), light_impact_range = 1, flame_range = 1, smoke = FALSE)
-				L.Stun(50)
-			else
-				L.visible_message(span_warning("[L] resists being churned!"), span_userdanger("I resist being churned!"))
+			L.visible_message("<span class='warning'>[L] has been churned!", "<span class='danger'>I've been churned!")
+			explosion(get_turf(L), light_impact_range = 1, flame_range = 1, smoke = FALSE)
+			L.Stun(50)
 	..()
 	return TRUE
 
