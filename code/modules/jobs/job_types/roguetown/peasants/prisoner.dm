@@ -487,3 +487,84 @@
 	H.change_stat("constitution", 1)
 	H.change_stat("perception", 1)
 
+// Cleric Prisoner subclass
+/datum/advclass/prisonercleric
+	name = "Cleric Prisoner"
+	tutorial = "A captured missionary of the divine, kept as a hostage for ransom. Your faith sustains you in captivity, and you cling to your religious symbols for comfort."
+	allowed_sexes = list(MALE, FEMALE)
+	allowed_races = RACES_ALL_KINDS
+	outfit = /datum/outfit/job/roguetown/prisoner/cleric
+	category_tags = list(CTAG_PRISONER)
+	maximum_possible_slots = 1
+	pickprob = 10
+
+/datum/outfit/job/roguetown/prisoner/cleric/pre_equip(mob/living/carbon/human/H)
+	..()
+	// Add druidic skill for Dendor followers
+	if(istype(H.patron, /datum/patron/divine/dendor))
+		H.mind.adjust_skillrank(/datum/skill/magic/druidic, 3, TRUE)
+		to_chat(H, span_notice("As a follower of Dendor, you have innate knowledge of druidic magic."))
+
+	// Missionary skills without equipment
+	H.mind.adjust_skillrank(/datum/skill/combat/polearms, 2, TRUE)
+	H.mind.adjust_skillrank(/datum/skill/magic/holy, 4, TRUE)
+	H.mind.adjust_skillrank(/datum/skill/combat/wrestling, 1, TRUE)
+	H.mind.adjust_skillrank(/datum/skill/combat/unarmed, 1, TRUE)
+	H.mind.adjust_skillrank(/datum/skill/misc/swimming, 1, TRUE)
+	H.mind.adjust_skillrank(/datum/skill/misc/climbing, 2, TRUE)
+	H.mind.adjust_skillrank(/datum/skill/misc/athletics, 2, TRUE)
+	H.mind.adjust_skillrank(/datum/skill/misc/reading, 4, TRUE)
+	H.mind.adjust_skillrank(/datum/skill/misc/medicine, 2, TRUE)
+	H.cmode_music = 'sound/music/combat_holy.ogg'
+	H.change_stat("intelligence", 2)
+	H.change_stat("endurance", 1)
+	H.change_stat("perception", 2)
+	H.change_stat("speed", 1)
+
+	// Faith-specific cross on wrist instead of neck
+	switch(H.patron?.type)
+		if(/datum/patron/old_god)
+			wrists = /obj/item/clothing/neck/roguetown/psicross
+		if(/datum/patron/divine/astrata)
+			wrists = /obj/item/clothing/neck/roguetown/psicross/astrata
+		if(/datum/patron/divine/noc)
+			wrists = /obj/item/clothing/neck/roguetown/psicross/noc
+		if(/datum/patron/divine/abyssor)
+			wrists = /obj/item/clothing/neck/roguetown/psicross/abyssor
+		if(/datum/patron/divine/dendor)
+			wrists = /obj/item/clothing/neck/roguetown/psicross/dendor
+			H.cmode_music = 'sound/music/combat_druid.ogg'
+		if(/datum/patron/divine/necra)
+			wrists = /obj/item/clothing/neck/roguetown/psicross/necra
+		if(/datum/patron/divine/pestra)
+			wrists = /obj/item/clothing/neck/roguetown/psicross/pestra
+		if(/datum/patron/divine/ravox)
+			wrists = /obj/item/clothing/neck/roguetown/psicross/ravox
+		if(/datum/patron/divine/malum)
+			wrists = /obj/item/clothing/neck/roguetown/psicross/malum
+		if(/datum/patron/divine/eora)
+			wrists = /obj/item/clothing/neck/roguetown/psicross/eora
+		if(/datum/patron/inhumen/zizo)
+			H.cmode_music = 'sound/music/combat_cult.ogg'
+			wrists = /obj/item/roguekey/inhumen
+		if (/datum/patron/inhumen/matthios)
+			H.cmode_music = 'sound/music/combat_cult.ogg'
+		if(/datum/patron/divine/xylix) // Random psicross for Xylix
+			var/list/psicross_options = list(
+			/obj/item/clothing/neck/roguetown/psicross,
+			/obj/item/clothing/neck/roguetown/psicross/astrata,
+			/obj/item/clothing/neck/roguetown/psicross/noc,
+			/obj/item/clothing/neck/roguetown/psicross/abyssor,
+			/obj/item/clothing/neck/roguetown/psicross/dendor,
+			/obj/item/clothing/neck/roguetown/psicross/necra,
+			/obj/item/clothing/neck/roguetown/psicross/pestra,
+			/obj/item/clothing/neck/roguetown/psicross/ravox,
+			/obj/item/clothing/neck/roguetown/psicross/malum,
+			/obj/item/clothing/neck/roguetown/psicross/eora
+			)
+			wrists = pick(psicross_options)
+
+	// Grant miracles like missionary
+	var/datum/devotion/C = new /datum/devotion(H, H.patron)
+	C.grant_miracles(H, cleric_tier = CLERIC_T1, passive_gain = CLERIC_REGEN_MINOR)	//Minor regen, can level up to T4.
+
