@@ -267,3 +267,4 @@
 /atom/movable/screen/fullscreen/psydon
 	icon = 'icons/mob/screen_full.dmi'
 	icon_state = "psydon"
+	plane = FULLSCREEN_PLANE

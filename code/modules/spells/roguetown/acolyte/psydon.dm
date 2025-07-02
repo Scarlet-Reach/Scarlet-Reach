@@ -4,8 +4,8 @@
 	name = "Elucidate"
 	overlay_state = "limb_attach"
 	desc = "The Agonizing Truth of the Martyr causes a temporary seizure of the senses."
-	recharge_time = 10 SECONDS
-	chargetime = 0 SECONDS
+	recharge_time = 60 SECONDS
+	chargetime = 5 SECONDS
 	chargedrain = 0 SECONDS
 	movement_interrupt = FALSE
 	warnie = "sydwarning"
