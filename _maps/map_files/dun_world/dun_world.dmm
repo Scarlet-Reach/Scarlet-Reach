@@ -2442,7 +2442,7 @@
 /area/rogue/indoors/town)
 "aQb" = (
 /obj/structure/fluff/signage{
-	name = "SCARLET REACH - NORTH"
+	name = "BLACKMOOR - NORTH"
 	},
 /turf/open/floor/rogue/dirt,
 /area/rogue/outdoors/woods)
@@ -2702,11 +2702,6 @@
 	},
 /turf/open/water/swamp,
 /area/rogue/outdoors/bog)
-"aVg" = (
-/obj/structure/bed/rogue/shit,
-/obj/effect/landmark/start/prisonerr,
-/turf/open/floor/rogue/cobble,
-/area/rogue/indoors/town/cell)
 "aVq" = (
 /obj/structure/mineral_door/wood{
 	locked = 1;
@@ -5076,7 +5071,7 @@
 /area/rogue/under/town/basement/keep)
 "bJP" = (
 /obj/structure/fluff/signage{
-	name = "SCARLET REACH - EAST"
+	name = "BLACKMOOR - EAST"
 	},
 /turf/open/floor/rogue/dirt/road,
 /area/rogue/outdoors/woods)
@@ -13472,11 +13467,6 @@
 "eFz" = (
 /turf/open/floor/rogue/dirt/road,
 /area/rogue/indoors/town/church/basement)
-"eFC" = (
-/obj/effect/landmark/start/prisonerr,
-/obj/structure/table/wood,
-/turf/open/floor/rogue/cobble,
-/area/rogue/indoors/town/cell)
 "eFD" = (
 /obj/structure/chair/wood/rogue/chair3,
 /obj/machinery/light/rogue/wallfire/candle/r,
@@ -22754,7 +22744,7 @@
 /area/rogue/indoors/town/bath)
 "hJB" = (
 /obj/structure/fluff/signage{
-	name = "SCARLET REACH - EAST"
+	name = "BLACKMOOR - EAST"
 	},
 /turf/open/floor/rogue/grass,
 /area/rogue/outdoors/mountains)
@@ -39819,6 +39809,7 @@
 "nCn" = (
 /obj/structure/fluff/walldeco/chains,
 /obj/effect/decal/cleanable/blood,
+/obj/effect/landmark/start/prisonerr,
 /turf/open/floor/rogue/cobble,
 /area/rogue/indoors/town/cell)
 "nCs" = (
@@ -41731,7 +41722,7 @@
 /area/rogue/indoors/town)
 "okN" = (
 /obj/structure/fluff/walldeco/goblet{
-	name = "Scarlet Pints Inn and Bath"
+	name = "Blackmoorian Pints Inn and Bath"
 	},
 /turf/open/floor/rogue/ruinedwood/spiral,
 /area/rogue/indoors/town/tavern)
@@ -43352,6 +43343,7 @@
 /area/rogue/indoors/town/physician)
 "oNE" = (
 /obj/structure/fluff/walldeco/chains,
+/obj/effect/landmark/start/prisonerr,
 /turf/open/floor/rogue/cobble,
 /area/rogue/indoors/town/cell)
 "oNG" = (
@@ -51820,6 +51812,7 @@
 "rFo" = (
 /obj/structure/fluff/walldeco/chains,
 /obj/effect/decal/cleanable/blood/puddle,
+/obj/effect/landmark/start/prisonerr,
 /turf/open/floor/rogue/cobble,
 /area/rogue/indoors/town/cell)
 "rFB" = (
@@ -68822,7 +68815,7 @@
 /area/rogue/indoors/town/physician)
 "xkL" = (
 /obj/structure/fluff/signage{
-	name = "SCARLET REACH - NORTH"
+	name = "BLACKMOOR - NORTH"
 	},
 /turf/open/floor/rogue/dirt/road,
 /area/rogue/outdoors/rtfield)
@@ -278100,14 +278093,14 @@ oDW
 htZ
 dKM
 dwl
-eFC
+dot
 rPF
 dot
-aVg
+dwl
 aaB
 rPF
 dot
-aVg
+dwl
 dKM
 wFN
 uqB
