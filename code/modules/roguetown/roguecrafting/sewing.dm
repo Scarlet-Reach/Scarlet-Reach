@@ -1124,7 +1124,6 @@ datum/crafting_recipe/roguetown/sewing/Purdress
 				/obj/item/natural/fibers = 4)
 	craftdiff = 2
 
-surgical-bag-merchants
 /datum/crafting_recipe/roguetown/sewing/surgicalbag
 	name = "surgeon's bag (3 fibers, 1 cloth)"
 	result = list(/obj/item/storage/belt/rogue/surgery_bag/empty)
