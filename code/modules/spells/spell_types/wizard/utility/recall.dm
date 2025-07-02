@@ -5,17 +5,15 @@
 	charge_type = "recharge"
 	recharge_time = 3 MINUTES
 	clothes_req = FALSE
-	cost = 2
+	cost = 4
 	spell_tier = 2
-	invocation = "There's no place like home!"
-	invocation_type = "whisper"
 	cooldown_min = 3 MINUTES
 	associated_skill = /datum/skill/magic/arcane
 	xp_gain = TRUE
 	action_icon_state = "spell0"
 
 	var/turf/marked_location = null
-	var/recall_delay = 10 SECONDS
+	var/recall_delay = 15 SECONDS
 
 /obj/effect/proc_holder/spell/self/recall/cast(mob/user = usr)
 	if(!istype(user, /mob/living/carbon/human))
