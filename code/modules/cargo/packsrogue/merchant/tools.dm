@@ -234,8 +234,3 @@
 	cost = 10
 	contains = list(/obj/item/storage/hip/headhook)
 
-/datum/supply_pack/rogue/tools/surgeonsbag
-	name = "Surgeon's bag, Full"
-	cost = 80
-	contains = list(/obj/item/storage/belt/rogue/surgery_bag)
-
