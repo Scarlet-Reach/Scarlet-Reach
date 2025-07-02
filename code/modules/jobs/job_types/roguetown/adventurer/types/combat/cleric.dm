@@ -1,7 +1,5 @@
 //shield
 /datum/advclass/cleric
-//shield
-/datum/advclass/cleric
 	name = "Cleric"
 	tutorial = "Disciples of the divine - clerics are blessed with the power of miracles from the gods themselves."
 	allowed_sexes = list(MALE, FEMALE)
@@ -334,5 +332,20 @@
 			neck = /obj/item/roguekey/inhumen
 		if (/datum/patron/inhumen/matthios)
 			H.cmode_music = 'sound/music/combat_bandit.ogg'
+
+		if(/datum/patron/divine/xylix) // Random pricross for Xylix
+			var/list/psicross_options = list(
+			/obj/item/clothing/neck/roguetown/psicross,
+			/obj/item/clothing/neck/roguetown/psicross/astrata,
+			/obj/item/clothing/neck/roguetown/psicross/noc,
+			/obj/item/clothing/neck/roguetown/psicross/abyssor,
+			/obj/item/clothing/neck/roguetown/psicross/dendor,
+			/obj/item/clothing/neck/roguetown/psicross/necra,
+			/obj/item/clothing/neck/roguetown/psicross/pestra,
+			/obj/item/clothing/neck/roguetown/psicross/ravox,
+			/obj/item/clothing/neck/roguetown/psicross/malum,
+			/obj/item/clothing/neck/roguetown/psicross/eora
+			)
+			neck = pick(psicross_options)
 
 	H.verbs += list(/mob/living/carbon/human/proc/devotionreport, /mob/living/carbon/human/proc/clericpray)
