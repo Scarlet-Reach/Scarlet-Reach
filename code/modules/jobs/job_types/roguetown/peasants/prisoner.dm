@@ -490,13 +490,11 @@
 // Cleric Prisoner subclass
 /datum/advclass/prisonercleric
 	name = "Cleric Prisoner"
-	tutorial = "A captured missionary of the divine, kept as a hostage for ransom. Your faith sustains you in captivity, and you cling to your religious symbols for comfort."
+	tutorial = "You cling to your religious symbols for comfort."
 	allowed_sexes = list(MALE, FEMALE)
 	allowed_races = RACES_ALL_KINDS
 	outfit = /datum/outfit/job/roguetown/prisoner/cleric
 	category_tags = list(CTAG_PRISONER)
-	maximum_possible_slots = 1
-	pickprob = 10
 
 /datum/outfit/job/roguetown/prisoner/cleric/pre_equip(mob/living/carbon/human/H)
 	..()
