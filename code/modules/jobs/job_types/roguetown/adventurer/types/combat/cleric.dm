@@ -126,7 +126,7 @@
 					head = /obj/item/clothing/head/roguetown/helmet/heavy/nochelm
 				if(/datum/patron/divine/abyssor)
 					cloak = /obj/item/clothing/cloak/templar/abyssor
-					head = /obj/item/clothing/head/roguetown/helmet/heavy/bucket
+					head = /obj/item/clothing/head/roguetown/helmet/heavy/abyssorgreathelm
 				if(/datum/patron/divine/dendor)
 					cloak = /obj/item/clothing/cloak/templar/dendor
 					head = /obj/item/clothing/head/roguetown/helmet/heavy/dendorhelm
@@ -138,7 +138,7 @@
 					head = /obj/item/clothing/head/roguetown/helmet/heavy/malum
 				if (/datum/patron/divine/eora)
 					cloak = /obj/item/clothing/cloak/templar/eora
-					head = /obj/item/clothing/head/roguetown/helmet/sallet/eoran
+					head = /obj/item/clothing/head/roguetown/helmet/heavy/eoran
 				if (/datum/patron/divine/ravox)
 					cloak = /obj/item/clothing/cloak/templar/ravox
 					head = /obj/item/clothing/head/roguetown/helmet/heavy/bucket/gold
@@ -147,13 +147,13 @@
 					head = /obj/item/clothing/head/roguetown/helmet/heavy/bucket
 				if (/datum/patron/divine/pestra)
 					cloak = /obj/item/clothing/cloak/templar/pestra
-					head = /obj/item/clothing/head/roguetown/helmet/heavy/pestrahelm
+					head = /obj/item/clothing/head/roguetown/helmet/heavy/pestran
 				else
 					cloak = /obj/item/clothing/cloak/cape/crusader
 					head = /obj/item/clothing/head/roguetown/helmet/heavy/bucket
 			H.dna.species.soundpack_m = new /datum/voicepack/male/knight()
 			var/datum/devotion/C = new /datum/devotion(H, H.patron)
-			C.grant_spells_templar(H)
+			C.grant_miracles(H, cleric_tier = CLERIC_T1, passive_gain = FALSE, devotion_limit = CLERIC_REQ_1)
 			var/weapons = list("Bastard Sword","Mace","Flail")
 			var/weapon_choice = input("Choose your weapon.", "TAKE UP ARMS") as anything in weapons
 			switch(weapon_choice)
