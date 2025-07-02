@@ -76,12 +76,6 @@
 #define SPAN_UNDEAD "undead" //nyi but file found
 #define SPAN_CAT "cat"		 //nyi but file found
 
-// Global mapping of accent names to their span lists
-GLOBAL_LIST_INIT(accent_spans, list(
-	"Saut al-Atash accent" = list(SPAN_SANDWAUK)
-	//Add font-based accents here as needed
-))
-
 //bitflag #defines for return value of the radio() proc.
 #define ITALICS 1
 #define REDUCE_RANGE 2
