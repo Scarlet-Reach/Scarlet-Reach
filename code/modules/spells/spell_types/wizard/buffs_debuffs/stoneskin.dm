@@ -11,7 +11,7 @@
 	recharge_time = 2 MINUTES
 	warnie = "spellwarning"
 	school = "transmutation"
-	spell_tier = 2
+	spell_tier = 1
 	invocation = "Perstare Sicut Saxum." // Endure like Stone 
 	invocation_type = "whisper"
 	glow_color = GLOW_COLOR_BUFF

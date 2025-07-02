@@ -17,7 +17,7 @@
 	charging_slowdown = 1
 	chargedloop = /datum/looping_sound/invokegen
 	associated_skill = /datum/skill/magic/arcane
-	spell_tier = 2
+	spell_tier = 1
 	invocation = "Exmoveo!"
 	invocation_type = "shout"
 	glow_color = GLOW_COLOR_DISPLACEMENT

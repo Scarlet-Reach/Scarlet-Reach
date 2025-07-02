@@ -13,7 +13,7 @@
 	overlay_state = "fetch"
 	no_early_release = TRUE
 	charging_slowdown = 1
-	spell_tier = 2
+	spell_tier = 1
 	invocation = "Recolligere"
 	invocation_type = "whisper"
 	hide_charge_effect = TRUE // essential for rogue mage

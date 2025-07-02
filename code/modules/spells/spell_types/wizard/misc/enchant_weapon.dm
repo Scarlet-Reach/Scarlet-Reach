@@ -26,7 +26,7 @@
 
 	charging_slowdown = 3
 	cost = 2 // Slightly discounted as it is mostly buff.
-	spell_tier = 2 // Spellblade tier.
+	spell_tier = 1
 
 	invocation = "Incantare Arma!" // Enchant Weapon(s)
 	invocation_type = "whisper"

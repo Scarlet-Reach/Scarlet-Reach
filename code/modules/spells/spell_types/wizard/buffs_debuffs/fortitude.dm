@@ -12,7 +12,7 @@
 	overlay_state = "fortitude"
 	no_early_release = TRUE
 	movement_interrupt = FALSE
-	spell_tier = 2
+	spell_tier = 1
 	invocation = "Tenax"
 	invocation_type = "whisper"
 	glow_color = GLOW_COLOR_BUFF

@@ -10,7 +10,7 @@
 	warnie = "spellwarning"
 	school = "transmutation"
 	overlay_state = "rune3" // Temporary
-	spell_tier = 2
+	spell_tier = 1
 	invocation = "Festinatio!"
 	invocation_type = "shout" // I mean, it is fast
 	glow_color = GLOW_COLOR_BUFF

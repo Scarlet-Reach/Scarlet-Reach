@@ -10,7 +10,7 @@
 	recharge_time = 2 MINUTES
 	warnie = "spellwarning"
 	school = "transmutation"
-	spell_tier = 2
+	spell_tier = 1
 	invocation = "Oculi Accipitris." // Oculi - Eyes. Accipitris - Hawk, singular.
 	invocation_type = "whisper"
 	glow_color = GLOW_COLOR_BUFF

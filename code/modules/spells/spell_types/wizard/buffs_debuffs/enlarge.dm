@@ -10,7 +10,7 @@
 	no_early_release = TRUE
 	movement_interrupt = FALSE
 	charging_slowdown = 3
-	spell_tier = 2
+	spell_tier = 1
 	invocation = "Dilatare!"
 	invocation_type = "shout"
 	chargedloop = /datum/looping_sound/wind
