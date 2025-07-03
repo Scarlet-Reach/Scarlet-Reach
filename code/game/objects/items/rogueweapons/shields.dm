@@ -77,7 +77,7 @@
 	icon_state = "inbash"
 	hitsound = list('sound/combat/shieldbash_wood.ogg')
 	chargetime = 0
-	penfactor = BLUNT_DEFAULT_PENFACTOR
+	penfactor = 30
 	item_d_type = "blunt"
 
 /datum/intent/shield/bash/metal
@@ -102,8 +102,8 @@
 	attack_verb = list("smashes")
 	icon_state = "insmash"
 	hitsound = list('sound/combat/shieldbash_wood.ogg')
-	penfactor = BLUNT_DEFAULT_PENFACTOR
-	damfactor = 1.5
+	penfactor = 50
+	damfactor = 1
 	swingdelay = 10
 
 /datum/intent/shield/smash/metal
