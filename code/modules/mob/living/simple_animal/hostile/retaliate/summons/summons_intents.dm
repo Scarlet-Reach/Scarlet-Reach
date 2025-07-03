@@ -3,7 +3,7 @@
 	icon_state = "instrike"
 	attack_verb = list("punches", "strikes", "rolls on", "crushes")
 	animname = "blank22"
-	blade_class = BCLASS_BLUNT
+	blade_class = 10
 	hitsound = null
 	chargetime = 0
 	penfactor = BLUNT_DEFAULT_PENFACTOR
@@ -14,7 +14,7 @@
 	icon_state = "instrike"
 	attack_verb = list("punches", "strikes", "kicks", "steps on", "crushes")
 	animname = "blank22"
-	blade_class = BCLASS_SMASH
+	blade_class = 10
 	hitsound = null
 	chargetime = 0
 	penfactor = BLUNT_DEFAULT_PENFACTOR
