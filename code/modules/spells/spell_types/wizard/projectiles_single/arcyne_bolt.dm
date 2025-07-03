@@ -28,7 +28,7 @@
 /obj/projectile/energy/rogue3
 	name = "Arcyne Bolt"
 	icon_state = "arcane_barrage"
-	damage = 40
+	damage = 39
 	woundclass = BCLASS_BLUNT
 	nodamage = FALSE
 	npc_damage_mult = 1.5 // Makes it more effective against NPCs.
