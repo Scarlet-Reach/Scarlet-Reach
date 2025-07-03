@@ -615,6 +615,7 @@ GLOBAL_LIST_EMPTY(asset_datums)
 		"hell.ttf" = 'interface/fonts/languages/hell.ttf',
 		"orc.ttf" = 'interface/fonts/languages/orc.ttf',
 		"sand.ttf" = 'interface/fonts/languages/sand.ttf',
+		"algaib.ttf" = 'interface/fonts/languages/algaib.ttf',
 		"undead.ttf" = 'interface/fonts/languages/undead.ttf',
 		"draconic.ttf" = 'interface/fonts/languages/draconic.ttf',
 		"grenzelhoftian.ttf" = 'interface/fonts/languages/grenzelhoftian.ttf',

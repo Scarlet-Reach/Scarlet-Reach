@@ -129,10 +129,11 @@ h1.alert, h2.alert	{color: #c9c1ba;font-family: Pterra, TrueType;}
 .papyrus				{font-family: "Papyrus", cursive, sans-serif;}
 .robot					{font-family: "Courier New", cursive, sans-serif;}
 
+.sandwauk				{font-family: "Ramadhan Karim", Pterra; font-size: 150%;}
 .human					{font-family: "Honoka Mincho", Pterra;}
 .elf					{font-family: "Dauphin", cursive, Pterra;}
 .dwarf					{font-family: "MasonAlternate", Pterra;}
-.sandspeak				{font-family: "Arabolical", Pterra;}
+.sandspeak				{font-family: "Furqan", Pterra;}
 .delf					{font-family: "Dauphin", Pterra;}
 .hellspeak				{font-family: "Xaphan", Pterra; font-size: 110%}
 .undead					{font-family: "FriskyVampire", Pterra;}
