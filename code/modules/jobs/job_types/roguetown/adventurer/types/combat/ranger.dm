@@ -9,12 +9,13 @@
 	classes = list("Sentinel" = "You are a ranger well-versed in traversing untamed lands, with years of experience taking odd jobs as a pathfinder and bodyguard in areas of wilderness untraversable to common soldiery.",
 					"Assassin" = "You've lived the life of a hired killer and have spent your time training with blades and crossbows alike.",
 					"Bombadier" = "Bombs? You've got them. Plenty of them - and the skills to make more. You've spent years training under skilled alchemists and have found the perfect mix to create some chaos - now go blow something up!",
-					"Biome Wanderer" = "The dangers of the wilds vary upon the plains they rest upon, You happen to be experienced in many.")
+					"Biome Wanderer" = "The dangers of the wilds vary upon the plains they rest upon, You happen to be experienced in many.",
+					"Famkha" = "Why shoot arrows when you can lob bricks?")
 
 /datum/outfit/job/roguetown/adventurer/ranger/pre_equip(mob/living/carbon/human/H)
 	..()
 	H.adjust_blindness(-3)
-	var/classes = list("Sentinel","Assassin","Bombadier","Biome Wanderer")
+	var/classes = list("Sentinel","Assassin","Bombadier","Biome Wanderer","Famkha")
 	var/classchoice = input("Choose your archetypes", "Available archetypes") as anything in classes
 
 	switch(classchoice)
@@ -199,3 +200,55 @@
 			H.change_stat("perception", 2) // Look far, but not too far.
 			H.change_stat("endurance", 2)
 			H.change_stat("intelligence", 1) // Adaptive to their surroundings.
+
+		if("Famkha")
+			to_chat(H, span_warning("Why shoot arrows when you can lob bricks?"))
+			// Equipment (copy from Sentinel as a base, but can be customized)
+			shoes = /obj/item/clothing/shoes/roguetown/boots/leather
+			shirt = /obj/item/clothing/suit/roguetown/shirt/undershirt
+			neck = /obj/item/storage/belt/rogue/pouch/coins/poor
+			pants = /obj/item/clothing/under/roguetown/trou/leather
+			gloves = /obj/item/clothing/gloves/roguetown/leather
+			wrists = /obj/item/clothing/wrists/roguetown/bracers/leather
+			belt = /obj/item/storage/belt/rogue/leather
+			if(should_wear_femme_clothes(H))
+				armor = /obj/item/clothing/suit/roguetown/armor/leather/hide/bikini
+			else
+				armor = /obj/item/clothing/suit/roguetown/armor/leather/hide
+			cloak = /obj/item/clothing/cloak/raincloak/green
+			backl = /obj/item/storage/backpack/rogue/satchel
+			beltr = /obj/item/flashlight/flare/torch/lantern
+			backpack_contents = list(/obj/item/bait = 1, /obj/item/rogueweapon/huntingknife = 1, /obj/item/recipe_book/survival = 1, /obj/item/reagent_containers/glass/bottle/alchemical/intpot = 2)
+			
+			H.mind.adjust_skillrank(/datum/skill/misc/athletics, 3, TRUE)
+			H.mind.adjust_skillrank(/datum/skill/combat/knives, 3, TRUE)
+			H.mind.adjust_skillrank(/datum/skill/combat/wrestling, 2, TRUE)
+			H.mind.adjust_skillrank(/datum/skill/combat/unarmed, 2, TRUE)
+			H.mind.adjust_skillrank(/datum/skill/misc/swimming, 3, TRUE)
+			H.mind.adjust_skillrank(/datum/skill/misc/climbing, 4, TRUE)
+			H.mind.adjust_skillrank(/datum/skill/craft/crafting, 2, TRUE)
+			H.mind.adjust_skillrank(/datum/skill/misc/reading, 1, TRUE)
+			H.mind.adjust_skillrank(/datum/skill/misc/sneaking, 2, TRUE)
+			H.mind.adjust_skillrank(/datum/skill/craft/tanning, 2, TRUE)
+			H.mind.adjust_skillrank(/datum/skill/labor/fishing, 2, TRUE)
+			H.mind.adjust_skillrank(/datum/skill/labor/butchering, 2, TRUE)
+			H.mind.adjust_skillrank(/datum/skill/craft/traps, 2, TRUE)
+			H.mind.adjust_skillrank(/datum/skill/craft/cooking, 2, TRUE)
+			H.mind.adjust_skillrank(/datum/skill/misc/tracking, 2, TRUE)
+			H.mind.adjust_skillrank(/datum/skill/combat/maces, 3, TRUE)
+			H.mind.adjust_skillrank(/datum/skill/magic/arcane, 2, TRUE)
+			
+			ADD_TRAIT(H, TRAIT_DODGEEXPERT, TRAIT_GENERIC)
+			ADD_TRAIT(H, TRAIT_MAGEARMOR, TRAIT_GENERIC)
+			
+			H.change_stat("speed", 3)
+			H.change_stat("intelligence", 2)
+			
+			if(H.mind)
+				H.mind.AddSpell(new /obj/effect/proc_holder/spell/self/magicians_brick)
+				H.mind.AddSpell(new /obj/effect/proc_holder/spell/self/magicians_brick)
+				H.mind.AddSpell(new /obj/effect/proc_holder/spell/self/magicians_brick)
+				H.mind.AddSpell(new /obj/effect/proc_holder/spell/invoked/haste)
+				H.mind.AddSpell(new /obj/effect/proc_holder/spell/invoked/guidance)
+			H.set_blindness(0)
+
