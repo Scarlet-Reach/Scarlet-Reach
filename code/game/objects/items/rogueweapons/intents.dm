@@ -659,7 +659,7 @@
 	animname = "strike"
 	hitsound = list('sound/combat/hits/blunt/daze_hit.ogg')
 	chargetime = 0
-	penfactor = BLUNT_DEFAULT_PENFACTOR
+	penfactor = 20
 	swingdelay = 6
 	damfactor = 1
 	item_d_type = "blunt"
