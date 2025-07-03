@@ -45,10 +45,6 @@
 		var/intdamage = damage
 		if(intdamfactor)
 			intdamage *= intdamfactor
-		if(d_type == "blunt")
-			if(used.armor?.getRating("blunt") > 0)
-				var/bluntrating = used.armor.getRating("blunt")
-				intdamage -= intdamage * ((bluntrating / 2) / 100)	//Half of the blunt rating reduces blunt damage taken by %-age.
 		used.take_damage(intdamage, damage_flag = d_type, sound_effect = FALSE, armor_penetration = 100)
 		if(damage)
 			if(blade_dulling == BCLASS_PEEL)
@@ -328,7 +324,7 @@
 		var/obj/item/bodypart/affecting = get_bodypart(ran_zone(dam_zone))
 		if(!affecting)
 			affecting = get_bodypart(BODY_ZONE_CHEST)
-		var/ap = (M.d_type == "blunt") ? BLUNT_DEFAULT_PENFACTOR : M.a_intent.penfactor
+		var/ap = M.a_intent.penfactor
 		var/armor = run_armor_check(affecting, M.d_type, armor_penetration = ap, damage = damage)
 		next_attack_msg.Cut()
 
