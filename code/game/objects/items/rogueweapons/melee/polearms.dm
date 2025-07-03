@@ -20,7 +20,7 @@
 /datum/intent/spear/bash
 	name = "bash"
 	blade_class = BCLASS_BLUNT
-	penfactor = BLUNT_DEFAULT_PENFACTOR
+	penfactor = 20
 	icon_state = "inbash"
 	attack_verb = list("bashes", "strikes")
 	penfactor = 10
@@ -94,7 +94,7 @@
 	blade_class = BCLASS_BLUNT
 	icon_state = "inbash"
 	attack_verb = list("bashes", "strikes")
-	penfactor = BLUNT_DEFAULT_PENFACTOR
+	penfactor = 20
 	damfactor = 1.3
 	item_d_type = "blunt"
 
@@ -106,7 +106,7 @@
 	animname = "cut"
 	blade_class = BCLASS_CHOP
 	reach = 1
-	penfactor = BLUNT_DEFAULT_PENFACTOR
+	penfactor = 0
 	damfactor = 2.5
 	chargetime = 10
 	no_early_release = TRUE
@@ -116,7 +116,7 @@
 
 /datum/intent/rend/reach
 	name = "long rend"
-	penfactor = BLUNT_DEFAULT_PENFACTOR
+	penfactor = 0
 	misscost = 5
 	chargetime = 5
 	damfactor = 2
@@ -156,7 +156,7 @@
 /datum/intent/spear/thrust/quarterstaff
 	blade_class = BCLASS_BLUNT
 	hitsound = list('sound/combat/hits/blunt/bluntsmall (1).ogg', 'sound/combat/hits/blunt/bluntsmall (2).ogg')
-	penfactor = BLUNT_DEFAULT_PENFACTOR
+	penfactor = 20
 	damfactor = 1.3 // Adds up to be slightly stronger than an unenhanced ebeak strike.
 	chargetime = 6 // Meant to be stronger than a bash, but with a delay.
 
@@ -169,7 +169,7 @@
 	attack_verb = list("lances", "runs through", "skewers")
 	animname = "stab"
 	item_d_type = "stab"
-	penfactor = BLUNT_DEFAULT_PENFACTOR // Not a mistake, to prevent it from nuking through armor.
+	penfactor = -100 // Not a mistake, to prevent it from nuking through armor.
 	chargetime = 4 SECONDS
 	damfactor = 4 // 80 damage on hit. It is gonna hurt.
 	reach = 3 // Yep! 3 tiles
