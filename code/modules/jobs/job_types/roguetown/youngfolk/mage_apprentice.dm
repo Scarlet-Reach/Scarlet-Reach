@@ -6,7 +6,7 @@
 	total_positions = 4
 	spawn_positions = 4
 	allowed_races = RACES_ALL_KINDS
-	allowed_patrons = ALL_DIVINE_PATRONS
+	allowed_patrons = NON_PSYDON_PATRONS
 	spells = list(/obj/effect/proc_holder/spell/targeted/touch/prestidigitation)
 	advclass_cat_rolls = list(CTAG_WAPPRENTICE = 20)
 

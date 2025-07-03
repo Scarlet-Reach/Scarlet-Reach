@@ -9,7 +9,7 @@
 
 	allowed_races = RACES_ALL_KINDS
 	allowed_ages = ALL_AGES_LIST
-	allowed_patrons = ALL_DIVINE_PATRONS
+	allowed_patrons = NON_PSYDON_PATRONS
 
 	tutorial = "Granted a life of comfortable servitude in the Duke's manor, you follow the Seneschal's commands and spend your day performing necessary but menial tasks. This role offers an aesthetic choice between labor-servant, maid, and butler."
 
