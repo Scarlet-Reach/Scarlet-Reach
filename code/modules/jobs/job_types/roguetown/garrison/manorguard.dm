@@ -12,7 +12,7 @@
 	allowed_ages = list(AGE_ADULT, AGE_MIDDLEAGED)
 	tutorial = "Having proven yourself loyal and capable, you are entrusted to defend the royal family and their home. \
 				Trained regularly in combat and siege warfare, you deal with internal threats. \
-				Obey the royal family the Marshal, and the Baron. Show the nobles and knights your respect, so that you may earn it in turn. Not as a commoner, but as a soldier."
+				Obey the royal family the Marshal, and the Ducal will. Show the nobles and knights your respect, so that you may earn it in turn. Not as a commoner, but as a soldier."
 	display_order = JDO_CASTLEGUARD
 	whitelist_req = TRUE
 
@@ -174,7 +174,7 @@
 	H.set_blindness(0)
 	switch(weapon_choice)
 		if("Bow") // They can head down to the armory to sideshift into one of the other bows.
-			beltr = /obj/item/quiver/arrows
+			beltr = /obj/item/quiver/bodkin/
 			backl = /obj/item/gun/ballistic/revolver/grenadelauncher/bow/recurve
 		if("Sling")
 			beltr = /obj/item/quiver/sling/iron
