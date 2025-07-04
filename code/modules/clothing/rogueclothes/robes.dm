@@ -109,6 +109,7 @@
 	desc = "Holy vestments sanctified by divine hands. Caution is advised if not a faithful."
 	icon_state = "priestrobe"
 	color = null
+	resistance_flags |= FIRE_PROOF
 
 /obj/item/clothing/suit/roguetown/shirt/robe/priest/pickup(mob/living/user)
 	if(!HAS_TRAIT(user, TRAIT_CHOSEN))

@@ -276,6 +276,7 @@
 	flags_inv = HIDEEARS|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR|HIDESNOUT
 	dynamic_hair_suffix = ""
 	sewrepair = TRUE
+	resistance_flags |= FIRE_PROOF
 
 /obj/item/clothing/head/roguetown/priestmask/pickup(mob/living/user)
 	..()
