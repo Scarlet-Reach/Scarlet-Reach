@@ -174,10 +174,16 @@
 	lockid = "heir"
 
 /obj/item/roguekey/garrison
-	name = "town watch key"
+	name = "garrison key"
 	desc = "This key belongs to the town guards."
 	icon_state = "spikekey"
 	lockid = "garrison"
+
+/obj/item/roguekey/watch
+	name = "watch key"
+	desc = "This key belongs to the town watch."
+	icon_state = "spikekey"
+	lockid = "watch"
 
 /obj/item/roguekey/sergeant
 	name = "sergeant key"
@@ -186,7 +192,7 @@
 	lockid = "sergeant"
 
 /obj/item/roguekey/warden
-	name = "watchtower key"
+	name = "warden key"
 	desc = "This key belongs to the wardens."
 	icon_state = "spikekey"
 	lockid = "warden"
@@ -213,7 +219,7 @@
 	name = "bailiff's key"
 	desc = "This key belongs to the bailiff."
 	icon_state = "cheesekey"
-	lockid = "sheriff"
+	lockid = "bailiff"
 
 /obj/item/roguekey/armory
 	name = "armory key"
