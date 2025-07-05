@@ -20,6 +20,7 @@
 
 /mob/living/carbon/human/examine(mob/user)
 	var/observer_privilege = isobserver(user)
+	var/aghost_privilege = isadminobserver(user)
 	var/t_He = p_they(TRUE)
 	var/t_his = p_their()
 //	var/t_him = p_them()
@@ -792,16 +793,31 @@
 		if(get_dist(src, H) <= ((2 + clamp(floor(((H.STAPER - 10))),-1, 4)) + HAS_TRAIT(user, TRAIT_INTELLECTUAL)))
 			. += "<a href='?src=[REF(src)];task=assess;'>Assess</a>"
 
+	var/flavorcheck = FALSE // to avoid duplicating the below checks a little later
 	if((!obscure_name || client?.prefs.masked_examine) && (flavortext || headshot_link || ooc_notes))
+		flavorcheck = TRUE
+	if(flavorcheck)
 		. += "<a href='?src=[REF(src)];task=view_headshot;'>Examine closer</a>"
 		//tiny picture when you are not examining closer, shouldnt take too much space.
 	var/list/lines = build_cool_description(get_mob_descriptors(obscure_name, user), src)
 	for(var/line in lines)
 		. += span_info(line)
 
+	if(!flavorcheck || aghost_privilege) // we show this due to flavortext panel fields all being empty, meaning that panel's age verified text could not otherwise be displayed
+		var/towrite = "ID Status: "
+		if(!src.ckey)
+			towrite += "N/A"
+		else if(!src.check_agevet())
+			towrite += "Unverified"
+		else
+			towrite += span_notice("Age Verified")
+		. += span_info(towrite)
+
 	var/trait_exam = common_trait_examine()
 	if(!isnull(trait_exam))
 		. += trait_exam
+	
+
 
 /mob/living/proc/status_effect_examines(pronoun_replacement) //You can include this in any mob's examine() to show the examine texts of status effects!
 	var/list/dat = list()

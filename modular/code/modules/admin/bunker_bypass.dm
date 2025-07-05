@@ -11,12 +11,22 @@ GLOBAL_LIST_INIT(bunker_bypasses, load_bypasses_from_file())
 	set category = "-Server-"
 	set name = "Add Bunker Bypass"
 
+	if(!check_rights())
+		return
+
 	var/selection = input("Who would you like to let in?", "CKEY", "") as text|null
 	if(selection)
-		add_bunker_bypass(selection, ckey)
+		if(ckey in GLOB.bunker_bypasses)
+			to_chat(src, span_warning("Player with ckey [ckey] is already on the list."))
+			return
+		if(alert("Confirm: allow ckey [selection] to connect?", "", "Yes!", "No") == "Yes!")
+			add_bunker_bypass(selection, ckey)
 
 /proc/add_bunker_bypass(target_ckey, admin_ckey = "SYSTEM")
 	if(!target_ckey)
+		return
+
+	if(IsAdminAdvancedProcCall())
 		return
 
 	target_ckey = ckey(target_ckey)

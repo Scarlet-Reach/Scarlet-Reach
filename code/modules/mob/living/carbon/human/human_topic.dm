@@ -33,7 +33,9 @@ GLOBAL_VAR_INIT(year_integer, text2num(year)) // = 2013???
 			client.prefs?.save_character()
 		if(is_legacy)
 			dat += "<center><i><font color = '#b9b9b9'; font size = 1>This is a LEGACY Profile from naive days of Psydon.</font></i></center>"
-		if(valid_headshot_link(null, headshot_link, TRUE))
+		var/agevetted = client.check_agevet()
+		dat += "<br><center>This person is [agevetted ? "<font color='#1cb308'>Age Vetted.</font>" : "<font color='#aa0202'>Not Age Vetted</font>"]</center>"
+		if(valid_headshot_link(null, headshot_link, TRUE) && agevetted)
 			dat += ("<div align='center'><img src='[headshot_link]' width='350px' height='350px'></div>")
 		if(flavortext)
 			dat += "<div align='left'>[flavortext_display]</div>"
@@ -41,14 +43,15 @@ GLOBAL_VAR_INIT(year_integer, text2num(year)) // = 2013???
 			dat += "<br>"
 			dat += "<div align='center'><b>OOC notes</b></div>"
 			dat += "<div align='left'>[ooc_notes_display]</div>"
-		if(ooc_extra)
+		if(ooc_extra && agevetted)
 			dat += "[ooc_extra]"
-		if(nsfw_headshot_link)
-			dat += "<br><div align='center'><b>NSFW</b></div>"
-		if(nsfw_headshot_link && !wear_armor && !wear_shirt)
-			dat += ("<br><div align='center'><img src='[nsfw_headshot_link]' width='600px' height='725px'></div>")
-		else if(nsfw_headshot_link && (wear_armor || wear_shirt))
-			dat += "<br><center><i><font color = '#9d0080'; font size = 5>There is more to see but they are not naked...</font></i></center>"
+		if(agevetted)
+			if(nsfw_headshot_link)
+				dat += "<br><div align='center'><b>NSFW</b></div>"
+			if(nsfw_headshot_link && !wear_armor && !wear_shirt)
+				dat += ("<br><div align='center'><img src='[nsfw_headshot_link]' width='600px' height='725px'></div>")
+			else if(nsfw_headshot_link && (wear_armor || wear_shirt))
+				dat += "<br><center><i><font color = '#9d0080'; font size = 5>There is more to see but they are not naked...</font></i></center>"
 		var/datum/browser/popup = new(user, "[src]", nwidth = 700, nheight = 800)
 		popup.set_content(dat.Join())
 		popup.open(FALSE)

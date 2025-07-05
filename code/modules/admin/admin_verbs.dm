@@ -40,6 +40,7 @@ GLOBAL_PROTECT(admin_verbs_default)
 	/client/proc/remove_bounty,
 	// RATWOOD MODULAR START
 	/client/proc/bunker_bypass,
+	/client/proc/agevet_player,
 	// RATWOOD MODULAR END
 	)
 GLOBAL_LIST_INIT(admin_verbs_admin, world.AVerbsAdmin())
