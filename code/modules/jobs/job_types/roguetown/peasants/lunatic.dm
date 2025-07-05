@@ -6,7 +6,6 @@
 	total_positions = 1
 	spawn_positions = 1
 	round_contrib_points = 2
-	family_blacklisted = TRUE
 	var/list/traits_applied
 	traits_applied = list(TRAIT_SCHIZO_AMBIENCE, TRAIT_NOSTINK, TRAIT_MANIAC_AWOKEN) // Maniac_Awoken no longer has any function other than the flavor text and trait
   

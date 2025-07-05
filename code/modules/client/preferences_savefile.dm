@@ -606,24 +606,7 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	S["customizer_entries"] >> customizer_entries
 	validate_customizer_entries()
 
-	// family_changes
-	S["family"]					>> family
-	S["spouse_ckey"]			>> spouse_ckey
-	S["family_surname"]			>> family_surname
-	S["family_genitals"] 		>> family_genitals
-	S["allow_latejoin_family"] 	>> allow_latejoin_family
-	S["family_gender"] 			>> family_gender
-	S["family_species"] 		>> family_species
 
-	if(!islist(family_genitals) || !LAZYLEN(family_genitals))
-		family_genitals = list("Male", "Female", "Futa", "Cuntboy")
-	if(!islist(family_gender))
-		family_gender = list()
-	if(!islist(family_species))
-		family_species = list()
-	
-	// Validate family preference
-	family = sanitize_integer(family, FAMILY_NONE, FAMILY_FULL, initial(family))
 
 	return TRUE
 
@@ -723,13 +706,7 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	else
 		WRITE_FILE(S["loadout3"] , null)
 
-	WRITE_FILE(S["family"] 				, family) // family_changes - основной переключатель семьи
-	WRITE_FILE(S["spouse_ckey"] 		, spouse_ckey) // family_changes - ckey второй половинки
-	WRITE_FILE(S["family_surname"] 		, family_surname) // family_changes - фамилия семьи
-	WRITE_FILE(S["family_genitals"] 	, family_genitals) // family_changes - проверка на половые органы партнёра
-	WRITE_FILE(S["allow_latejoin_family"] , allow_latejoin_family) // family_changes - разрешение создавать семью после начала раунда
-	WRITE_FILE(S["family_gender"] 		, family_gender) // family_changes - допустимые гендеры партнёра
-	WRITE_FILE(S["family_species"] 		, family_species) // family_changes - допустимые расы партнёра
+
 
 	return TRUE
 

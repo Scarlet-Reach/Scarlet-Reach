@@ -582,10 +582,7 @@ GLOBAL_LIST_INIT(roleplay_readme, world.file2list("strings/rt/rp_prompt.txt"))
 	if(humanc)
 		try_apply_character_post_equipment(humanc)
 	log_manifest(character.mind.key,character.mind,character,latejoin = TRUE)
-	// family_changes - попытка создать семью с персонажем в раунде
-	if(humanc.client?.prefs.family)
-		if(humanc.allow_latejoin_family)
-			SSfamily.SetupFamilies_Short(humanc)
+
 
 /mob/dead/new_player/proc/LateChoices()
 	var/list/dat = list("<div class='notice' style='font-style: normal; font-size: 14px; margin-bottom: 2px; padding-bottom: 0px'>Round Duration: [DisplayTimeText(world.time - SSticker.round_start_time, 1)]</div>")
@@ -729,11 +726,7 @@ GLOBAL_LIST_INIT(roleplay_readme, world.file2list("strings/rt/rp_prompt.txt"))
 	. = H
 	new_character = .
 
-	// Apply family surname if set
-	H.old_real_name = H.real_name
-	if(client.prefs.family_surname)
-		H.real_name = "[H.real_name] [client.prefs.family_surname]"
-		H.name = H.real_name
+
 
 	H.after_creation()
 

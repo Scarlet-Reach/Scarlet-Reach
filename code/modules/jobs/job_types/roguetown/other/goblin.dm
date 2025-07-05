@@ -7,7 +7,6 @@
 	spawn_positions = 0
 	min_pq = null //no pq
 	max_pq = null
-	family_blacklisted = TRUE
 
 	allowed_sexes = list(MALE, FEMALE)
 	allowed_races = list(

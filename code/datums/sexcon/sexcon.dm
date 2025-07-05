@@ -99,9 +99,6 @@
 	after_ejaculation()
 	if(!oral)
 		after_intimate_climax()
-	
-	// Cuckold check only for penetrative sex (cum_into)
-	cuckold_check()
 
 /datum/sex_controller/proc/ejaculate()
 	log_combat(user, user, "Ejaculated")
@@ -120,48 +117,6 @@
 	user.playsound_local(user, 'sound/misc/mat/end.ogg', 100)
 	last_ejaculation_time = world.time
 	GLOB.scarlet_round_stats[STATS_PLEASURES]++
-
-/datum/sex_controller/proc/cuckold_check()
-	if(!target || !ishuman(target) || !ishuman(user))
-		return
-	
-	if(!user?.getorganslot(ORGAN_SLOT_PENIS))
-		return
-	
-	check_cuckolding(user, target) 
-	check_cuckolding(target, user) 
-
-/datum/sex_controller/proc/check_cuckolding(mob/living/carbon/human/person_with_spouse, mob/living/carbon/human/their_partner)
-	// Single family lookup with null check
-	var/datum/family/family = person_with_spouse.getFamily()
-	if(!family)
-		// Try the true family check as backup
-		family = person_with_spouse.getFamily(TRUE)
-		if(!family)
-			return
-	
-	var/list/spouse_relations = family.getRelations(person_with_spouse, REL_TYPE_SPOUSE)
-	if(!spouse_relations?.len)
-		return
-	
-	// Process first spouse only (there should only be one anyway)
-	var/datum/relation/R = spouse_relations[1]
-	var/mob/living/carbon/human/cuckold = R.target:resolve()
-	
-	if(!cuckold)
-		return
-	
-	if(cuckold == their_partner)
-		return
-		
-	if(!cuckold.getorganslot(ORGAN_SLOT_PENIS))
-		return
-	
-	var/cuckold_entry = "[cuckold.mind.assigned_role] [cuckold.real_name] (by [their_partner.real_name])"
-	if(cuckold_entry in GLOB.cuckolds)
-		return
-		
-	GLOB.cuckolds += cuckold_entry
 
 /datum/sex_controller/proc/after_intimate_climax()
 	if(user == target)

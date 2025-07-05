@@ -34,8 +34,6 @@ GLOBAL_LIST_EMPTY(lord_titles)
 	give_bank_account = 1000
 	required = TRUE
 	cmode_music = 'sound/music/combat_noble.ogg'
-	ruler_family = TRUE
-	//allowed_patrons = NON_PSYDON_PATRONS		//No Psydonites - Lore reason: Town is Astratan town, you are crowned by Astrata for right to rule. (Inhumen people pose as Ten worshipers.) - Commented out for now, we now have storyteller tension to cause issues for psydonites.
 
 /datum/job/roguetown/exlord //just used to change the lords title
 	title = "Duke Emeritus"
@@ -144,7 +142,6 @@ GLOBAL_LIST_EMPTY(lord_titles)
 
 	ADD_TRAIT(H, TRAIT_NOBLE, TRAIT_GENERIC)
 	ADD_TRAIT(H, TRAIT_HEAVYARMOR, TRAIT_GENERIC)
-//	SSticker.rulermob = H
 
 /datum/outfit/job/roguetown/lord/visuals/pre_equip(mob/living/carbon/human/H)
 	..()

@@ -197,15 +197,7 @@
 	if(ishuman(user))
 		var/mob/living/carbon/human/H = user
 
-		// Family examine text
-		if(H.isFamily(src))
-			var/datum/relation/R = H.getRelationship(src)
-			if(R)
-				. += span_love("It's my [R.name]!")
-		else if(family)
-			var/datum/family/F = getFamily()
-			if(F)
-				. += span_notice("Ah, they belong to the [F.name] family!")
+
 
 		if(HAS_TRAIT(H, TRAIT_INTELLECTUAL) || H.mind?.get_skill_level(H, /datum/skill/craft/blacksmithing) >= SKILL_EXP_EXPERT)
 			is_smart = TRUE	//Most of this is determining integrity of objects + seeing multiple layers. 

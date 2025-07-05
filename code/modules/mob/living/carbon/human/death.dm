@@ -141,8 +141,6 @@
 					continue
 				if(HAS_TRAIT(HU, TRAIT_STEELHEARTED))
 					continue
-				if(HU.isFamily(src))
-					if(istype(HU.getRelationship(src),/datum/relation/spouse))
 						HU.adjust_triumphs(-1)
 
 	. = ..()
@@ -171,8 +169,6 @@
 		if(CA != src && !HAS_TRAIT(CA, TRAIT_BLIND))
 			if(HAS_TRAIT(CA, TRAIT_STEELHEARTED))
 				continue
-			if(CA.isFamily(src))
-				if(istype(CA.getRelationship(src),/datum/relation/spouse))
 					CA.adjust_triumphs(-1)
 			CA.add_stress(/datum/stressevent/viewgib)
 	return ..()
