@@ -705,6 +705,25 @@
 	w_class = WEIGHT_CLASS_NORMAL
 	slot_flags = ITEM_SLOT_HIP | ITEM_SLOT_BACK
 
+/obj/item/mobilestove/attack_self(mob/user, params)
+	..()
+	var/turf/T = get_turf(loc)
+	if(!isfloorturf(T))
+		to_chat(user, span_warning("I need ground to plant this on!"))
+		return
+	for(var/obj/A in T)
+		if(istype(A, /obj/structure))
+			to_chat(user, span_warning("I need some free space to deploy a [src] here!"))
+			return
+		if(A.density && !(A.flags_1 & ON_BORDER_1))
+			to_chat(user, span_warning("There is already something here!</span>"))
+			return
+	user.visible_message(span_notice("[user] begins placing \the [src] down on the ground."))
+	if(do_after(user, 2 SECONDS, TRUE, src))
+		var/obj/machinery/light/rogue/hearth/mobilestove/new_mobilestove = new /obj/machinery/light/rogue/hearth/mobilestove(get_turf(src))
+		new_mobilestove.color = src.color
+		qdel(src)
+
 /obj/machinery/light/rogue/campfire
 	name = "campfire"
 	desc = "Oily smoke curls from a weak sputtering flame."
