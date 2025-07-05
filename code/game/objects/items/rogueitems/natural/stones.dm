@@ -524,8 +524,6 @@ GLOBAL_LIST_INIT(stone_personality_descs, list(
 	icon = 'icons/roguetown/items/crafting.dmi'
 	item_state = "block"
 	experimental_inhand = FALSE
-	grid_width = 64
-	grid_height = 64
 	base_width = 64
 	base_height = 64
 	drop_sound = 'sound/foley/brickdrop.ogg'

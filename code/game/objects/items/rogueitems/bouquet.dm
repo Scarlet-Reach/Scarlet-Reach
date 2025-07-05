@@ -7,9 +7,6 @@
 	icon_state = ""
 	item_state = ""
 
-	grid_width = 32
-	grid_height = 64
-
 /obj/item/bouquet/rosa
 	name = "rosa bouquet"
 	desc = "Affections bundled together in string."
@@ -45,9 +42,6 @@
 	icon_state = ""
 	item_state = ""
 	experimental_inhand = FALSE
-
-	grid_width = 64
-	grid_height = 32
 
 /obj/item/flowercrown/rosa
 	name = "crown of rosa"

@@ -137,8 +137,7 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 	heat = 1000
 	spitoutmouth = FALSE
 
-	grid_width = 32
-	grid_height = 32
+
 
 	var/dragtime = 100
 	var/nextdragtime = 0

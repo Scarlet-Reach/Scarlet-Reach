@@ -1,4 +1,3 @@
-
 // Raw Shellfish. Separate folder due to sprites
 /obj/item/reagent_containers/food/snacks/fish/crab
 	name = "crab"
@@ -126,9 +125,7 @@
 	dropshrink = 0.5
 	w_class = WEIGHT_CLASS_TINY
 	sellprice = 3
-	grid_height = 32
-	grid_width = 32
-	
+
 // Close enough crab cake is raw shellfish
 /obj/item/reagent_containers/food/snacks/rogue/foodbase/crabcakeraw
 	name = "raw crab cake"

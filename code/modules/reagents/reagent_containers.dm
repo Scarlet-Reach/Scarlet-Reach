@@ -16,8 +16,6 @@
 	var/drinksounds = list('sound/items/drink_gen (1).ogg','sound/items/drink_gen (2).ogg','sound/items/drink_gen (3).ogg')
 	var/fillsounds
 	var/poursounds
-	grid_height = 64
-	grid_width = 32
 
 	COOLDOWN_DECLARE(fill_cooldown)
 

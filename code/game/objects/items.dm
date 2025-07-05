@@ -240,11 +240,6 @@ GLOBAL_VAR_INIT(rpg_loot_items, FALSE)
 	if(twohands_required)
 		has_inspect_verb = TRUE
 
-	if(grid_width <= 0)
-		grid_width = (w_class * world.icon_size)
-	if(grid_height <= 0)
-		grid_height = (w_class * world.icon_size)
-	
 	if(body_parts_covered)
 		body_parts_covered_dynamic = body_parts_covered
 	update_transform()

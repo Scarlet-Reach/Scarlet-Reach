@@ -10,8 +10,7 @@
 	sewrepair = TRUE //Vrell - AFAIK, all cloaks are cloth ATM. Technically semi-less future-proof, but it removes a line of code from every subtype, which is worth it IMO.
 	experimental_inhand = FALSE
 
-	grid_width = 64
-	grid_height = 64
+
 
 
 //////////////////////////

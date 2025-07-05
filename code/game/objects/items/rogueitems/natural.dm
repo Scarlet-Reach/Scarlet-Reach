@@ -1,4 +1,3 @@
-
 /obj/item/natural
 	icon = 'icons/roguetown/items/natural.dmi'
 	lefthand_file = 'icons/mob/inhands/misc/food_lefthand.dmi'
@@ -8,8 +7,7 @@
 	var/bundletype = null
 	var/bundling_time = 4 SECONDS		// Base bundling time - make lower for small objects. Higher for large.
 	var/quality = SMELTERY_LEVEL_NORMAL // To not ruin blacksmith recipes
-	grid_width = 32
-	grid_height = 32
+
 	var/sharpening_factor = 0
 	var/spark_chance = 0
 
@@ -172,18 +170,14 @@
 	var/increases = FLOOR(amount / items_per_increase, 1)
 
 	var/height = FALSE
-	grid_height = base_height
-	grid_width = base_width
+
 	for(var/i = 1 to increases)
 		if(height)
 			height = FALSE
-			grid_height += 32
 		else
 			height = TRUE
-			grid_width += 32
 	if(item_flags & IN_STORAGE)
 		var/obj/item/location = loc
 		var/datum/component/storage/storage = location.GetComponent(/datum/component/storage)
 
-		storage.update_item(src)
 		storage.orient2hud()

@@ -360,8 +360,6 @@
 	stacktype = /obj/item/natural/fibers
 	icon1step = 3
 	icon2step = 6
-	grid_width = 32
-	grid_height = 32
 
 /obj/item/natural/bundle/fibers/full
 	icon_state = "fibersroll2"
@@ -409,8 +407,6 @@
 	icon1step = 5
 	icon2 = "clothroll2"
 	icon2step = 10
-	grid_width = 32
-	grid_height = 64
 
 /obj/item/natural/bundle/stick
 	name = "bundle of sticks"

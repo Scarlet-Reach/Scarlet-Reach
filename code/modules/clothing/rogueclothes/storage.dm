@@ -14,8 +14,6 @@
 	bloody_icon_state = "bodyblood"
 	experimental_inhand = FALSE
 	component_type = /datum/component/storage/concrete/roguetown/belt
-	grid_width = 64
-	grid_height = 64
 
 /obj/item/storage/belt/rogue/attack_right(mob/user)
 	var/datum/component/storage/CP = GetComponent(/datum/component/storage)
@@ -115,8 +113,6 @@
 	bloody_icon_state = "bodyblood"
 	sewrepair = TRUE
 	resistance_flags = FIRE_PROOF
-	grid_height = 64
-	grid_width = 32
 	component_type = /datum/component/storage/concrete/roguetown/coin_pouch
 
 /obj/item/storage/belt/rogue/pouch/coins

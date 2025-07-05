@@ -7,9 +7,6 @@
 	dropshrink = 0.9
 	experimental_inhand = FALSE
 
-	grid_width = 32
-	grid_height = 64
-
 /obj/item/reagent_containers/glass/mortar
 	name = "alchemical mortar"
 	desc = "A small, thick-walled stone bowl made for grinding things up inside."
@@ -22,9 +19,6 @@
 	reagent_flags = OPENCONTAINER|REFILLABLE|DRAINABLE
 	spillable = TRUE
 	var/obj/item/to_grind
-
-	grid_width = 64
-	grid_height = 32
 
 /obj/item/reagent_containers/glass/mortar/examine()
 	. += ..()

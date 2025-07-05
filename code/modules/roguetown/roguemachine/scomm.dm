@@ -337,9 +337,7 @@
 	var/hearrange = 1 // change to 0 if you want your special scomstone to be only hearable by wearer
 	drop_sound = 'sound/foley/coinphy (1).ogg'
 	sellprice = 100
-	grid_width = 32
-	grid_height = 32
-//wip
+
 /obj/item/scomstone/attack_right(mob/living/carbon/human/user)
 	user.changeNext_move(CLICK_CD_MELEE)
 	var/input_text = input(user, "Enter your message:", "Message")
@@ -435,8 +433,6 @@
 	var/listening = TRUE
 	var/speaking = TRUE
 	sellprice = 200
-	grid_width = 32
-	grid_height = 32
 
 /obj/item/listenstone/MiddleClick(mob/user)
 	if(.)
@@ -505,8 +501,6 @@
 	var/listening = TRUE
 	var/speaking = TRUE
 	sellprice = 0
-	grid_width = 32
-	grid_height = 32
 
 /obj/item/mattcoin/New(loc, ...)
 	. = ..()
@@ -606,8 +600,6 @@
 	experimental_inhand = FALSE
 	slot_flags = ITEM_SLOT_MOUTH|ITEM_SLOT_HIP|ITEM_SLOT_NECK|ITEM_SLOT_RING
 	possible_item_intents = list(INTENT_GENERIC)
-	grid_width = 32
-	grid_height = 32
 
 /obj/item/speakerinq/proc/repeat_message(message, atom/A, tcolor, message_language)
 	if(A == src)
@@ -665,8 +657,6 @@
 	throwforce = 10
 	w_class = WEIGHT_CLASS_SMALL
 	experimental_inhand = FALSE
-	grid_width = 32
-	grid_height = 32
 
 
 /obj/item/listeningdevice/attack_self(mob/living/user)

@@ -1,4 +1,3 @@
-
 /obj/item/roguestatue
 	icon = 'icons/roguetown/items/valuable.dmi'
 	name = "statue"
@@ -6,8 +5,6 @@
 	w_class = WEIGHT_CLASS_NORMAL
 	experimental_inhand = FALSE
 	smeltresult = null
-	grid_width = 32
-	grid_height = 64
 
 /obj/item/roguestatue/gold
 	name = "gold statue"
@@ -99,8 +96,6 @@
 	w_class = WEIGHT_CLASS_SMALL
 	dropshrink = 0.8
 	var/uses = 12
-	grid_width = 32
-	grid_height = 32
 
 /obj/item/polishing_cream/examine(mob/user)
 	. = ..()
@@ -134,25 +129,23 @@
 	w_class = WEIGHT_CLASS_SMALL
 	smeltresult = null
 	dropshrink = 0.8
-	grid_width = 32
-	grid_height = 64
-	var/roughness = 0 // 0  for a fine brush, 1 for a coarse brush
+	var/roughness = 0
 
 /obj/item/armor_brush/attack_self(mob/user)
-	roughness = 1 - roughness
-	if(roughness)
+	src.roughness = 1 - src.roughness
+	if(src.roughness)
 		to_chat(user, span_info("I flip the brush to the coarse side."))
 		name = "coarse brush"
 	else
 		to_chat(user, span_info("I flip the brush to the fine side."))
 		name = "fine brush"
-	icon_state = "brush_[roughness]"
+	icon_state = "brush_[src.roughness]"
 
 /obj/item/armor_brush/attack_obj(obj/O, mob/living/user)
 	if(!isitem(O))
 		return ..()
 	var/obj/item/thing = O
-	if(thing.polished == 1 && roughness)
+	if(thing.polished == 1 && src.roughness)
 		if((HAS_TRAIT(user, TRAIT_SQUIRE_REPAIR) || user.mind.get_skill_level(thing.anvilrepair)))
 			to_chat(user, span_info("I start roughly scrubbing the compound on \the [thing]..."))
 			playsound(loc,"sound/foley/scrubbing[pick(1,2)].ogg", 100, TRUE)
@@ -161,7 +154,7 @@
 				thing.remove_atom_colour(FIXED_COLOUR_PRIORITY)
 				thing.add_atom_colour("#9e9e9e", FIXED_COLOUR_PRIORITY)
 
-	else if(thing.polished == 2 && !roughness)
+	else if(thing.polished == 2 && !src.roughness)
 		if((HAS_TRAIT(user, TRAIT_SQUIRE_REPAIR) || user.mind.get_skill_level(thing.anvilrepair)))
 			to_chat(user, span_info("I start gently scrubbing the edges of \the [thing]..."))
 			playsound(loc,"sound/foley/scrubbing[pick(1,2)].ogg", 100, TRUE)

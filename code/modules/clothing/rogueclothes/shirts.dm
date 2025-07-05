@@ -16,8 +16,7 @@
 	flags_inv = HIDEBOOB
 	experimental_inhand = FALSE
 	
-	grid_width = 64
-	grid_height = 64
+
 
 /obj/item/clothing/suit/roguetown/shirt/undershirt
 	name = "shirt"

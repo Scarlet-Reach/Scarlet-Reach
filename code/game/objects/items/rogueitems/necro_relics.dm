@@ -8,8 +8,6 @@
     dropshrink = 0.6
     var/last_use_time = 0
     var/use_cooldown = 300 // 30 seconds to prevent spamming it for multiple free goons
-    grid_height = 32
-    grid_width = 32
 
 
 

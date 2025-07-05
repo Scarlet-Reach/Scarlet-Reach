@@ -51,8 +51,6 @@
 	icon_state = "brickbundle1"
 	icon = 'icons/roguetown/items/cooking.dmi'	//It's because these are cooked via clay. Don't ask questions.
 	experimental_inhand = FALSE
-	grid_width = 64
-	grid_height = 64
 	base_width = 64
 	base_height = 64
 	drop_sound = 'sound/foley/brickdrop.ogg'

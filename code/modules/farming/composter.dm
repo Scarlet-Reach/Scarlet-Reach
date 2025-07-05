@@ -184,8 +184,6 @@
 	icon_state = "ash"
 	color = "#ffac38"
 	w_class = WEIGHT_CLASS_SMALL
-	grid_width = 32
-	grid_height = 32
 
 /obj/item/fertilizer
 	name = "fertilizer"
@@ -193,5 +191,3 @@
 	icon = 'icons/roguetown/items/misc.dmi'
 	icon_state = "fertilizer"
 	w_class = WEIGHT_CLASS_SMALL
-	grid_width = 32
-	grid_height = 32

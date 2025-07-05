@@ -1,4 +1,3 @@
-
 ///books that teach things (intrinsic actions like bar flinging, spells like fireball or smoke, or martial arts)///
 
 /obj/item/book/granter
@@ -69,9 +68,6 @@
 	return FALSE
 
 /obj/item/book/granter/spell
-	grid_width = 64
-	grid_height = 32
-
 	var/spell
 	var/spellname = "conjure bugs"
 

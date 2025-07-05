@@ -15,8 +15,6 @@
 	toolspeed = 1
 	associated_skill = /datum/skill/labor/mining
 	smeltresult = /obj/item/ingot/iron
-	grid_width = 64
-	grid_height = 64
 	pickup_sound = 'modular_helmsguard/sound/sheath_sounds/draw_gen.ogg'
 	sheathe_sound = 'sound/items/wood_sharpen.ogg'
 

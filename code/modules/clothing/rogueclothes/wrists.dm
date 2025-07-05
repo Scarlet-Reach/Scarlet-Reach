@@ -8,8 +8,6 @@
 	sewrepair = TRUE
 	anvilrepair = null
 	experimental_inhand = FALSE
-	grid_width = 32
-	grid_height = 64
 
 /obj/item/clothing/wrists/roguetown/bracers
 	name = "steel bracers"

@@ -1,4 +1,3 @@
-
 /obj/item/bomb
 	name = "bottle bomb"
 	desc = "A fiery explosion waiting to be coaxed from its glass prison."
@@ -12,8 +11,6 @@
 	var/fuze = 50
 	var/lit = FALSE
 	var/prob2fail = 23
-	grid_width = 32
-	grid_height = 64
 
 
 /obj/item/bomb/spark_act()
@@ -86,8 +83,6 @@
 	throwforce = 0
 	slot_flags = ITEM_SLOT_HIP
 	throw_speed = 0.5
-	grid_width = 32
-	grid_height = 64
 
 /obj/item/smokebomb/attack_self(mob/user)
     ..()

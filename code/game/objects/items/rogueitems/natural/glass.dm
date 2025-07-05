@@ -4,8 +4,6 @@
 	icon = 'icons/roguetown/items/crafting.dmi'
 	icon_state = "glasspane"
 	dropshrink = 0.8
-	grid_width = 64
-	grid_height = 64
 	drop_sound = 'sound/foley/dropsound/glass_drop.ogg'
 	possible_item_intents = list(/datum/intent/use)
 	force = 0
@@ -62,8 +60,6 @@
 	icon_state = "glasspane1"
 	item_state = "glasspane"
 	dropshrink = 0.8
-	grid_width = 64
-	grid_height = 64
 	drop_sound = 'sound/foley/dropsound/glass_drop.ogg'
 	possible_item_intents = list(/datum/intent/use)
 	force = 15

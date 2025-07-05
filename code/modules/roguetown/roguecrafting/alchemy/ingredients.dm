@@ -176,8 +176,6 @@
 	force = 7
 	throwforce = 5
 	w_class = WEIGHT_CLASS_SMALL
-	grid_width = 32
-	grid_height = 64
 
 	major_pot = /datum/alch_cauldron_recipe/strong_antidote
 	med_pot = /datum/alch_cauldron_recipe/health_potion
@@ -190,8 +188,6 @@
 	force = 7
 	throwforce = 5
 	w_class = WEIGHT_CLASS_NORMAL
-	grid_width = 64
-	grid_height = 64
 
 	major_pot = /datum/alch_cauldron_recipe/str_potion
 	med_pot = /datum/alch_cauldron_recipe/con_potion

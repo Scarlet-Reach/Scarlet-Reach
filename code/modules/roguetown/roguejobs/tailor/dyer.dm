@@ -253,8 +253,6 @@ var/global/list/colorlist = list(
 	icon_state = "dbrush"
 	w_class = WEIGHT_CLASS_SMALL
 	dropshrink = 0.8
-	grid_width = 32
-	grid_height = 32
 
 	var/dye = null
 

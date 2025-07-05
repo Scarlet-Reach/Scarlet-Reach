@@ -8,8 +8,6 @@
 	desc = "Iron tool for woodworking."
 	icon_state = "handsaw"
 	icon = 'icons/roguetown/items/crafting.dmi'
-	grid_width = 32
-	grid_height = 96
 	sharpness = IS_SHARP
 	wdefense = 0
 	wlength = WLENGTH_LONG
@@ -28,8 +26,6 @@
 	desc = "Add something to strike it with before doing stonework. Like a mallet or a stone."
 	icon_state = "chisel"
 	icon = 'icons/roguetown/items/crafting.dmi'
-	grid_width = 32
-	grid_height = 64
 	force = 10
 	throwforce = 2
 	possible_item_intents = list(/datum/intent/stab)
@@ -102,8 +98,6 @@
 /obj/item/rogueweapon/chisel/assembly	// template
 	name = "chisel set"
 	desc = "Ready to shape stones when held in a steady grip. Can be separated easily."
-	grid_width = 64
-	grid_height = 64
 	possible_item_intents = list(/datum/intent/hit)
 	gripped_intents =  list(/datum/intent/chisel)
 	already_assembled = TRUE
