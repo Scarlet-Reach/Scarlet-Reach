@@ -495,13 +495,11 @@
 	var/prob2defend = U.defprob
 	if(L.rogfat >= L.maxrogfat)
 		return FALSE
-	if(L)
-		if(H?.check_dodge_skill())
-			prob2defend = prob2defend + (L.STASPD * 15)
-		else
-			prob2defend = prob2defend + (L.STASPD * 10)
-	if(U)
-		prob2defend = prob2defend - (U.STASPD * 10)
+	if(L && U)
+		var/dodgechance = ((L.STASPD-U.STASPD)*10)
+		if(dodgechance>0 && H?.check_dodge_skill()) //This does not penalize you if you are losing
+			dodgechance = dodgechance*1.5 //dodgeexpert multiplier = 1.5
+		prob2defend += dodgechance
 	if(I)
 		if(I.wbalance > 0 && U.STASPD > L.STASPD) //nme weapon is quick, so they get a bonus based on spddiff
 			prob2defend = prob2defend - ( I.wbalance * ((U.STASPD - L.STASPD) * 10) )
