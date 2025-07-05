@@ -141,7 +141,6 @@
 					continue
 				if(HAS_TRAIT(HU, TRAIT_STEELHEARTED))
 					continue
-						HU.adjust_triumphs(-1)
 
 	. = ..()
 
@@ -169,6 +168,5 @@
 		if(CA != src && !HAS_TRAIT(CA, TRAIT_BLIND))
 			if(HAS_TRAIT(CA, TRAIT_STEELHEARTED))
 				continue
-					CA.adjust_triumphs(-1)
 			CA.add_stress(/datum/stressevent/viewgib)
 	return ..()
