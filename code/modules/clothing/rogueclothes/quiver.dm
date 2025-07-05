@@ -145,7 +145,7 @@
 /obj/item/quiver/bodkin/Initialize()
 	. = ..()
 	for(var/i in 1 to max_storage)
-		var/obj/projectile/bullet/reusable/arrow/steel/A = new()
+		var/obj/item/ammo_casing/caseless/rogue/arrow/steel/A = new()
 		arrows += A
 	update_icon()
 
