@@ -35,6 +35,8 @@
 			return strings("feline_replacement.json", type, convert_HTML = TRUE)
 		if("Slopes accent")
 			return strings("welsh_replacement.json", type, convert_HTML = TRUE)
+		if("Saut al-Atash accent")
+			return
 		if("Valley accent")
 			return strings("valley_replacement.json", type, convert_HTML = TRUE)
 

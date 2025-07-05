@@ -22,25 +22,7 @@ SUBSYSTEM_DEF(family)
 
 
 /datum/controller/subsystem/family/fire() //update family icons.
-	var/list/old_images = rel_images.Copy()
-	for(var/i in old_images)
-		var/image/I = i
-		I.loc = null
-		qdel(I)
 
-	rel_images.Cut()
-	for(var/mob/living/carbon/human/H in GLOB.mob_list)
-		for(var/mob/living/carbon/human/HH in GLOB.mob_list)
-			if(HH == H)
-				continue
-			if(H.isFamily(HH))
-				var/datum/relation/R = H.getRelationship(HH)
-				if(!R)
-					continue
-				var/image/I = image('icons/mob/rel.dmi',HH,icon_state=R.rel_state)
-				I.appearance_flags = RESET_TRANSFORM
-				H << I
-				rel_images += I
 
 /datum/controller/subsystem/family/proc/makeFamily(mob/living/carbon/human/head, name)
 	var/i = 0

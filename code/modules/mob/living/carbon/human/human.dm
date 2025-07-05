@@ -129,11 +129,16 @@
 /mob/living/carbon/human/Stat()
 	..()
 	if(mind)
-		var/datum/antagonist/vampirelord/VD = mind.has_antag_datum(/datum/antagonist/vampirelord)
-		if(VD)
+		var/datum/antagonist/vampirelord/VDL = mind.has_antag_datum(/datum/antagonist/vampirelord)
+		if(VDL)
 			if(statpanel("Stats"))
-				stat("Vitae:",VD.vitae)
-		if((mind.assigned_role == "Shepherd") || (mind.assigned_role == "Inquisitor"))
+				stat("Vitae:", VDL.vitae)
+		else
+			var/datum/antagonist/vampire/VD = mind.has_antag_datum(/datum/antagonist/vampire)
+			if(VD && VD.wretch_antag)
+				if(statpanel("Stats"))
+					stat("Vitae:", VD.vitae)
+		if((mind.assigned_role == "Orthodoxist") || (mind.assigned_role == "Inquisitor"))
 			if(statpanel("Status"))
 				stat("Confessions sent: [GLOB.confessors.len]")
 
@@ -296,7 +301,7 @@
 	for(var/obj/item/grabbing/grab in grabbedby) //Grabbed by the mouth
 		if(grab.sublimb_grabbed == BODY_ZONE_PRECISE_MOUTH)
 			return FALSE
-			
+
 	return TRUE
 
 

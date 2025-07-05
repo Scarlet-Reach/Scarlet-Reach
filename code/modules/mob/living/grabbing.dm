@@ -284,13 +284,11 @@
 							break
 						M.Stun(stun_dur - pincount * 2)	
 						M.Immobilize(stun_dur)	//Made immobile for the whole do_after duration, though
-						user.rogfat_add(rand(1,3) + abs(skill_diff) + stun_dur / 1.5)
 						M.visible_message(span_danger("[user] keeps [M] pinned to the ground!"))
 						pincount += 2
 					else if(src in M.grabbedby)
 						M.Stun(stun_dur - 10)
 						M.Immobilize(stun_dur)
-						user.rogfat_add(rand(1,3) + abs(skill_diff) + stun_dur / 1.5)
 						pincount += 2
 						M.visible_message(span_danger("[user] pins [M] to the ground!"), \
 							span_userdanger("[user] pins me to the ground!"), span_hear("I hear a sickening sound of pugilism!"), COMBAT_MESSAGE_RANGE)
@@ -612,14 +610,16 @@
 	last_drink = world.time
 	user.changeNext_move(CLICK_CD_MELEE)
 
-	if(user.mind && C.mind)
+	if(user.mind)
 		var/datum/antagonist/vampirelord/VDrinker = user.mind.has_antag_datum(/datum/antagonist/vampirelord)
 		var/datum/antagonist/vampirelord/VVictim = C.mind.has_antag_datum(/datum/antagonist/vampirelord)
 		var/zomwerewolf = C.mind.has_antag_datum(/datum/antagonist/werewolf)
 		if(!zomwerewolf)
 			if(C.stat != DEAD)
 				zomwerewolf = C.mind.has_antag_datum(/datum/antagonist/zombie)
+		
 		if(VDrinker)
+			// Regular vampire lords
 			if(zomwerewolf)
 				to_chat(user, span_danger("I'm going to puke..."))
 				addtimer(CALLBACK(user, TYPE_PROC_REF(/mob/living/carbon, vomit), 0, TRUE), rand(8 SECONDS, 15 SECONDS))
@@ -634,32 +634,21 @@
 						if(H.virginity)
 							to_chat(user, "<span class='love'>Virgin blood, delicious!</span>")
 							if(VDrinker.isspawn)
-								VDrinker.handle_vitae(750, 750)
+								VDrinker.handle_vitae(1500, 1500)
 							else
-								VDrinker.handle_vitae(750)
+								VDrinker.handle_vitae(1500)
 					if(VDrinker.isspawn)
-						VDrinker.handle_vitae(500, 500)
+						VDrinker.handle_vitae(1000, 1000)
 					else
-						VDrinker.handle_vitae(500)
+						VDrinker.handle_vitae(1000)
 				else
 					to_chat(user, span_warning("No more vitae from this blood..."))
+		else if(HAS_TRAIT(user, TRAIT_HORDE))
+			// Horde trait allows safe blood drinking
 		else
-/*			if(VVictim)
-				to_chat(user, "<span class='notice'>A strange, sweet taste tickles my throat.</span>")
-				addtimer(CALLBACK(user, .mob/living/carbon/human/proc/vampire_infect), 1 MINUTES) // I'll use this for succession later.
-			else */
-			if(!HAS_TRAIT(user, TRAIT_HORDE))
-				to_chat(user, "<span class='warning'>I'm going to puke...</span>")
-				addtimer(CALLBACK(user, TYPE_PROC_REF(/mob/living/carbon, vomit), 0, TRUE), rand(8 SECONDS, 15 SECONDS))
-	else
-		if(user.mind)
-			if(user.mind.has_antag_datum(/datum/antagonist/vampirelord))
-				var/datum/antagonist/vampirelord/VDrinker = user.mind.has_antag_datum(/datum/antagonist/vampirelord)
-				C.blood_volume = max(C.blood_volume-45, 0)
-				if(VDrinker.isspawn)
-					VDrinker.handle_vitae(300, 300)
-				else
-					VDrinker.handle_vitae(300)
+			// Non-vampires will vomit
+			to_chat(user, "<span class='warning'>I'm going to puke...</span>")
+			addtimer(CALLBACK(user, TYPE_PROC_REF(/mob/living/carbon, vomit), 0, TRUE), rand(8 SECONDS, 15 SECONDS))
 
 	C.blood_volume = max(C.blood_volume-15, 0)
 	C.handle_blood()
@@ -673,21 +662,10 @@
 	to_chat(user, span_warning("I drink from [C]'s [parse_zone(sublimb_grabbed)]."))
 	log_combat(user, C, "drank blood from ")
 
-	if(ishuman(C) && C.mind)
-		var/datum/antagonist/vampirelord/VDrinker = user.mind.has_antag_datum(/datum/antagonist/vampirelord)
-		if(C.blood_volume <= BLOOD_VOLUME_SURVIVE)
-			if(!VDrinker.isspawn)
-				switch(alert("Would you like to sire a new spawn?",,"Yes","No"))
-					if("Yes")
-						user.visible_message("[user] begins to infuse dark magic into [C]")
-						if(do_after(user, 30))
-							C.visible_message("[C] rises as a new spawn!")
-							var/datum/antagonist/vampirelord/lesser/new_antag = new /datum/antagonist/vampirelord/lesser()
-							new_antag.sired = TRUE
-							C.mind.add_antag_datum(new_antag)
-							sleep(10 SECONDS)
-							C.fully_heal()
-							C.rogstam = C.maxrogstam
-							C.update_health_hud()
-					if("No")
-						to_chat(user, span_warning("I decide [C] is unworthy."))
+	if(user.mind && user.mind.has_antag_datum(/datum/antagonist/vampire))
+		var/datum/antagonist/vampire/VampDrinker = user.mind.has_antag_datum(/datum/antagonist/vampire)
+		if(VampDrinker && VampDrinker.wretch_antag)
+			VampDrinker.vitae = min(VampDrinker.vitae + 400, 5000)
+			to_chat(user, span_notice("I gain 400 vitae from drinking blood. Current vitae: [VampDrinker.vitae]"))
+		else if(VampDrinker && !C.mind)
+			to_chat(user, span_warning("This blood is not pure enough to nourish me properly."))

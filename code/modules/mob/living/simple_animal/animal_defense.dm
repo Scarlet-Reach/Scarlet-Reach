@@ -167,6 +167,11 @@
 			to_chat(src, span_warning("I feed on succulent flesh. I feel reinvigorated."))
 			user.reagents.add_reagent(/datum/reagent/medicine/healthpot, 30)
 			gib()
+		if(user.mind && istype(user, /mob/living/carbon/human/species/wildshape/volf))
+			visible_message(span_danger("The volf ravenously consumes the [src]!"))
+			to_chat(src, span_warning("I feed on succulent flesh. I feel satiated."))
+			user.reagents.add_reagent(/datum/reagent/consumable/nutriment, 15)
+			gib()
 		return
 	if(src.apply_damage(damage, BRUTE))
 		if(istype(user, /mob/living/carbon/human/species/werewolf))

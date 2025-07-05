@@ -50,7 +50,8 @@
 					/obj/effect/proc_holder/spell/invoked/lesser_heal 			= CLERIC_T0,
 					/obj/effect/proc_holder/spell/invoked/spiderspeak 			= CLERIC_T0,
 					/obj/effect/proc_holder/spell/targeted/blesscrop			= CLERIC_T1,
-					/obj/effect/proc_holder/spell/targeted/shapeshift/dendor	= CLERIC_T2,
+					/obj/effect/proc_holder/spell/targeted/wildshape			= CLERIC_T2,
+					/obj/effect/proc_holder/spell/targeted/beasttame			= CLERIC_T2,
 					/obj/effect/proc_holder/spell/targeted/conjure_glowshroom	= CLERIC_T3,
 					/obj/effect/proc_holder/spell/self/howl/call_of_the_moon	= CLERIC_T4,
 	)
