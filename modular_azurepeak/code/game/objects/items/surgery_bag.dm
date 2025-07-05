@@ -44,5 +44,3 @@
 	)
 
 /obj/item/storage/belt/rogue/surgery_bag/empty
-	populate_contents = list(
-	)

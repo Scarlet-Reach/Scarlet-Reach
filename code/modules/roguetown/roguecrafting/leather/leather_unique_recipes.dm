@@ -121,3 +121,13 @@
 	tools = list(/obj/item/needle)
 	craftdiff = 5
 	sellprice = 20
+
+/datum/crafting_recipe/roguetown/leather/unique/crafteast
+	name = "decorated dobo robe (2 fibers, 2 leather, 1 tallow, 1 simple dobo robe)"
+	result = list(/obj/item/clothing/suit/roguetown/armor/basiceast/crafteast)
+	reqs = list(/obj/item/natural/hide/cured = 2,
+				/obj/item/reagent_containers/food/snacks/tallow = 1,
+				/obj/item/natural/fibers = 2,
+				/obj/item/clothing/suit/roguetown/armor/basiceast)
+	tools = list(/obj/item/needle)
+	craftdiff = 5
