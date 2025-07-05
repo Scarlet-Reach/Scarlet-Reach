@@ -1,5 +1,5 @@
-/datum/round_event_control/antagonist/solo/gene_besserict
-	name = "Gène Besserict"
+/datum/round_event_control/antagonist/solo/bene_gesserict
+	name = "Bène Gesserict"
 	antag_flag = ROLE_BESSERICT
 	antag_datum = /datum/antagonist/gene_besserict
 	roundstart = TRUE
@@ -40,6 +40,6 @@
 		return filtered
 
 	canSpawnEvent(players_amt, gamemode, fake_check)
-		if(!prob(50))
+		if(!prob(100))
 			return FALSE
 		return ..()
