@@ -155,6 +155,12 @@
 			if(has_flaw(/datum/charflaw/addiction/sadist) && user.has_flaw(/datum/charflaw/masochist))
 				. += span_secradio("[m1] looking with eyes filled with a desire to inflict pain. So exciting.")
 
+		// Spouse check
+		if(ishuman(user))
+			var/mob/living/carbon/human/H = user
+			if(H.marriedto == name)
+				. += span_love("It's my spouse.")
+
 		var/villain_text = get_villain_text(user)
 		if(villain_text)
 			. += villain_text
@@ -813,7 +819,7 @@
 	var/heretic_text = null
 	var/seer
 
-	if(HAS_TRAIT(src,TRAIT_DECEIVING_MEEKNESS))
+	if(HAS_TRAIT(src, TRAIT_DECEIVING_MEEKNESS))
 		return null
 
 	if(HAS_TRAIT(examiner, TRAIT_HERETIC_SEER))

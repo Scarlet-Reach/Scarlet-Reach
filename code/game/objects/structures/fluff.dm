@@ -1032,57 +1032,133 @@
 	max_integrity = 80
 	chance2hear = 10
 
+/obj/structure/fluff/psycross/psycrucifix
+	name = "wooden psydonic crucifix"
+	desc = "A rarely seen symbol of absolute and devoted certainty, more common in Otava: HE yet lyves. HE yet breathes."
+	icon_state = "psycruci"
+	max_integrity = 80
+	chance2hear = 10
+
+/obj/structure/fluff/psycross/psycrucifix/stone
+	name = "stone psydonic crucifix"
+	desc = "Formed of stone, this great Psycross symbolises that HE is forever ENDURING. Considered a rare sight upon the Peaks."
+	icon_state = "psycruci_r"
+	max_integrity = 120
+	chance2hear = 10
+
+/obj/structure/fluff/psycross/psycrucifix/silver
+	name = "silver psydonic crucifix"
+	icon_state = "psycruci_s"
+	desc = "Constructed of Blessed Silver, this crucifix symbolises absolute faith in the ONE - For PSYDON WEEPS, for all mortal ilk. PSYDON WEEPS, for all who walk upon the soil. PSYDON WEEPS..."
+	attacked_sound = list("sound/combat/hits/onmetal/metalimpact (1).ogg", "sound/combat/hits/onmetal/metalimpact (2).ogg")
+	max_integrity = 450
+	chance2hear = 10
+
 /obj/structure/fluff/psycross/zizocross
 	name = "inverted cross"
 	desc = "An unholy symbol. Blasphemy for most, reverence for few."
 	icon_state = "invertedcross"
 	divine = FALSE
 
-/obj/structure/fluff/psycross/attackby(obj/item/W, mob/living/carbon/human/user, params)
+/obj/structure/fluff/psycross/attackby(obj/item/W, mob/user, params)
 	if(user.mind)
-		if((user.mind.assigned_role == "Priest") || ((user.mind.assigned_role == "Acolyte") && (user.patron.type == /datum/patron/divine/eora)))
+		if(user.mind.assigned_role == "Priest")
 			if(istype(W, /obj/item/reagent_containers/food/snacks/grown/apple))
+				if(!istype(get_area(user), /area/rogue/indoors/town/church/chapel))
+					to_chat(user, span_warning("I need to do this in the chapel."))
+					return FALSE
 				var/marriage
 				var/obj/item/reagent_containers/food/snacks/grown/apple/A = W
-				
+				//The MARRIAGE TEST BEGINS
 				if(A.bitten_names.len)
 					if(A.bitten_names.len == 2)
+						//Groom provides the surname that the bride will take
 						var/mob/living/carbon/human/thegroom
 						var/mob/living/carbon/human/thebride
-						
-						// Find people by bite order, not random viewer order
-						for(var/bite_name in A.bitten_names)
-							for(var/mob/M in viewers(src, 7))
-								if(!ishuman(M))
-									continue
-								var/mob/living/carbon/human/C = M
-								if(C.stat == DEAD)
-									continue
-								if(!C.client)
-									continue
-								if(C.real_name == bite_name)
-									if(!thegroom)
-										thegroom = C  // First bite = groom
-									else if(!thebride)
-										thebride = C  // Second bite = bride
-									break
+						//Did anyone get cold feet on the wedding?
+						for(var/mob/M in viewers(src, 7))
+							testing("check [M]")
 							if(thegroom && thebride)
 								break
+							if(!ishuman(M))
+								continue
+							var/mob/living/carbon/human/C = M
+							/*
+							* This is for making the first biters name
+							* always be applied to the groom.
+							* second. This seems to be the best way
+							* to use the least amount of variables.
+							*/
+							var/name_placement = 1
+							for(var/X in A.bitten_names)
+								//I think that guy is dead.
+								if(C.stat == DEAD)
+									continue
+								//That person is not a player or afk.
+								if(!C.client)
+									continue
+								//Gotta get a divorce first
+								if(C.marriedto)
+									continue
+								if(C.real_name == X)
+									//I know this is very sloppy but its alot less code.
+									switch(name_placement)
+										if(1)
+											if(thegroom)
+												continue
+											thegroom = C
+										if(2)
+											if(thebride)
+												continue
+											thebride = C
+									testing("foundbiter [C.real_name]")
+									name_placement++
 
+						//WE FOUND THEM LETS GET THIS SHOW ON THE ROAD!
 						if(!thegroom || !thebride)
+							testing("fail22")
 							return
-						
+						//Alright now for the boring surname formatting.
+						var/surname2use
+						var/index = findtext(thegroom.real_name, " ")
+						var/bridefirst
+						thegroom.original_name = thegroom.real_name
+						thebride.original_name = thebride.real_name
+						if(!index)
+							surname2use = thegroom.dna.species.random_surname()
+						else
+							/*
+							* This code prevents inheriting the last name of
+							* " of wolves" or " the wolf"
+							* remove this if you want "Skibbins of wolves" to
+							* have his bride become "Sarah of wolves".
+							*/
+							if(findtext(thegroom.real_name, " of ") || findtext(thegroom.real_name, " the "))
+								surname2use = thegroom.dna.species.random_surname()
+								thegroom.change_name(copytext(thegroom.real_name, 1,index))
+							else
+								surname2use = copytext(thegroom.real_name, index)
+								thegroom.change_name(copytext(thegroom.real_name, 1,index))
+						index = findtext(thebride.real_name, " ")
+						if(index)
+							thebride.change_name(copytext(thebride.real_name, 1,index))
+						bridefirst = thebride.real_name
+						thegroom.change_name(thegroom.real_name + surname2use)
+						thebride.change_name(thebride.real_name + surname2use)
+						thegroom.marriedto = thebride.real_name
+						thebride.marriedto = thegroom.real_name
 						thegroom.adjust_triumphs(1)
 						thebride.adjust_triumphs(1)
-						priority_announce("[thegroom.real_name] has married [thebride.real_name]!", title = "Holy Union!", sound = 'sound/misc/bell.ogg')
+						//Bite the apple first if you want to be the groom.
+						priority_announce("[thegroom.real_name] has married [bridefirst]!", title = "Holy Union!", sound = 'sound/misc/bell.ogg')
 						marriage = TRUE
 						qdel(A)
 
 				if(!marriage)
 					A.burn()
 					return
-				return
-	..()
+	return ..()
+
 
 /obj/structure/fluff/psycross/copper/Destroy()
 	addomen("psycross")
