@@ -34,11 +34,16 @@
 	neck = /obj/item/storage/belt/rogue/pouch/coins/poor
 	beltr = /obj/item/flashlight/flare/torch/lantern
 	beltl = /obj/item/rogueweapon/whip //The whip itself is not often associated to many jobs. Druids feel like a thematic choice to have a self-defense whip
-	backl = /obj/item/storage/backpack/rogue/satchel
+	backl = /obj/item/storage/backpack/rogue/backpack
 	head = /obj/item/clothing/head/roguetown/dendormask
 	wrists = /obj/item/clothing/neck/roguetown/psicross/dendor
 	shirt = /obj/item/clothing/suit/roguetown/shirt/robe/dendor
-	backpack_contents = list(/obj/item/ritechalk)
+	backpack_contents = list(
+		/obj/item/rogueweapon/pick = 1,
+		/obj/item/rogueweapon/stoneaxe/woodcut/steel = 1,
+		/obj/item/rogueweapon/shovel = 1,
+		/obj/item/ritechalk = 1
+	)
 	if(H.mind)
 		H.mind.adjust_skillrank(/datum/skill/misc/sewing, 1, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/craft/tanning, 1, TRUE)
@@ -58,6 +63,8 @@
 		H.mind.adjust_skillrank(/datum/skill/misc/swimming, 2, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/combat/whipsflails, 1, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/combat/polearms, 1, TRUE) //To help them defend themselves with parrying
+		H.mind.adjust_skillrank(/datum/skill/labor/mining, 2, TRUE) //Druids can harvest stone and minerals
+		H.mind.adjust_skillrank(/datum/skill/labor/lumberjacking, 3, TRUE) //Druids are skilled at harvesting wood
 		H.grant_language(/datum/language/beast)
 		H.put_in_hands(new /obj/item/rogueweapon/woodstaff(H), TRUE) //To encourage them to wander the forests and to help defend themselves
 		H.change_stat("intelligence", 1)
