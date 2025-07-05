@@ -23452,9 +23452,7 @@
 "hWw" = (
 /obj/structure/bed/rogue,
 /obj/machinery/light/rogue/wallfire/candle/r,
-/obj/effect/landmark/start/manorguardsman{
-	name = "Manor Guard"
-	},
+/obj/effect/landmark/start/manorguardsman,
 /turf/open/floor/rogue/ruinedwood{
 	icon_state = "weird1"
 	},
@@ -25114,8 +25112,8 @@
 /obj/structure/chair/wood/rogue/chair3{
 	dir = 8
 	},
-/obj/effect/landmark/start/manorguardsman,
 /obj/machinery/light/rogue/wallfire/candle/r,
+/obj/effect/landmark/start/manorguardsman,
 /turf/open/floor/rogue/ruinedwood{
 	icon_state = "weird1"
 	},
@@ -36298,8 +36296,8 @@
 /area/rogue/indoors/town/garrison)
 "mqV" = (
 /obj/structure/bed/rogue,
-/obj/effect/landmark/start/manorguardsman,
 /obj/machinery/light/rogue/wallfire/candle/l,
+/obj/effect/landmark/start/manorguardsman,
 /turf/open/floor/rogue/ruinedwood{
 	icon_state = "weird1"
 	},
@@ -65366,15 +65364,6 @@
 /obj/effect/spawner/roguemap/stump,
 /turf/open/floor/rogue/dirt,
 /area/rogue/under/cave/goblinfort)
-"waX" = (
-/obj/structure/bed/rogue,
-/obj/effect/landmark/start/manorguardsman{
-	name = "Manor Guard"
-	},
-/turf/open/floor/rogue/ruinedwood{
-	icon_state = "weird1"
-	},
-/area/rogue/indoors/town/garrison)
 "wbb" = (
 /obj/structure/roguemachine/mail{
 	mailtag = "Heir's Suite"
@@ -398901,7 +398890,7 @@ jWw
 dRj
 nQR
 iCo
-waX
+eFi
 gQf
 mqV
 gQf
@@ -400257,7 +400246,7 @@ jWw
 dSa
 nQR
 iCo
-waX
+eFi
 gQf
 hWw
 gQf
