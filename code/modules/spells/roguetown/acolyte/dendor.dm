@@ -115,23 +115,6 @@
 		to_chat(user, span_boldwarning("Ware thee well, child of Dendor."))
 		first_cast = TRUE
 	. = ..()
-	
-/obj/effect/proc_holder/spell/targeted/shapeshift/dendor
-	name = "Beast Form"
-	desc = "Take on the form of one of Dendor's sacred beasts."
-	overlay_state = "tamebeast"
-	releasedrain = 60
-	recharge_time = 180 SECONDS
-	invocation = "Treefather grant me your form!"
-	invocation_type = "shout"
-	associated_skill = /datum/skill/magic/holy
-	devotion_cost = 80
-	miracle = TRUE
-	clothes_req = FALSE
-	human_req = FALSE
-
-	die_with_shapeshifted_form =  FALSE
-	pick_again = TRUE
 
 /obj/effect/proc_holder/spell/invoked/spiderspeak
 	name = "Spider Speak"

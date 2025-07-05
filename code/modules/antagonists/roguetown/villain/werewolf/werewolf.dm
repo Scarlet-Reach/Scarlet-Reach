@@ -14,7 +14,10 @@
 	var/transformed
 	var/transforming
 	var/untransforming
+	var/wwgenitals
+	var/wwbreastsize = 3
 	var/wolfname = "Verewolf"
+	var/wretch_antag = FALSE
 
 /datum/antagonist/werewolf/lesser
 	name = "Lesser Verewolf"

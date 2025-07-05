@@ -28,6 +28,7 @@
 	// Equip collar and loincloth only
 	neck = /obj/item/clothing/neck/roguetown/collar
 	pants = /obj/item/clothing/under/roguetown/loincloth
+	ADD_TRAIT(H, TRAIT_OUTLAW, TRAIT_GENERIC)
 
 /datum/job/roguetown/prisonerr/after_spawn(mob/living/L, mob/M, latejoin = TRUE)
 	. = ..()

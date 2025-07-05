@@ -61,6 +61,7 @@
 #define SPAN_DWARF "dwarf"
 #define SPAN_ELF "elf"
 #define SPAN_SAND "sandspeak"
+#define SPAN_SANDWAUK "sandwauk"
 #define SPAN_DELF "delf"
 #define SPAN_HELL "hellspeak"
 #define SPAN_GRENZELHOFTIAN "grenzelhoftian"

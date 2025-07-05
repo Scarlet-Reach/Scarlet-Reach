@@ -49,6 +49,11 @@ body {
   src: url('sand.ttf'); 
 }
 
+@font-face {
+  font-family: "Ramadhan Karim";
+  src: url('algaib.ttf');
+}
+
 @font-face { 
   font-family: "Xaphan"; 
   src: url('hell.ttf'); 
@@ -444,6 +449,7 @@ h1.alert, h2.alert	{color: #c9c1ba;font-family: Pterra, TrueType;}
 .papyrus				{font-family: "Papyrus", cursive, sans-serif;}
 .robot					{font-family: "Courier New", cursive, sans-serif;}
 
+.sandwauk 				{font-family: "Ramadhan Karim", "Pterra"; font-size: 150%;}
 .human 					{font-family: "Honoka Mincho", "Pterra";}
 .elf					{font-family: "Dauphin", cursive, "Pterra";}
 .dwarf 					{font-family: "MasonAlternate", "Pterra";} 

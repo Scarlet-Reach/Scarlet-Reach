@@ -219,14 +219,24 @@ GLOBAL_LIST_INIT(department_radio_keys, list(
 
 	if(language)
 		var/datum/language/L = GLOB.language_datum_instances[language]
+		var/list/chosen_spans
 		if(ishuman(src))
 			var/mob/living/carbon/human/H = src
+			//Species-specific language spans
 			if(H.dna?.species)
-				var/list/stuff = H.dna.species.get_span_language(L)
-				if(stuff)
-					spans |= stuff
+				chosen_spans = H.dna.species.get_span_language(L)
+			//Priority 2: Accent spans for imperial language (only if no species spans)
+			if(!chosen_spans?.len && L.type == /datum/language/common && H.char_accent && GLOB.accent_spans)
+				chosen_spans = GLOB.accent_spans[H.char_accent]
+			//Priority 3: Default language spans
+			if(!chosen_spans?.len && L.spans?.len)
+				chosen_spans = L.spans
 		else
-			spans |= L.spans
+			if(L.spans?.len)
+				chosen_spans = L.spans
+		
+		if(chosen_spans?.len && islist(chosen_spans))
+			spans |= chosen_spans
 
 	var/radio_return = radio(message, message_mode, spans, language)
 	if(radio_return & ITALICS)
