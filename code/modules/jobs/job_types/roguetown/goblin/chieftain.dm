@@ -15,7 +15,6 @@
 	display_order = JDO_GOBLINKING
 	min_pq = 2
 	max_pq = null
-	family_blacklisted = TRUE
 
 /datum/outfit/job/roguetown/goblinking/pre_equip(mob/living/carbon/human/H)
 	..()
