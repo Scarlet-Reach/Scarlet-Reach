@@ -663,8 +663,7 @@
 	smeltresult = /obj/item/ingot/steel
 	blocksound = PLATEHIT
 	max_integrity = 200
-	grid_height = 64
-	grid_width = 64
+
 	experimental_onhip = TRUE
 	experimental_inhand = TRUE
 

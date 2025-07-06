@@ -124,8 +124,6 @@
 	desc = "A copy you've taken with you. Unfortunately the dampness of Scarlet Reach made it unreadable. You can still add new entries, however. It looks bulky enough to act as a mild blunt weapon."
 	icon_state ="grudge_closed"
 	drop_sound = 'sound/foley/dropsound/book_drop.ogg'
-	grid_width = 32
-	grid_height = 32
 	force = 10
 	possible_item_intents = list(/datum/intent/mace/strike)
 

@@ -5,8 +5,6 @@
     icon_state = "cream"
     w_class = WEIGHT_CLASS_SMALL
     var/uses_remaining = 30
-    grid_width = 32
-    grid_height = 32
 
 /obj/item/hair_dye_cream/attack(mob/living/M, mob/living/user)
     if(!ishuman(M))

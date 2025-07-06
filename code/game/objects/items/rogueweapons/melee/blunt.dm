@@ -200,8 +200,6 @@
 	wdefense = 1
 	resistance_flags = FLAMMABLE
 	blade_dulling = DULLING_SHAFT_WOOD
-	grid_width = 32
-	grid_height = 96
 
 /obj/item/rogueweapon/mace/cudgel/copper
 	name = "copper bludgeon"

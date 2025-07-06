@@ -81,10 +81,8 @@
 	cartridge_wording = "stone"
 	load_sound = 'sound/foley/slingload.ogg'
 	obj_flags = UNIQUE_RENAME
-	grid_width = 32
-	grid_height = 64
 	var/atom/movable/temp_stone = null //stones are not ammo so they aren't acceptable by ballistics. this var will keep the stone temporarily stored
-	var/bonus_stone_force = 0 //above comment is relevant. a magical stone's bonus force is kept on the sling itself and changed accordingly
+	var/bonus_stone_force = 0 //above c
 	pickup_sound = 'modular_helmsguard/sound/sheath_sounds/draw_gen.ogg'
 	sheathe_sound = 'sound/items/wood_sharpen.ogg'
 

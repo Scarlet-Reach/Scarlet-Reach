@@ -1,5 +1,3 @@
-
-
 /*
  * Book
  */
@@ -28,8 +26,6 @@
 	var/textper = 100
 	var/our_font = "Rosemary Roman"
 	var/override_find_book = FALSE
-	grid_width = 32
-	grid_height = 64
 
 //Destroyer of knowledge - for storytellers
 /obj/item/book/fire_act()

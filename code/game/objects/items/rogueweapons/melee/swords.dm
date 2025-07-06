@@ -136,8 +136,6 @@
 	minstr = 6
 	sellprice = 30
 	wdefense = 4.5
-	grid_width = 32
-	grid_height = 64
 	pickup_sound = 'modular_helmsguard/sound/sheath_sounds/draw_sword.ogg'
 	sheathe_sound = 'modular_helmsguard/sound/sheath_sounds/put_back_sword.ogg'
 
@@ -224,8 +222,6 @@
 	wdefense = 4.5
 	wlength = WLENGTH_SHORT
 	w_class = WEIGHT_CLASS_NORMAL
-	grid_width = 32
-	grid_height = 96
 
 /obj/item/rogueweapon/sword/short/pashortsword
 	name = "ancient shortsword"
@@ -610,8 +606,6 @@
 	wdefense = 3.5
 	wlength = WLENGTH_SHORT
 	w_class = WEIGHT_CLASS_NORMAL
-	grid_width = 32
-	grid_height = 96
 
 /obj/item/rogueweapon/sword/iron/short/ashort
 	name = "decrepit short sword"
@@ -900,8 +894,6 @@
 	desc = "A specialty-made bilbo hilt rapier made in service to Lady Eora. For the time when soft words can no longer be spoken, and hearts are to be pierced."
 	icon = 'icons/roguetown/weapons/32.dmi'
 	icon_state = "eorarapier"
-	grid_width = 32
-	grid_height = 64
 	dropshrink = 0
 	bigboy = FALSE
 

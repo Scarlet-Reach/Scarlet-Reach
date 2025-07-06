@@ -704,8 +704,6 @@
 	icon_state = "hobostovep"
 	w_class = WEIGHT_CLASS_NORMAL
 	slot_flags = ITEM_SLOT_HIP | ITEM_SLOT_BACK
-	grid_width = 32
-	grid_height = 64
 
 /obj/item/mobilestove/attack_self(mob/user, params)
 	..()

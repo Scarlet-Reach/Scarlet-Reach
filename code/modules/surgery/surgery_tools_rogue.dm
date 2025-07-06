@@ -19,9 +19,6 @@
 	anvilrepair = /datum/skill/craft/blacksmithing
 	smeltresult = null
 
-	grid_width = 32
-	grid_height = 64
-
 /obj/item/rogueweapon/surgery/Initialize()
 	. = ..()
 	item_flags |= SURGICAL_TOOL //let's not stab patients for fun

@@ -772,9 +772,6 @@
 	icon = 'icons/roguetown/items/misc.dmi'
 	icon_state = "magnifying_glass"
 
-	grid_height = 64
-	grid_width = 32
-
 /obj/item/magnifying_glass/attack(mob/living/M, mob/user)
 	return
 

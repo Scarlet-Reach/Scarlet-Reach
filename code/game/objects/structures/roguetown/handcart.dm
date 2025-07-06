@@ -25,8 +25,6 @@
 	icon_state = "upgrade"
 	icon = 'icons/roguetown/misc/structure.dmi'
 	var/ulevel = 0
-	grid_width = 64
-	grid_height = 32
 
 /obj/item/cart_upgrade/level_1
 	name = "woodcutters wheelbrace"

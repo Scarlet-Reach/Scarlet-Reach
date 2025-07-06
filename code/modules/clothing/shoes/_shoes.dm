@@ -19,8 +19,7 @@
 	var/is_barefoot = FALSE
 	bloody_icon_state = "shoeblood"
 
-	grid_width = 32
-	grid_height = 64
+
 
 /obj/item/clothing/shoes/ComponentInitialize()
 	. = ..()

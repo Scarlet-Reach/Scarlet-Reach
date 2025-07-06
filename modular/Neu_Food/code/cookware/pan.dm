@@ -19,8 +19,6 @@
 	throwforce = 15
 	possible_item_intents = list(/datum/intent/mace/strike/pan)
 	wdefense = 2
-	grid_width = 32
-	grid_height = 64
 
 /obj/item/cooking/pan/examine(mob/user)
 	. = ..()

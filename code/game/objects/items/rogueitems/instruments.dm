@@ -24,8 +24,6 @@
 	var/groupplaying = FALSE
 	var/curfile = ""
 	var/playing = FALSE
-	grid_height = 64
-	grid_width = 32
 
 /obj/item/rogue/instrument/equipped(mob/living/user, slot)
 	. = ..()

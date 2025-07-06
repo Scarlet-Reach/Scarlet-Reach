@@ -1,4 +1,3 @@
-
 /obj/item/roguekey
 	name = "key"
 	desc = "An unremarkable iron key."
@@ -16,9 +15,6 @@
 	anvilrepair = /datum/skill/craft/blacksmithing
 	resistance_flags = FIRE_PROOF
 	experimental_inhand = FALSE
-
-	grid_height = 32
-	grid_width = 32
 
 /obj/item/roguekey/Initialize()
 	. = ..()
@@ -48,9 +44,6 @@
 	associated_skill = /datum/skill/misc/lockpicking	//Doesn't do anything, for tracking purposes only
 	always_destroy = TRUE
 
-	grid_width = 32
-	grid_height = 64
-
 /obj/item/lockpick/goldpin
 	name = "gold hairpin"
 	desc = "Often used by wealthy courtesans and nobility to keep hair and clothing in place."
@@ -73,9 +66,6 @@
 	anvilrepair = /datum/skill/craft/armorsmithing
 	associated_skill = /datum/skill/misc/lockpicking
 	var/material = "gold"
-
-	grid_width = 32
-	grid_height = 32
 
 /obj/item/lockpick/goldpin/equipped(mob/living/carbon/human/user, slot)
 	. = ..()

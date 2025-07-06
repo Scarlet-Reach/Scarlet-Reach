@@ -1,4 +1,3 @@
-
 /obj/item/rope
 	name = "rope"
 	desc = "A woven hemp rope."
@@ -17,8 +16,6 @@
 	firefuel = 5 MINUTES
 	drop_sound = 'sound/foley/dropsound/cloth_drop.ogg'
 	sewrepair = TRUE
-	grid_width = 32
-	grid_height = 64
 
 /obj/item/rope/Initialize()
 	. = ..()

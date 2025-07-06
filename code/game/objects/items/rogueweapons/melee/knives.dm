@@ -101,8 +101,7 @@
 	anvilrepair = /datum/skill/craft/weaponsmithing
 	smeltresult = /obj/item/ingot/iron
 
-	grid_height = 64
-	grid_width = 32
+
 	pickup_sound = 'modular_helmsguard/sound/sheath_sounds/draw_dagger.ogg'
 	sheathe_sound = 'modular_helmsguard/sound/sheath_sounds/put_back_dagger.ogg'
 

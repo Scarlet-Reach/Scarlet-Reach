@@ -18,8 +18,6 @@
 	var/obj/item/natural/dirtclod/heldclod
 	smeltresult = /obj/item/ingot/iron
 	max_blade_int = 50
-	grid_width = 32
-	grid_height = 96
 
 /obj/item/rogueweapon/shovel/Destroy()
 	if(heldclod)
@@ -169,7 +167,6 @@
 	w_class = WEIGHT_CLASS_NORMAL
 	max_blade_int = 0
 	smeltresult = null
-	grid_height = 64
 
 /obj/item/rogueweapon/shovel/aalloy
 	force = 8

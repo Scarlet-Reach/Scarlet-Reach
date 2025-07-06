@@ -1,10 +1,6 @@
-
-
 /obj/item/recipe_book
 	icon = 'icons/roguetown/items/books.dmi'
 
-	grid_width = 32
-	grid_height = 32
 	firefuel = 5 MINUTES
 	var/list/types = list()
 	var/mob/current_reader

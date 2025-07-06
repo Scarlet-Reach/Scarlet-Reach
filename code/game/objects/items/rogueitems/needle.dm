@@ -1,7 +1,7 @@
 /obj/item/needle
 	name = "needle"
 	icon_state = "needle"
-	desc = "This sharp needle can sew wounds, mend clothing, and stab someone if you’re desperate."
+	desc = "This sharp needle can sew wounds, mend clothing, and stab someone if you're desperate."
 	icon = 'icons/roguetown/items/misc.dmi'
 	lefthand_file = 'icons/mob/inhands/misc/food_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/misc/food_righthand.dmi'
@@ -21,8 +21,6 @@
 	var/infinite = FALSE
 	/// If this needle can be used to repair items
 	var/can_repair = TRUE
-	grid_width = 32
-	grid_height = 32
 
 /obj/item/needle/examine()
 	. = ..()

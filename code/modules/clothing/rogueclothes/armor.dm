@@ -26,8 +26,7 @@
 	experimental_inhand = FALSE
 	nodismemsleeves = TRUE
 	flags_inv = HIDEBOOB|HIDECROTCH
-	grid_width = 64
-	grid_height = 96
+
 
 //LIGHT ARMOR//
 

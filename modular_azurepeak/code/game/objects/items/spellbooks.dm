@@ -190,8 +190,8 @@ decreases charge time if held opened in hand, for pure mage build + aesthetics.
 	name = "tome in waiting"
 	icon_state = "spellbook_unfinished"
 	desc = "A fully bound tome of scroll paper. It's lacking a certain arcyne energy."
-	grid_width = 32
-	grid_height = 64
+	drop_sound = 'sound/foley/dropsound/book_drop.ogg'
+	pickup_sound = 'sound/blank.ogg'
 
 /obj/item/natural/hide/attackby(obj/item/P, mob/living/carbon/human/user, params)
 	var/found_table = locate(/obj/structure/table) in (loc)

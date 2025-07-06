@@ -28,8 +28,6 @@ Reel teleports the attached atom to the grabbed turf.
 	var/max_range_noz = 6
 	var/leash_range = 7
 	var/list/obj_to_destroy = list()
-	grid_height = 32
-	grid_width = 64
 
 /obj/item/grapplinghook/Initialize(mapload)
 	. = ..()

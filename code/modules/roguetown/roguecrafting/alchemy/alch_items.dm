@@ -13,7 +13,6 @@
 	w_class = WEIGHT_CLASS_TINY
 	experimental_onhip = FALSE
 	experimental_inhand = FALSE
-	grid_height = 32 // Takes 1x1 area
 	sellprice = 1
 
 // Shitty copy paste override until bottle code refactored

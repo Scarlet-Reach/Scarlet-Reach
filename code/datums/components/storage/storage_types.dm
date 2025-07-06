@@ -1,5 +1,4 @@
 /datum/component/storage/concrete/roguetown
-	grid = TRUE
 
 /datum/component/storage/concrete/roguetown/satchel
 	screen_max_rows = 4

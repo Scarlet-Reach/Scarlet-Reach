@@ -113,8 +113,6 @@
 	w_class = WEIGHT_CLASS_SMALL
 	var/cooldown = 0
 	var/list/cards = list()
-	grid_width = 32
-	grid_height = 32
 
 /obj/item/toy/cards/deck/Initialize()
 	. = ..()

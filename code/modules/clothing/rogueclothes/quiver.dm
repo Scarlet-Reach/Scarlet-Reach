@@ -1,4 +1,3 @@
-
 /obj/item/quiver
 	name = "quiver"
 	desc = ""
@@ -224,8 +223,6 @@
 	slot_flags = ITEM_SLOT_HIP | ITEM_SLOT_NECK
 	max_storage = 20
 	w_class = WEIGHT_CLASS_NORMAL
-	grid_height = 64
-	grid_width = 32
 
 /obj/item/quiver/sling/attack_turf(turf/T, mob/living/user)
 	if(arrows.len >= max_storage)

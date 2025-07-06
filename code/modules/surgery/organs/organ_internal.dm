@@ -50,9 +50,6 @@
 	/// Original owner of the organ, the one who had it inside them last
 	var/mob/living/carbon/last_owner = null
 
-	grid_width = 32
-	grid_height = 32
-
 	sellprice = 10
 
 /obj/item/organ/proc/Insert(mob/living/carbon/M, special = 0, drop_if_replaced = TRUE)

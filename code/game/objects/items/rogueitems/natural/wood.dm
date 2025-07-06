@@ -74,8 +74,6 @@
 	name = "small log"
 	desc = "Piece of lumber cut from a larger log. Suitable for building."
 	icon_state = "logsmall"
-	grid_width = 64
-	grid_height = 96
 	attacked_sound = 'sound/misc/woodhit.ogg'
 	max_integrity = 30
 	static_debris = list(/obj/item/grown/log/tree/stick = 3)
@@ -221,8 +219,6 @@
 	gripped_intents = null
 	slot_flags = ITEM_SLOT_MOUTH|ITEM_SLOT_HIP
 	lumber_amount = 0
-	grid_width = 32
-	grid_height = 32
 
 /obj/item/grown/log/tree/stick/Crossed(mob/living/L)
 	. = ..()
@@ -335,8 +331,6 @@
 	name = "stake"
 	icon_state = "stake"
 	desc = "A sharpened piece of wood, fantastic for piercing"
-	grid_width = 32
-	grid_height = 64
 	force = 10
 	throwforce = 5
 	possible_item_intents = list(/datum/intent/stab, /datum/intent/pick)
@@ -372,8 +366,6 @@
 	desc = "A flat piece of wood, useful for flooring."
 	icon = 'icons/roguetown/items/crafting.dmi'
 	icon_state = "plank"
-	grid_width = 64
-	grid_height = 224
 	attacked_sound = 'sound/misc/woodhit.ogg'
 	drop_sound = 'sound/foley/dropsound/wooden_drop.ogg'
 	possible_item_intents = list(/datum/intent/use)
@@ -417,8 +409,6 @@
 	icon_state = "plankbundle1"
 	item_state = "plankbundle"
 	icon = 'icons/roguetown/items/crafting.dmi'
-	grid_width = 128
-	grid_height = 224
 	drop_sound = 'sound/foley/dropsound/wooden_drop.ogg'
 	possible_item_intents = list(/datum/intent/use)
 	force = 0
