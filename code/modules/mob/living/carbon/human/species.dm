@@ -1846,13 +1846,16 @@ GLOBAL_LIST_EMPTY(roundstart_races)
 		//FIRE_STACKS Human damage taken from fire is determined here.
 		var/burn_damage
 		var/firemodifier = H.fire_stacks / 50
-		if (H.on_fire)
+		if (HAS_TRAIT(H, TRAIT_CHOSEN)) {
+			burn_damage = 0
+		} else if (H.on_fire) {
 			burn_damage = 20
 			if(H.fire_stacks >= HUMAN_FIRE_STACK_ICON_NUM)
 				burn_damage = 200
-		else
+		} else {
 			firemodifier = min(firemodifier, 0)
 			burn_damage = max(log(2-firemodifier,(H.bodytemperature-BODYTEMP_NORMAL))-5,0) // this can go below 5 at log 2.5
+		}
 		if (burn_damage)
 			switch(burn_damage)
 				if(0 to 2)
