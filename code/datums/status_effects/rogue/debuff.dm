@@ -408,3 +408,39 @@
 	effectedstats = list("strength" = -1, "endurance" = -2, "speed" = -2, "intelligence" = -3)
 	duration = 1 MINUTES
 	alert_type = /atom/movable/screen/alert/status_effect/emberwine
+
+/datum/status_effect/debuff/excomm
+	id = "Excommunicated follower of Ten!"
+	alert_type = /atom/movable/screen/alert/status_effect/debuff/excomm
+	effectedstats = list("fortune" = -2, "intelligence" = -2, "speed" = -1, "endurance" = -1, "constitution" = -1)
+	duration = 999 MINUTES
+
+/atom/movable/screen/alert/status_effect/debuff/excomm
+	name = "Excommunicated follower of Ten!"
+	desc = "The Ten have forsaken me!"
+	icon_state = "muscles"
+	color ="#6d1313"
+
+/datum/status_effect/debuff/apostasy
+	id = "Apostasy!"
+	alert_type = /atom/movable/screen/alert/status_effect/debuff/apostasy
+	effectedstats = list("fortune" = -5, "intelligence" = -3, "perception" = -2 , "speed" = -2, "endurance" = -2, "constitution" = -2)
+	duration = 999 MINUTES
+
+/atom/movable/screen/alert/status_effect/debuff/apostasy
+	name = "Apostasy!"
+	desc = "Shame upon the member of clergy!"
+	icon_state = "debuff"
+	color ="#7a0606"
+
+/datum/status_effect/debuff/hereticsermon
+	id = "Heretic on sermon!"
+	alert_type = /atom/movable/screen/alert/status_effect/debuff/hereticsermon
+	effectedstats = list("intelligence" = -2, "speed" = -2, "fortune" = -2)
+	duration = 20 MINUTES
+
+/atom/movable/screen/alert/status_effect/debuff/hereticsermon
+	name = "Heretic on sermon!"
+	desc = "I was on the sermon. My patron is not proud of me."
+	icon_state = "debuff"
+	color ="#af9f9f"

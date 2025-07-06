@@ -221,3 +221,13 @@
 	stressadd = -1
 	desc = span_green("I have prevailed over my rival! Graggar favours me now!")
 	timer = INFINITY
+
+/datum/stressevent/gazeuponme
+	stressadd = -5
+	desc = span_green("I am a heretic under Ten's gaze... My patron is proud of me!")
+	timer = 999 MINUTES
+
+/datum/stressevent/sermon
+	stressadd = -5
+	desc = span_green("I feel inspired by the sermon.")
+	timer = 20 MINUTES

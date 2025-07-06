@@ -316,3 +316,27 @@
 	stressadd = 15
 	desc = span_boldred("By Psydon, the great comet's shard is no more! What will we do now!?")
 	timer = 15 MINUTES
+
+/datum/stressevent/psycurse
+
+	stressadd = 3
+	desc = span_boldred("Oh no! I've received divine punishment!")
+	timer = 999 MINUTES
+
+/datum/stressevent/excommunicated
+
+	stressadd = 5
+	desc = span_boldred("The Ten have forsaken me!")
+	timer = 999 MINUTES
+
+/datum/stressevent/apostasy
+
+	stressadd = 3
+	desc = span_boldred("The apostasy's mark is upon me!")
+	timer = 999 MINUTES
+
+/datum/stressevent/heretic_on_sermon
+
+	stressadd = 5
+	desc = span_red("My PATRON is NOT PROUD of ME!")
+	timer = 20 MINUTES
