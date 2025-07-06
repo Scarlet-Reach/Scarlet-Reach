@@ -14,11 +14,6 @@
 	cost = 15
 	contains = list(/obj/item/clothing/suit/roguetown/armor/gambeson/heavy)
 
-/datum/supply_pack/rogue/Knave/leather
-	name = "Leather Armor"
-	cost = 10
-	contains = list(/obj/item/clothing/suit/roguetown/armor/leather)
-
 /datum/supply_pack/rogue/Knave/leather/studded
 	name = "Studded Leather Armor"
 	cost = 20
@@ -130,9 +125,15 @@
 	contains = list(/obj/item/quiver/bolts)
 
 /datum/supply_pack/rogue/Knave/Sarrows
-	name = "Steel Bodkin Arrow"
-	cost = 3
-	contains = list(/obj/item/ammo_casing/caseless/rogue/arrow/steel)
+	name = "Steel Bodkin Arrows (x5)"
+	cost = 15
+	contains = list(
+	/obj/item/ammo_casing/caseless/rogue/arrow/steel,
+	/obj/item/ammo_casing/caseless/rogue/arrow/steel,
+	/obj/item/ammo_casing/caseless/rogue/arrow/steel,
+	/obj/item/ammo_casing/caseless/rogue/arrow/steel,
+	/obj/item/ammo_casing/caseless/rogue/arrow/steel,
+	)
 
 /datum/supply_pack/rogue/Knave/Warrows
 	name = "Water Arrows (x5)"
@@ -146,19 +147,37 @@
 	)
 
 /datum/supply_pack/rogue/Knave/Parrows
-	name = "Poisoned Arrow"
-	cost = 5
-	contains = list(/obj/item/ammo_casing/caseless/rogue/arrow/poison)
+	name = "Poisoned Arrows (x5)"
+	cost = 25
+	contains = list(
+	/obj/item/ammo_casing/caseless/rogue/arrow/poison,
+	/obj/item/ammo_casing/caseless/rogue/arrow/poison,
+	/obj/item/ammo_casing/caseless/rogue/arrow/poison,
+	/obj/item/ammo_casing/caseless/rogue/arrow/poison,
+	/obj/item/ammo_casing/caseless/rogue/arrow/poison,
+	)
 
 /datum/supply_pack/rogue/Knave/pyroarrows
-	name = "Pyroclastic Arrow"
-	cost = 8
-	contains = list(/obj/item/ammo_casing/caseless/rogue/arrow/pyro)
+	name = "Pyroclastic Arrows (x5)"
+	cost = 40
+	contains = list(
+	/obj/item/ammo_casing/caseless/rogue/arrow/pyro,
+	/obj/item/ammo_casing/caseless/rogue/arrow/pyro,
+	/obj/item/ammo_casing/caseless/rogue/arrow/pyro,
+	/obj/item/ammo_casing/caseless/rogue/arrow/pyro,
+	/obj/item/ammo_casing/caseless/rogue/arrow/pyro,
+	)
 
 /datum/supply_pack/rogue/Knave/pyrobolts
-	name = "Pyroclastic bolt"
+	name = "Pyroclastic Bolts (x5)"
 	cost = 12
-	contains = list(/obj/item/ammo_casing/caseless/rogue/bolt/pyro)
+	contains = list(
+	/obj/item/ammo_casing/caseless/rogue/bolt/pyro,
+	/obj/item/ammo_casing/caseless/rogue/bolt/pyro,
+	/obj/item/ammo_casing/caseless/rogue/bolt/pyro,
+	/obj/item/ammo_casing/caseless/rogue/bolt/pyro,
+	/obj/item/ammo_casing/caseless/rogue/bolt/pyro,
+	)
 
 /datum/supply_pack/rogue/Knave/Mancatcher
 	name = "Mancatcher"

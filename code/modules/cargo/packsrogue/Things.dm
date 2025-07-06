@@ -84,6 +84,11 @@
 	cost = 20
 	contains = list(/obj/item/mattcoin)
 
+/datum/supply_pack/rogue/Things/steelmask
+	name = "Steel Mask"
+	cost = 35
+	contains = list(/obj/item/clothing/mask/rogue/facemask/steel)
+
 /datum/supply_pack/rogue/Things/Dragonscale
 	name = "Dragonscale Necklace"
 	cost = 900
