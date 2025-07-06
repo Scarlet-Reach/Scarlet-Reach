@@ -52,7 +52,7 @@ GLOBAL_VAR_INIT(dayspassed, FALSE)
 				if("dawn")
 					if(prob(25))
 						GLOB.forecast = "rain"
-				if("day")
+				if("dae")
 					if(prob(5))
 						GLOB.forecast = "rain"
 				if("dusk")

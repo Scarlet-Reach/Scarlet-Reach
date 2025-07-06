@@ -804,13 +804,31 @@ GLOBAL_VAR_INIT(mobids, 1)
 			if(check_rights(R_ADMIN,0))
 				stat(null, SSmigrants.get_status_line())
 
+	/var/days = "TWILIGHT"
+	switch(GLOB.dayspassed)
+		if(1)
+			days = "MOON'S DAE"
+		if(2)
+			days = "TIW'S DAE"
+		if(3)
+			days = "WEDDING'S DAE"
+		if(4)
+			days = "THULE'S DAE"
+		if(5)
+			days = "FREYJA'S DAE"
+		if(6)
+			days = "SATURN'S DAE"
+		if(7)
+			days = "SUN'S DAE"
+
 	if(client)
 		if(statpanel("RoundInfo"))
-			stat("Round ID: [GLOB.rogue_round_id]")
-			stat("Round Time: [time2text(STATION_TIME_PASSED(), "hh:mm:ss", 0)] [world.time - SSticker.round_start_time]")
+			stat("ROUND ID: [GLOB.rogue_round_id]")
+			stat("ROUND TIME: [time2text(STATION_TIME_PASSED(), "hh:mm:ss", 0)] [world.time - SSticker.round_start_time]")
 			if(SSgamemode.roundvoteend)
-				stat("Round End: [DisplayTimeText(time_left)]")
-			stat("TimeOfDay: [GLOB.tod]")
+				stat("ROUND END: [DisplayTimeText(time_left)]")
+			stat("[days] ᛉ [uppertext(GLOB.tod)]")
+
 
 	if(client && client.holder && check_rights(R_DEBUG,0))
 		if(statpanel("MC"))
