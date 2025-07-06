@@ -225,7 +225,7 @@
 
 /obj/item/rogueweapon/woodstaff/aries
 	name = "staff of the shepherd"
-	desc = "This staff makes you look important to any peasant."
+	desc = "A sacred relic bestowed upon priests upon their coronation, symbolizing their divine authority and duty to guide the faithful."
 	force = 25
 	force_wielded = 28
 	icon_state = "aries"
@@ -237,6 +237,7 @@
 	bigboy = FALSE
 	gripsprite = FALSE
 	gripped_intents = null
+	cast_time_reduction = 0.4
 
 /obj/item/rogueweapon/woodstaff/aries/getonmobprop(tag)
 	. = ..()
@@ -247,6 +248,14 @@
 			if("wielded")
 				return list("shrink" = 0.6,"sx" = 4,"sy" = -2,"nx" = -3,"ny" = -2,"wx" = -5,"wy" = -1,"ex" = 3,"ey" = -2,"northabove" = 0,"southabove" = 1,"eastabove" = 1,"westabove" = 0,"nturn" = 7,"sturn" = -7,"wturn" = 16,"eturn" = -22,"nflip" = 8,"sflip" = 0,"wflip" = 8,"eflip" = 0)
 
+/obj/item/rogueweapon/woodstaff/aries/melee_attack_chain(mob/user, atom/target, params)
+	. = ..()
+	if(ismob(target)) {
+		var/mob/living/M = target
+		M.adjust_fire_stacks(3)
+		M.IgniteMob()
+	}
+	return .
 
 /obj/item/rogueweapon/spear
 	force = 20
