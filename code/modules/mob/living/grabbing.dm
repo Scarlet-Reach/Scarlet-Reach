@@ -493,6 +493,7 @@
 /obj/item/grabbing/bite
 	name = "bite"
 	icon_state = "bite"
+	d_type = "stab"
 	slot_flags = ITEM_SLOT_MOUTH
 	bleed_suppressing = 1
 	var/last_drink
@@ -529,7 +530,7 @@
 
 	user.changeNext_move(CLICK_CD_MELEE)
 	var/mob/living/carbon/C = grabbed
-	var/armor_block = C.run_armor_check(sublimb_grabbed, d_type)
+	var/armor_block = C.run_armor_check(sublimb_grabbed, d_type, armor_penetration = BLUNT_DEFAULT_PENFACTOR)
 	var/damage = user.get_punch_dmg()
 	if(HAS_TRAIT(user, TRAIT_STRONGBITE))
 		damage = damage*2
