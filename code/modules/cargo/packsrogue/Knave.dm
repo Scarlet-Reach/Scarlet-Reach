@@ -44,45 +44,20 @@
 	cost = 30
 	contains = list(/obj/item/clothing/neck/roguetown/chaincoif)
 
-/datum/supply_pack/rogue/Knave/leather/Lbracers
-	name = "Leather Bracers"
-	cost = 5
-	contains = list(/obj/item/clothing/wrists/roguetown/bracers/leather)
-
 /datum/supply_pack/rogue/Knave/leather/hbracers
 	name = "Hardened Leather Bracers"
 	cost = 10
 	contains = list(/obj/item/clothing/wrists/roguetown/bracers/leather/heavy)
-
-/datum/supply_pack/rogue/Knave/leather/lgloves
-	name = "Leather Gloves"
-	cost = 5
-	contains = list(/obj/item/clothing/gloves/roguetown/leather)
 
 /datum/supply_pack/rogue/Knave/leather/hlgloves
 	name = "Heavy Leather Gloves"
 	cost = 10
 	contains = list(/obj/item/clothing/gloves/roguetown/angle)
 
-/datum/supply_pack/rogue/Knave/leather/flgloves
-	name = "Fingerless Leather Gloves"
-	cost = 10
-	contains = list(/obj/item/clothing/gloves/roguetown/fingerless_leather)
-
-/datum/supply_pack/rogue/Knave/leather/pants
-	name = "Leather Trousers"
-	cost = 10
-	contains = list(/obj/item/clothing/under/roguetown/trou/leather)
-
 /datum/supply_pack/rogue/Knave/leather/hpants
 	name = "Hardened Leather Trousers"
 	cost = 20
 	contains = list(/obj/item/clothing/under/roguetown/heavy_leather_pants)
-
-/datum/supply_pack/rogue/Knave/leather/lhelmet
-	name = "Leather Helmet"
-	cost = 5
-	contains = list(/obj/item/clothing/head/roguetown/helmet/leather)
 
 /datum/supply_pack/rogue/Knave/leather/hlhelmet
 	name = "Hardened Leather Helmet"
@@ -103,11 +78,6 @@
 	name = "Recurve Bow"
 	cost = 20
 	contains = list(/obj/item/gun/ballistic/revolver/grenadelauncher/bow/recurve)
-
-/datum/supply_pack/rogue/Knave/dagger
-	name = "Iron Dagger"
-	cost = 10
-	contains = list(/obj/item/rogueweapon/huntingknife/idagger)
 
 /datum/supply_pack/rogue/Knave/daggerss
 	name = "Steel Dagger"

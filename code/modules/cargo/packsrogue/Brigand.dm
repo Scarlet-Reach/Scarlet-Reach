@@ -119,16 +119,6 @@
 	cost = 20
 	contains =  list(/obj/item/rogueweapon/flail/sflail)
 
-/datum/supply_pack/rogue/Brigand/flail
-	name = "Iron flail"
-	cost = 10
-	contains = list(/obj/item/rogueweapon/flail)
-
-/datum/supply_pack/rogue/Brigand/mace
-	name = "Iron Mace"
-	cost = 10
-	contains = list(/obj/item/rogueweapon/mace)
-
 /datum/supply_pack/rogue/Brigand/steelmace
 	name = "Steel Mace"
 	cost = 20
@@ -154,25 +144,10 @@
 	cost = 20
 	contains = list(/obj/item/rogueweapon/mace/warhammer/steel)
 
-/datum/supply_pack/rogue/Brigand/Ironwarhammer
-	name = "Iron Warhammer"
-	cost = 10
-	contains = list(/obj/item/rogueweapon/mace/warhammer)
-
-/datum/supply_pack/rogue/Brigand/axe
-	name = "Iron Axe"
-	cost = 10
-	contains = list(/obj/item/rogueweapon/stoneaxe/woodcut)
-
 /datum/supply_pack/rogue/Brigand/Staxe
 	name = "Steel Battleaxe"
 	cost = 20
 	contains = list(/obj/item/rogueweapon/stoneaxe/battle)
-
-/datum/supply_pack/rogue/Brigand/Gaxe
-	name = "Iron Greataxe"
-	cost = 10
-	contains = list(/obj/item/rogueweapon/greataxe)
 
 /datum/supply_pack/rogue/Brigand/SGaxe
 	name = "Steel Greataxe"

@@ -9,6 +9,11 @@
 	cost = 10
 	contains = list(/obj/item/rogueweapon/sword/sabre/shamshir)
 
+/datum/supply_pack/rogue/Sellsword/sabre
+	name = "Old Naledi package..."
+	cost = 15
+	contains = list(/obj/item/rogueweapon/sword/sabre)
+
 /datum/supply_pack/rogue/Sellsword/driderhead
 	name = "Desert Rider headdress"
 	cost = 5
@@ -94,11 +99,6 @@
 	cost = 20
 	contains = list(/obj/item/clothing/neck/roguetown/bevor)
 
-/datum/supply_pack/rogue/Sellsword/gorget
-	name = "Gorget"
-	cost = 20
-	contains = list(/obj/item/clothing/neck/roguetown/gorget)
-
 /datum/supply_pack/rogue/Sellsword/sgorget
 	name = "Steel Gorget"
 	cost = 30
@@ -149,11 +149,6 @@
 	cost = 10
 	contains = list(/obj/item/rogueweapon/halberd)
 
-/datum/supply_pack/rogue/Sellsword/spear
-	name = "Iron Spear"
-	cost = 10
-	contains = list(/obj/item/rogueweapon/spear)
-
 /datum/supply_pack/rogue/Sellsword/bardiche
 	name = "Bardiche"
 	cost = 10
@@ -183,3 +178,8 @@
 	name = "Crossbow"
 	cost = 20
 	contains = list(/obj/item/gun/ballistic/revolver/grenadelauncher/crossbow)
+
+/datum/supply_pack/rogue/Sellsword/Tshield
+	name = "Tower Shield"
+	cost = 10
+	contains = list(/obj/item/rogueweapon/shield/tower)
