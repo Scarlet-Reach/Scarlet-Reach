@@ -340,25 +340,6 @@ SUBSYSTEM_DEF(ticker)
 		transfer_characters()	//transfer keys to the new mobs
 		log_game("GAME SETUP: transfer characters success")
 
-		// Family setup
-		for(var/mob/living/carbon/human/H in GLOB.mob_living_list)
-			if(H.client)
-				var/datum/job/J = SSjob.GetJob(H.job)
-				if(!J)
-					continue
-				if(J.family_blacklisted && !H.client.prefs.spouse_ckey) // REDMOON EDIT - family_changes - выставленный соигрок в семью обходит ограничения (можно быть мужем проститутки или женой бездомного) - WAS if(SSjob.GetJob(H.job).family_blacklisted
-					continue
-				if(SSfamily.special_role_blacklist.Find(H.mind.special_role))
-					continue
-				if(H.client.prefs.family == FAMILY_FULL)
-					// Exclude all royal family members from regular family processing
-					var/datum/job/job = SSjob.GetJob(H.job)
-					if(!job?.ruler_family)
-						SSfamily.family_candidates += H
-
-		SSfamily.SetupLordFamily()
-		SSfamily.SetupFamilies()
-		log_game("GAME SETUP: family setup success")
 
 	for(var/I in round_start_events)
 		var/datum/callback/cb = I

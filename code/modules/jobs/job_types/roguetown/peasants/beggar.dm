@@ -5,7 +5,6 @@
 	faction = "Station"
 	total_positions = 0
 	spawn_positions = 0
-	family_blacklisted = TRUE
 
 	allowed_races = RACES_ALL_KINDS
 	allowed_ages = ALL_AGES_LIST

@@ -143,10 +143,7 @@
 	var/list/virtue_restrictions
 	var/list/vice_restrictions
 	
-	// family_changes
-	var/ruler_family = FALSE
-	var/family_blacklisted = FALSE
-	var/lord_rel_type = REL_TYPE_RELATIVE
+
 
 
 /datum/job/proc/special_job_check(mob/dead/new_player/player)

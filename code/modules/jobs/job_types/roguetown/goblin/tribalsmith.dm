@@ -13,7 +13,6 @@
 	outfit = /datum/outfit/job/roguetown/goblinsmith
 	min_pq = 0
 	max_pq = null
-	family_blacklisted = TRUE
 
 /datum/outfit/job/roguetown/goblinsmith/pre_equip(mob/living/carbon/human/H)
 	..()

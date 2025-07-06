@@ -155,6 +155,12 @@
 			if(has_flaw(/datum/charflaw/addiction/sadist) && user.has_flaw(/datum/charflaw/masochist))
 				. += span_secradio("[m1] looking with eyes filled with a desire to inflict pain. So exciting.")
 
+		// Spouse check
+		if(ishuman(user))
+			var/mob/living/carbon/human/H = user
+			if(H.marriedto == name)
+				. += span_love("It's my spouse.")
+
 		var/villain_text = get_villain_text(user)
 		if(villain_text)
 			. += villain_text
@@ -197,15 +203,7 @@
 	if(ishuman(user))
 		var/mob/living/carbon/human/H = user
 
-		// Family examine text
-		if(H.isFamily(src))
-			var/datum/relation/R = H.getRelationship(src)
-			if(R)
-				. += span_love("It's my [R.name]!")
-		else if(family)
-			var/datum/family/F = getFamily()
-			if(F)
-				. += span_notice("Ah, they belong to the [F.name] family!")
+
 
 		if(HAS_TRAIT(H, TRAIT_INTELLECTUAL) || H.mind?.get_skill_level(H, /datum/skill/craft/blacksmithing) >= SKILL_EXP_EXPERT)
 			is_smart = TRUE	//Most of this is determining integrity of objects + seeing multiple layers. 
@@ -821,7 +819,7 @@
 	var/heretic_text = null
 	var/seer
 
-	if(HAS_TRAIT(src,TRAIT_DECEIVING_MEEKNESS))
+	if(HAS_TRAIT(src, TRAIT_DECEIVING_MEEKNESS))
 		return null
 
 	if(HAS_TRAIT(examiner, TRAIT_HERETIC_SEER))

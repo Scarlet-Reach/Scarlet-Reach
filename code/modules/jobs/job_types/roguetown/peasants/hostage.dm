@@ -5,7 +5,6 @@
 	faction = "Station"
 	total_positions = 0
 	spawn_positions = 2
-	family_blacklisted = TRUE
 
 	allowed_sexes = list(MALE, FEMALE)
 	allowed_races = RACES_ALL_KINDS

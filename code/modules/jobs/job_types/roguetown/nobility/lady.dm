@@ -19,8 +19,7 @@
 	min_pq = 5
 	max_pq = null
 	round_contrib_points = 3
-	ruler_family = TRUE
-	lord_rel_type = REL_TYPE_SPOUSE
+
 
 /datum/job/roguetown/exlady //just used to change the ladys title
 	title = "Consort Dowager"

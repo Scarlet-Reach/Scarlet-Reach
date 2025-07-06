@@ -23,8 +23,7 @@
 	round_contrib_points = 3
 	cmode_music = 'sound/music/combat_noble.ogg'
 	allowed_patrons = NON_PSYDON_PATRONS		//Same reason as lord. See Lord.
-	ruler_family = TRUE
-	lord_rel_type = REL_TYPE_OFFSPRING
+
 
 
 /datum/job/roguetown/prince/after_spawn(mob/living/H, mob/M, latejoin)
