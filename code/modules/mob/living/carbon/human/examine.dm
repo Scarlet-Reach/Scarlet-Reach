@@ -99,7 +99,7 @@
 			else
 				. += span_notice("A noble!")
 
-		if (HAS_TRAIT(src, TRAIT_OUTLANDER) && !HAS_TRAIT(user, TRAIT_OUTLANDER)) 
+		if (HAS_TRAIT(src, TRAIT_OUTLANDER) && !HAS_TRAIT(user, TRAIT_OUTLANDER))
 			. += span_phobia("A foreigner...")
 
 		//For tennite schism god-event
@@ -129,11 +129,11 @@
 			var/datum/job/J = SSjob.GetJob(user.mind?.assigned_role)
 			if(J?.department_flag & GARRISON || J?.department_flag & NOBLEMEN)
 				. += span_greentext("<b>[m1] an agent of the court!</b>")
-		
+
 		if(user != src && !HAS_TRAIT(src, TRAIT_DECEIVING_MEEKNESS))
 			if(has_flaw(/datum/charflaw/addiction/lovefiend) && user.has_flaw(/datum/charflaw/addiction/lovefiend))
 				. += span_aiprivradio("[m1] as lovesick as I.")
-			
+
 			if(has_flaw(/datum/charflaw/addiction/junkie) && user.has_flaw(/datum/charflaw/addiction/junkie))
 				. += span_deadsay("[m1] carrying the same dust marks on their nose as I.")
 
@@ -167,7 +167,7 @@
 
 		if(leprosy == 1)
 			. += span_necrosis("A LEPER...")
-	
+
 		if (HAS_TRAIT(src, TRAIT_BEAUTIFUL))
 			switch (pronouns)
 				if (HE_HIM)
@@ -208,7 +208,7 @@
 				. += span_notice("Ah, they belong to the [F.name] family!")
 
 		if(HAS_TRAIT(H, TRAIT_INTELLECTUAL) || H.mind?.get_skill_level(H, /datum/skill/craft/blacksmithing) >= SKILL_EXP_EXPERT)
-			is_smart = TRUE	//Most of this is determining integrity of objects + seeing multiple layers. 
+			is_smart = TRUE	//Most of this is determining integrity of objects + seeing multiple layers.
 		if(((H?.STAINT - 10) + round((H?.STAPER - 10) / 2) + H.mind?.get_skill_level(/datum/skill/misc/reading)) < 0 && !is_smart)
 			is_stupid = TRUE
 		if(((H?.STAINT - 10) + (H?.STAPER - 10) + H.mind?.get_skill_level(/datum/skill/misc/reading)) >= 5)
@@ -453,12 +453,23 @@
 			. += "[m3] some sort of ring!"
 		else if(is_smart && istype(wear_ring, /obj/item/clothing/ring/active))
 			var/str = "[m3] [wear_ring.get_examine_string(user)] on [m2] hands. "
+
+		// SLAVE RING
+		if(istype(wear_ring, /obj/item/clothing/ring/slave))
+			var/obj/item/clothing/ring/slave/R = wear_ring
+
+			if(lowertext(user.job) == "grand duke" || lowertext(user.job) == "grand duchess")
+				. += span_userdanger("You notice the ring is engraved with a phrase: <b>\"[R.code_phrase]\"</b>.")
+
+		// Check
+		if(istype(wear_ring, /obj/item/clothing/ring/active))
 			var/obj/item/clothing/ring/active/AR = wear_ring
+			var/str = ""
 			if(AR.cooldowny)
 				if(world.time < AR.cooldowny + AR.cdtime)
 					str += span_warning("It cannot activate again, yet.")
 				else
-					str += span_warning("It is ready to use.")
+					str += span_notice("It is ready to use.")
 			. += str
 		else
 			. += "[m3] [wear_ring.get_examine_string(user)] on [m2] hands."
@@ -729,7 +740,7 @@
 				. += span_warning("[t_He] look[p_s()] weaker than I.")
 			if(-INFINITY to -5)
 				. += span_warning("<B>[t_He] look[p_s()] much weaker than I.</B>")
-			
+
 	if((HAS_TRAIT(user,TRAIT_INTELLECTUAL)))
 		var/mob/living/L = user
 		var/final_int = STAINT
@@ -786,7 +797,7 @@
 			. += "<a href='?src=[REF(src)];inspect_limb=[checked_zone]'>Inspect [parse_zone(checked_zone)]</a>"
 			if(!(mobility_flags & MOBILITY_STAND) && user != src && (user.zone_selected == BODY_ZONE_CHEST))
 				. += "<a href='?src=[REF(src)];check_hb=1'>Listen to Heartbeat</a>"
-				
+
 	if(ishuman(user))
 		var/mob/living/carbon/human/H = user
 		if(get_dist(src, H) <= ((2 + clamp(floor(((H.STAPER - 10))),-1, 4)) + HAS_TRAIT(user, TRAIT_INTELLECTUAL)))
@@ -826,7 +837,7 @@
 
 	if(HAS_TRAIT(examiner, TRAIT_HERETIC_SEER))
 		seer = TRUE
-	
+
 	if(HAS_TRAIT(src, TRAIT_COMMIE))
 		if(seer)
 			heretic_text += "Matthiosan."
@@ -849,7 +860,7 @@
 			heretic_text += "Baotha's Touched."
 			if(HAS_TRAIT(examiner, TRAIT_DEPRAVED))
 				heretic_text += " She leads us to the greatest ends."
-	
+
 	return heretic_text
 
 /// Same as get_heretic_text, but returns a simple symbol depending on the type of heretic!
@@ -865,7 +876,7 @@
 		heretic_text += "♠"
 	else if(HAS_TRAIT(src, TRAIT_DEPRAVED) && HAS_TRAIT(examiner, TRAIT_DEPRAVED))
 		heretic_text += "♥"
-	
+
 	return heretic_text
 
 
@@ -888,7 +899,7 @@
 				villain_text = span_userdanger("BANDIT!")*/
 		if(mind.special_role == "Vampire Lord")
 			var/datum/antagonist/vampirelord/VD = mind.has_antag_datum(/datum/antagonist/vampirelord)
-			if(VD) 
+			if(VD)
 				if(!VD.disguised)
 					villain_text += span_userdanger("A MONSTER!")
 		if(mind.assigned_role == "Lunatic")
@@ -910,3 +921,4 @@
 			return "[verbose ? "Conjured shaft" : "(C. shaft)"]"
 		else
 			return null
+
