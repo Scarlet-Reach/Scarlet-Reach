@@ -336,6 +336,26 @@ GLOBAL_LIST_INIT(spells, typesof(/obj/effect/proc_holder/spell)) //needed for th
 	if(action)
 		action.UpdateButtonIcon()
 	record_featured_stat(FEATURED_STATS_MAGES, user)
+	// Excommunication block for divine worshippers casting miracles
+	if(miracle && istype(user, /mob/living)) {
+		var/mob/living/LU = user
+		if(ispath(LU.patron?.type, /datum/patron/divine)) {
+			var/excomm_found = FALSE
+			for(var/excomm_name in GLOB.excommunicated_players) {
+				var/clean_excomm = lowertext(trim(excomm_name))
+				var/clean_target = lowertext(trim(LU.real_name))
+				if(clean_excomm == clean_target) {
+					excomm_found = TRUE
+					break
+				}
+			}
+			if(excomm_found) {
+				var/patron_name = LU.patron?.name || "my god"
+				to_chat(LU, span_notice("I pray to [patron_name] for help, but no one answers my call."))
+				return FALSE
+			}
+		}
+	}
 	return TRUE
 
 /obj/effect/proc_holder/spell/proc/charge_check(mob/user, silent = FALSE)
