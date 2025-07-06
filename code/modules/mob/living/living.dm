@@ -1128,12 +1128,25 @@
 	L.changeNext_move(agg_grab ? CLICK_CD_GRABBING : CLICK_CD_GRABBING + 1 SECONDS)
 	playsound(src.loc, 'sound/combat/grabbreak.ogg', 50, TRUE, -1)
 
-	// Change the grabber's intent to grab before stopping the pull
+	L.stop_pulling()
+
+	// Repeatedly force the intent to grab on both server and client for 5 ticks after all cleanup
 	if(iscarbon(L))
 		var/mob/living/carbon/C = L
-		C.a_intent_change(INTENT_GRAB)
+		spawn(1)
+			for(var/i = 1, i <= 5, i++)
+				// Find the index of grab intent in the possible intents list
+				var/grab_index = 0
+				for(var/j = 1, j <= C.possible_a_intents.len, j++)
+					if(istype(C.possible_a_intents[j], INTENT_GRAB))
+						grab_index = j
+						break
+				if(grab_index > 0)
+					C.rog_intent_change(grab_index)
+					if(C.client)
+						C.client.mob.rog_intent_change(grab_index)
+				sleep(1)
 
-	L.stop_pulling()
 	return TRUE
 
 /mob/living/proc/resist_buckle()
