@@ -260,7 +260,7 @@
 									"Antagonist Positions" = list(ROLE_MANIAC, ROLE_WEREWOLF,
 									ROLE_VAMPIRE, ROLE_NBEAST, ROLE_BANDIT,
 									ROLE_DELF, ROLE_PREBEL, ROLE_ASPIRANT,
-									ROLE_LICH, ROLE_ASCENDANT, ROLE_WRETCH))
+									ROLE_LICH, ROLE_ASCENDANT, ROLE_WRETCH, ROLE_BESSERICT))
 		for(var/department in long_job_lists)
 			output += "<div class='column'><label class='rolegroup long [ckey(department)]'><input type='checkbox' name='[department]' class='hidden' [usr.client.prefs.tgui_fancy ? " onClick='toggle_checkboxes(this, \"_com\")'" : ""]>[department]</label><div class='content'>"
 			break_counter = 0
