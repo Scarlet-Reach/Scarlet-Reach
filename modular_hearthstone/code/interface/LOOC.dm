@@ -40,6 +40,7 @@
 
 	if(is_banned_from(ckey, "LOOC"))
 		to_chat(src, "<span class='danger'>I cannot use LOOC (perma muted).</span>")
+		return
 
 	if(!mob)
 		return
